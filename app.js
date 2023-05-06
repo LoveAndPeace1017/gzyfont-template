@@ -1,7 +1,6 @@
 /**
  * App
- *
- * @author qiumingsheng
+ * @author gaozhiyuan
  */
 const cluster = require('cluster');
 
