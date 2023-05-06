@@ -1,0 +1,8 @@
+@import "../../../../styles/core/base";
+.view{
+  margin-left: 15px;
+  cursor: pointer;
+}
+:global(.pg-viewer-wrapper){
+  overflow-x: hidden;
+}

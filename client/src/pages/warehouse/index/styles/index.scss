@@ -1,0 +1,38 @@
+.mul-account{
+	.account-notice{
+		font-size:12px;
+		padding-bottom:10px;
+		border-bottom:1px solid #ccc;
+	}
+	.an-txt-l{
+		float:left;
+		color: #2DA66A;
+		font-size: 13px;
+		font-weight: bold;
+	}
+	.an-txt-r{
+		color:#333;
+		font-weight: bold;
+	}
+	.white{
+		color: #B0B0B0;
+	}
+	.account-ope{
+		margin-top:10px;
+	}
+	.tb-account{
+		margin-top:10px;
+	}
+}
+
+.modal-container{
+	display: inline-block;
+}
+.modal-size{
+	width: 100%;
+}
+.dropdown-action{
+	border-top:1px solid #ccc;
+	padding: 5px 12px;
+	line-height: 22px;
+}

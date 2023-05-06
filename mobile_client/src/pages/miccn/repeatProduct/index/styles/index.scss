@@ -1,0 +1,136 @@
+//base
+@import "../../../../../styles/base/mobile";
+
+input, textarea {
+  -webkit-user-select: auto;
+  -khtml-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  -o-user-select: auto;
+  user-select: auto;
+  caret-color: #333;
+}
+
+.main{
+  position: absolute;
+  left:0;
+  right:0;
+  top: px2rem(90px);
+  bottom: 0;
+  background: #F3F3F3;
+  :global(.am-tabs-default-bar-underline){
+    border: 1px #2DA66A solid;
+  }
+  :global(.am-tabs-default-bar-tab-active){
+    color: #2DA66A;
+  }
+  :global(.am-tabs-pane-wrap){
+    overflow-y: hidden;
+  }
+  :global(.am-tabs-default-bar-tab){
+    line-height: 0;
+  }
+}
+
+.tab-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: relative;
+  height: 100%;
+  .tip-component{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #FDFCEC;
+    height: px2rem(168px);
+    padding: px2rem(24px) px2rem(54px) px2rem(24px) px2rem(24px);
+    .content{
+      color: #F86E21;
+      line-height: px2rem(36px);
+    }
+  }
+  .lst-component{
+    position: absolute;
+    background: #F2F2F2;
+    top: px2rem(168px);
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.repeat-product-item{
+  padding: px2rem(24px) px2rem(44px) px2rem(24px) px2rem(24px);
+  border-bottom: px2rem(1px) solid #E0E0E0;
+  font-size: px2rem(24px);
+  font-weight:500;
+  color: #333;
+  .r-left{
+    width: 35%;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    img{
+      width: px2rem(200px);
+      height: px2rem(200px);
+      background: #F3F3F3;
+    }
+  }
+  .r-right{
+    width: 65%;
+    display: inline-block;
+    text-align: left;
+  }
+  .name{
+    display: inline-block;
+    font-weight: 500;
+    color: #333;
+    font-size: px2rem(24px);
+    line-height: px2rem(40px);
+  }
+  .address{
+    font-size: px2rem(22px);
+    margin-top: px2rem(23px);
+    color: #999;
+    line-height: 24px;
+  }
+}
+
+.no-goods{
+  width: 100%;
+  .no-goods-logo{
+    margin: px2rem(160px) px2rem(255px) px2rem(36px) px2rem(255px);
+    display:inline-block;
+    width:px2rem(240px);
+    height:px2rem(240px);
+    background:url("../../../../../images/no_list.png") top center no-repeat;
+    background-size: 100%;
+  }
+  .no-goods-words{
+    display: inline-block;
+    font-size: px2rem(32px);
+    line-height: px2rem(45px);
+    height: px2rem(45px);
+    width: 100%;
+    color: #000;
+    text-align: center;
+  }
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #2B9262;
+  color: #fff;
+  font-size: px2rem(28px);
+  padding: px2rem(30px) 0;
+  text-align: center;
+}
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="keywords" content="{{keywords}}">
+    <meta http-equiv="description" content="{{description}}">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+    <link rel='stylesheet' href='/style/base/common.css' />
+    {{{block "styles"}}}
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TQQ44QL');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Bytedance Tracking channel为002时执行使用-->
+    {{#compare source "==" '002'}}
+        <script>
+            (function(r,d,s,l){var meteor=r.meteor=r.meteor||[];meteor.methods=["track","off","on"];meteor.factory=function(method){return function(){
+                var args=Array.prototype.slice.call(arguments);args.unshift(method);meteor.push(args);return meteor}};for(var i=0;i<meteor.methods.length;i++){
+                var key=meteor.methods[i];meteor[key]=meteor.factory(key)}meteor.load=function(){var js,fjs=d.getElementsByTagName(s)[0];js=d.createElement(s);
+                js.src="https://analytics.snssdk.com/meteor.js/v1/"+l+"/sdk";fjs.parentNode.insertBefore(js,fjs)};meteor.load();if(meteor.invoked){return}
+                meteor.invoked=true;meteor.track("pageview")})(window,document,"script","1701347346252813");
+        </script>
+    {{/compare}}
+    <!-- End Bytedance Tracking -->
+
+    <!-- Bytedance Tracking -->
+    {{#compare source "==" '009'}}
+        <script>
+            (function(r,d,s){r._tt_config=true;var _baq=(r._baq=r._baq||[]);_baq.methods=["track","off","on"];
+                _baq.factory=function(method){return function(){var args=Array.prototype.slice.call(arguments);
+                    args.unshift(method);_baq.push(args);return _baq}};for(var i=0;i<_baq.methods.length;i++){
+                    var key=_baq.methods[i];_baq[key]=_baq.factory(key)}_baq.load=function(){
+                    var js,fjs=d.getElementsByTagName(s)[0];js=d.createElement(s);
+                    js.src="https://analytics.oceanengine.com/api/v2/js/sdk";fjs.parentNode.insertBefore(js,fjs)};
+                _baq.load();if(_baq.invoked){return}_baq.invoked=true;_baq.track("pageview")})(window,document,"script");
+        </script>
+    {{/compare}}
+     <!-- End Bytedance Tracking -->
+
+    <!-- Bytedance Tracking channel为011时执行使用-->
+    {{#compare source "==" '011'}}
+      <script>
+          (function(r,d,s,l){var meteor=r.meteor=r.meteor||[];meteor.methods=["track","off","on"];meteor.factory=function(method){return function(){
+              var args=Array.prototype.slice.call(arguments);args.unshift(method);meteor.push(args);return meteor}};for(var i=0;i<meteor.methods.length;i++){
+              var key=meteor.methods[i];meteor[key]=meteor.factory(key)}meteor.load=function(){var js,fjs=d.getElementsByTagName(s)[0];js=d.createElement(s);
+              js.src="https://analytics.snssdk.com/meteor.js/v1/"+l+"/sdk";fjs.parentNode.insertBefore(js,fjs)};meteor.load();if(meteor.invoked){return}
+              meteor.invoked=true;meteor.track("pageview")})(window,document,"script","1694372314305549");
+      </script>
+    {{/compare}}
+    <!-- End Bytedance Tracking -->
+
+    <!-- Bytedance Tracking channel为070时执行使用-->
+    {{#compare source "==" '070'}}
+        <script type="text/javascript">
+            (function (root) {
+                var ksscript = document.createElement('script');
+                ksscript.setAttribute('charset', 'utf-8');
+                ksscript.src = 'https://static.yximgs.com/udata/pkg/ks-ad-trace-sdk/ks-trace.3.2.0.min.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ksscript, s);
+            })(window);
+        </script>
+    {{/compare}}
+    <!-- End Bytedance Tracking -->
+
+    <!-- Bytedance Tracking channel为071时执行使用-->
+      {{#compare source "==" '071'}}
+          <script type="text/javascript">
+              (function (root) {
+                  var ksscript = document.createElement('script');
+                  ksscript.setAttribute('charset', 'utf-8');
+                  ksscript.src = 'https://static.yximgs.com/udata/pkg/ks-ad-trace-sdk/ks-trace.3.2.0.min.js';
+                  var s = document.getElementsByTagName('script')[0];
+                  s.parentNode.insertBefore(ksscript, s);
+              })(window);
+          </script>
+      {{/compare}}
+    <!-- End Bytedance Tracking -->
+
+    {{#if is_dls}}
+        <!-- Bytedance Tracking -->
+        <script>
+            (function(r,d,s,l){var meteor=r.meteor=r.meteor||[];meteor.methods=["track","off","on"];meteor.factory=function(method){return function(){
+                var args=Array.prototype.slice.call(arguments);args.unshift(method);meteor.push(args);return meteor}};for(var i=0;i<meteor.methods.length;i++){
+                var key=meteor.methods[i];meteor[key]=meteor.factory(key)}meteor.load=function(){var js,fjs=d.getElementsByTagName(s)[0];js=d.createElement(s);
+                js.src="https://analytics.snssdk.com/meteor.js/v1/"+l+"/sdk";fjs.parentNode.insertBefore(js,fjs)};meteor.load();if(meteor.invoked){return}
+                meteor.invoked=true;meteor.track("pageview")})(window,document,"script","1701347345778759");
+        </script>
+        <!-- End Bytedance Tracking -->
+    {{/if}}
+
+    <!-- vivo 回传调用 -->
+    <script src="https://sspstatic.vivo.com.cn/ssp/js/vadevent.1.0.0.js"></script>
+    <!-- end -->
+
+      <!-- jweixin 调用 -->
+    {{#if isJwexin}}
+        <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    {{/if}}
+    <!-- jweixin end -->
+    <script type="text/javascript" src="/script/lib/scanalytics.js"></script>
+  </head>
+  <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQQ44QL"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    {{{body}}}
+  </body>
+</html>

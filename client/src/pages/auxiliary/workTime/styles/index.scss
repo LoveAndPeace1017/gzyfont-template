@@ -1,0 +1,34 @@
+//core
+@import '../../../../styles/core/base';
+
+.top-tip{
+  height: 32px;
+  line-height: 32px;
+  padding-left: 5px;
+  margin: 15px 0;
+  background: #DFF5FF;
+  border-radius: 2px;
+  border: 1px solid #9DD2F8;
+}
+
+.content-hd{
+  padding: 20px;
+  border: 1px solid #d2d2d2;
+}
+
+.title-d{
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.title-d-s{
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+.bt-save{
+  margin-top: 20px;
+}

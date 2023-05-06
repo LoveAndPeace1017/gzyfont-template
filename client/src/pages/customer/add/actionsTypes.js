@@ -1,0 +1,8 @@
+
+// 获取客户详情
+export const CUSTOMER_DETAIL = 'CUSTOMER_DETAIL';
+
+export const CUSTOMER_INSERT = 'CUSTOMER_INSERT';
+export const CUSTOMER_INSERT_END = 'CUSTOMER_INSERT_END';
+
+

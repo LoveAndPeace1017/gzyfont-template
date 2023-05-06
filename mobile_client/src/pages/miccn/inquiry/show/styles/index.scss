@@ -1,0 +1,100 @@
+//base
+@import "../../../../../styles/base/mobile";
+
+.inq-detail{
+	position:relative;
+}
+.inq-detail-deadline,
+.inq-detail-com,
+.inq-detail-date{
+	padding:px2rem(10px) 0;
+	font-size:px2rem(24px);
+}
+
+.inq-detail-com,
+.inq-detail-date{
+	color:#666;
+}
+
+.inq-detail-com{
+	max-width:64%;
+}
+
+.inq-detail-deadline{
+	span{
+		color:#e53e3e;
+	}
+}
+
+.quotation-info{
+	position:absolute;
+	height: px2rem(50px);
+	top:50%;
+	right:px2rem(-30px);
+	margin-top:px2rem(-25px);
+	padding:px2rem(3px) px2rem(40px);
+	background:#f1b068;
+	color:#fff;
+	font-size:px2rem(28px);
+	&:after{
+		content: "";
+		position:absolute;
+		top:0;
+		left:px2rem(-20px);
+		border-width:px2rem(25px) px2rem(20px) px2rem(25px) 0;
+		border-style: solid;
+		border-color:transparent #f1b068 transparent transparent;
+	}
+}
+
+.icon-verify{
+	margin:px2rem(18px) 0 0 px2rem(-30px);
+	display:block;
+	width:px2rem(30px);
+	line-height: initial;
+	padding:0;
+	text-align:center;
+	background:#2DA66A;
+	color:#fff;
+	font-size:px2rem(26px);
+}
+
+
+:global(.am-navbar){
+	+ .main{
+		.scroll-container{
+			top: px2rem(90px);
+		}
+	}
+}
+.main{
+	.scroll-container{
+		top:0;
+		padding-bottom:px2rem(20px);
+		bottom:px2rem(100px);
+	}
+}
+
+.no-data{
+	padding:px2rem(100px) 0;
+	text-align: center;
+	font-size: px2rem(24px);
+}
+
+.footer-ope{
+	position: absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	a{
+		display: block;
+		width:100%;
+		height: px2rem(100px);
+		background: #2DA66A;
+		text-align: center;
+		color:#fff;
+		font-size:px2rem(32px);
+		padding:px2rem(25px)
+	}
+
+}

@@ -1,0 +1,27 @@
+@import "../../../../../styles/core/base";
+
+.ware-drop-menu{
+	:global(.ant-dropdown-menu-item){
+		cursor:auto;
+		&:hover{
+			background:none;
+		}
+	}
+}
+
+.ware-drop{
+	padding:10px;
+	.tit{
+		line-height:20px;
+	}
+	ul{
+		li{
+			line-height: 20px;
+		}
+	}
+}
+
+
+
+
+.ant-table td { white-space: nowrap; }

@@ -1,0 +1,42 @@
+.re-tp1{
+  position: relative;
+  right: 6px;
+  top: -1px;
+  cursor: pointer;
+}
+.re-bd{
+  display: inline-block;
+  width: 618px;
+  height: 454px;
+  background:url("../images/tp2.png") top center no-repeat;
+}
+
+.re-dom{
+  :global(.ant-modal-content){
+       background-color: unset!important;
+       box-shadow: unset!important;
+  }
+}
+
+.re-close-bd{
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 107px;
+  top: 28px;
+}
+
+.re-info{
+  margin-top: 96px;
+  padding-left: 145px;
+  margin-bottom: 12px;
+  .re-info-title{
+    font-size: 18px;
+    font-weight: bold;
+    color: #EE9915;
+    margin-bottom: 5px;
+  }
+}

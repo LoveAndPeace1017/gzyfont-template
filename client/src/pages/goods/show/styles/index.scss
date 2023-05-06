@@ -1,0 +1,152 @@
+@import "../../../../styles/core/base";
+@import "../../../onlineOrder/cartDetail/styles/index";
+
+.dropdown-action {
+  border-top: 1px solid #ccc;
+  padding: 5px 12px;
+  line-height: 22px;
+}
+
+.prod-name {
+  display: inline-block;
+  color: #333;
+  font-size: 24px;
+  i{
+    color: $primaryColor;
+    font-size: 18px;
+    vertical-align: middle;
+    margin-top: -3px;
+  }
+}
+
+div.price-info {
+  background: #f2f2f2;
+  padding-left: 10px;
+}
+
+.price-item {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.price-attr-key {
+  color: #666;
+}
+
+.attr-key {
+  color: #666;
+  font-size: 14px;
+}
+
+.quantity {
+  color: $red;
+  font-size: 28px;
+}
+
+.vertical-margin {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.info-block-margin-top {
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.attr-value {
+  color: #333;
+  font-size: 14px;
+  padding-right: 40px;
+  padding-top: 15px;
+  display: inline-block;
+}
+
+.prod-desc{
+  padding:50px 120px;
+}
+.prod-desc-tit{
+  padding: 10px 16px;
+  background:#f2f2f2;
+  border-left:4px solid $primaryColor;
+  font-size:16px;
+  color:#333;
+  font-weight:bold;
+}
+.prod-desc-content{
+  margin-top:20px;
+}
+
+.goods-remarks{
+  margin-top:-20px;
+}
+
+.attach-info{
+  span:nth-of-type(1){
+    color:$gray;
+    vertical-align: top;
+  }
+}
+.multi-container{
+  margin-top: 5px;
+}
+.multi-btn-1,.multi-btn-2,.multi-btn-3,.multi-btn-4{
+  margin-left: 5px;
+}
+.multi-btn-3{
+  background: #f0f0f0;
+  color: #B0B0B0;
+  border: none;
+  &:hover{
+    background: #f0f0f0;
+    color: #B0B0B0;
+  }
+  &:focus{
+    background: #f0f0f0;
+    color: #B0B0B0;
+  }
+  &:visited{
+    background: #f0f0f0;
+    color: #B0B0B0;
+  }
+}
+.multi-btn-4{
+  background: #fff;
+  color: #333;
+  border: 2px solid #E53E3E;
+  &:before{
+    content: "不存在";
+    display: block;
+    top: -14px;
+    background: #e53e3e;
+    color: #fff;
+    opacity: 1;
+    height: 20px;
+    width: 42px;
+    border-radius: 2px 4px 2px 4px;
+    right: -11px;
+    left: auto;
+    font-size: 8px;
+  }
+
+  &:hover{
+    background: #fff;
+    color: #333;
+  }
+  &:focus{
+    background: #fff;
+    color: #333;
+  }
+  &:visited{
+    background: #fff;
+    color: #333;
+  }
+}
+
+
+.multi-li{
+  margin-top: 20px;
+}
+.multi-label{
+  color: #666;
+  font-size: 13px;
+}

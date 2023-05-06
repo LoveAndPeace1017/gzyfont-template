@@ -1,0 +1,126 @@
+@import "../../../../styles/core/base";
+
+.copy-sale-pop{
+  :global(.ant-table-thead){
+    :global(.ant-table-expand-icon-th){
+      width: 1px;
+      max-width: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  }
+  :global(.ant-table-expand-icon-col){
+    width: 0!important;
+    max-width: 0!important;
+    overflow: hidden!important;
+  }
+  :global(.tb-inner){
+    :global(.ant-table-tbody){
+      :global(.ant-table-measure-row){
+        td:nth-child(1){
+          width: 0!important;
+          max-width: 0!important;
+          overflow: hidden!important;
+        }
+      }
+      >tr{
+        >:global(.ant-table-row-expand-icon-cell){
+          width: 0!important;
+          max-width: 0!important;
+          overflow: hidden!important;
+        }
+      }
+    }
+  }
+  :global(.ant-table-tbody){
+
+    :global(.ant-table-row-expand-icon-cell){
+      width: 0!important;
+      max-width: 0!important;
+      overflow: hidden!important;
+    }
+  }
+}
+
+.copy-sale{
+  :global(.ant-table-body){
+    max-height: none!important;
+  }
+}
+
+
+:global(.ant-table-tbody){
+  :global(.ant-table-expanded-row){
+    > td{
+      padding: 0 0 0 60px;
+    }
+  }
+}
+
+:global(.ant-table-scroll) {
+  :global(.inner-table) {
+    :global(.ant-table-thead) {
+      tr {
+        > th {
+          border-top: none;
+          //border-bottom: 1px solid #fff;
+          &:nth-of-type(1) {
+            border-left: none;
+          }
+          &:nth-last-of-type(1) {
+            border-right: none;
+          }
+        }
+      }
+    }
+    :global(.ant-table-tbody){
+      >tr{
+        //> td{
+        //	border-bottom: 1px solid #fff;
+        //}
+        &:nth-last-of-type(1){
+          > td{
+            border-bottom: none;
+          }
+        }
+        >td{
+          &:nth-of-type(1){
+            border-left: none;
+          }
+          &:nth-last-of-type(1){
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.abstract-drop{
+  padding:12px 0 12px 10px;
+  font-size: 13px;
+  .tit{
+    line-height:30px;
+    color: #ccc;
+  }
+  ul{
+    max-height: 300px;
+    overflow-y: auto;
+    li{
+      line-height: 30px;
+    }
+    .prod-tit{
+      width: 138px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      float: left;
+    }
+    .amount{
+      min-width: 40px;
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}

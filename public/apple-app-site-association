@@ -1,0 +1,18 @@
+{
+  "applinks": {
+      "details": [
+           {
+             "appIDs": ["F8M3T8DUJT.com.focustech.abiz-best"],
+             "components": [
+               {
+                  "/": "*",
+                  "comment": "Matches any URL whose path starts with /buy/"
+               }
+             ]
+           }
+       ]
+   },
+  "webcredentials": {
+        "apps": ["F8M3T8DUJT.com.focustech.abiz-best"]
+   }
+}

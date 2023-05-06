@@ -1,0 +1,44 @@
+//core
+@import '../../../../styles/core/base';
+
+.fold{
+	margin-bottom: 20px;
+}
+.fold-hd{
+	height:50px;
+	line-height: 50px;
+	overflow:hidden;
+	width: 100%;
+}
+.fold-title{
+	position:relative;
+	float:left;
+	padding-left:10px;
+	color:$primaryColor;
+	font-size:16px;
+	&:before{
+		content: '';
+		position:absolute;
+		top:50%;
+		left:0;
+		width:3px;
+		height:14px;
+		margin-top:-7px;
+		background:#48d18d;
+	}
+}
+
+.fold-right-content{
+	position: absolute;
+	right: 20px;
+}
+
+.fold-sub-tit{
+	float:left;
+	margin-left:10px;
+	color:#666;
+	font-size:12px;
+}
+.fold-bd{
+	padding:20px 0;
+}

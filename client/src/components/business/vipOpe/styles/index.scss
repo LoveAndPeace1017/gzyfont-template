@@ -1,0 +1,15 @@
+@import "../../../../styles/core/base";
+
+.expired-tips{
+	a{
+		color: $linkColor;
+	}
+}
+
+.open-tips{
+	margin-bottom:20px;
+	text-align:center;
+	a{
+		color: $linkColor;
+	}
+}

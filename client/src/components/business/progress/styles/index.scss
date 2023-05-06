@@ -1,0 +1,254 @@
+@import "../../../../styles/core/base";
+
+.process-dom{
+	position: absolute;
+	z-index: 8;
+	cursor: pointer;
+	&:hover .process-detail{
+		display: block;
+	}
+	&:hover .process-detail-lst{
+		display: block;
+	}
+	&:hover .process-detail-mobile{
+		display: block;
+	}
+	&:hover .process-detail-mobile-lst{
+		display: block;
+	}
+}
+
+.out{
+	height: 28px;
+	width: 100%;
+	border-radius: 8px;
+	text-align: center;
+	line-height: 28px;
+	color: #d9d9d9;
+	font-size: 18px;
+	white-space: nowrap;
+}
+
+.process-detail-lst{
+	display: none;
+	background: #666;
+	color: #fff;
+	border-radius: 4px;
+	padding: 0px 12px;
+	width: 360px;
+	position: absolute;
+	left: 12px;
+	top: -118px;
+	.down-arrow{
+		width: 0;
+		height: 0;
+		border-right: 6px solid transparent;
+		border-left: 6px solid transparent;
+		border-top: 6px solid #666;
+		position: absolute;
+		bottom: -6px;
+	}
+	.long-txt{
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		display: inline-block;
+		position: relative;
+		top: 5.6px;
+	}
+}
+
+.process-detail-mobile-lst{
+	display: none;
+	background: #666;
+	color: #fff;
+	border-radius: 4px;
+	padding: 0px 12px;
+	width: 360px;
+	position: absolute;
+	left: 12px;
+	top: -154px;
+	.down-arrow{
+		width: 0;
+		height: 0;
+		border-right: 6px solid transparent;
+		border-left: 6px solid transparent;
+		border-top: 6px solid #666;
+		position: absolute;
+		bottom: -6px;
+	}
+	.long-txt{
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		display: inline-block;
+		position: relative;
+		top: 5.6px;
+	}
+}
+
+.process-detail{
+	display: none;
+	background: #666;
+	color: #fff;
+	border-radius: 4px;
+	padding: 12px;
+	width: 360px;
+	position: absolute;
+	left: 15px;
+	top: -156px;
+	.down-arrow{
+		width: 0;
+		height: 0;
+		border-right: 6px solid transparent;
+		border-left: 6px solid transparent;
+		border-top: 6px solid #666;
+		position: absolute;
+		bottom: -6px;
+	}
+	.long-txt{
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		display: inline-block;
+		position: relative;
+		top: 5.6px;
+	}
+}
+
+.process-mobile-detail{
+	display: none;
+	background: #666;
+	color: #fff;
+	border-radius: 4px;
+	padding: 12px;
+	width: 360px;
+	position: absolute;
+	left: 15px;
+	top: -120px;
+	.down-arrow{
+		width: 0;
+		height: 0;
+		border-right: 6px solid transparent;
+		border-left: 6px solid transparent;
+		border-top: 6px solid #666;
+		position: absolute;
+		bottom: -6px;
+	}
+	.long-txt{
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		display: inline-block;
+		position: relative;
+		top: 5.6px;
+	}
+}
+
+.process-graph{
+	height: 20px;
+	border-radius: 10px 0 0 10px;
+	overflow: hidden;
+
+	.item0{
+		width: 80px;
+		height: 20px;
+		display: inline-block;
+		position: relative;
+		color: #fff;
+		text-align: center;
+		padding-left: 5px;
+		border-radius: 10px;
+	}
+
+	.item1{
+		width: 80px;
+		height: 20px;
+		display: inline-block;
+		position: relative;
+		color: #fff;
+		text-align: center;
+		padding-left: 5px;
+		&:after{
+			content:'';
+			background: inherit;
+			position:absolute;
+			top: 1.93px;
+			right: -6.93px;
+			width: 17.14px;
+			height: 17.14px;
+			border-top: 2px solid white;
+			border-right: 2px solid white;
+			transform: rotate(45deg);
+			z-index: 9;
+		}
+	}
+
+	.item2{
+		width: 80px;
+		height: 20px;
+		display: inline-block;
+		position: relative;
+		color: #fff;
+		text-align: center;
+		padding-left: 5px;
+		&:after{
+			content:'';
+			background: inherit;
+			position:absolute;
+			top: 1.93px;
+			right: -6.93px;
+			width: 17.14px;
+			height: 17.14px;
+			border-top: 2px solid white;
+			border-right: 2px solid white;
+			transform: rotate(45deg);
+			z-index: 9;
+		}
+	}
+
+	.item3{
+		width: 80px;
+		height: 20px;
+		display: inline-block;
+		position: relative;
+		color: #fff;
+		text-align: center;
+		padding-left: 5px;
+		&:after{
+			content:'';
+			background: inherit;
+			position:absolute;
+			top: 0;
+			right: -10px;
+			width: 20px;
+			height: 20px;
+			border-radius: 10px;
+			z-index: 9;
+		}
+	}
+}
+
+.process-title{
+	width: 80px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 18px;
+	margin-top: 5px;
+	display: inline-block;
+}
+
+.process-pop-container{
+	.pop-item{
+		color: #222;
+		font-size: 14px;
+		line-height: 24px;
+	}
+	.tip{
+		color: red;
+		margin-left: 5px;
+	}
+}
+
+
+

@@ -1,0 +1,58 @@
+import {fromJS} from "immutable";
+import axios from 'utils/axios';
+import * as constant from './actionsTypes';
+import {asyncBaseBatchUpdateConfig} from 'utils/baseAction';
+
+/**
+ * 获取采购明细报表信息
+ **/
+const fetchSaleTraceDetailReport = () => ({
+    type: constant.FETCH_REPORT_SALE_TRACE_DETAIL
+});
+const fetchSaleTraceDetailReportSuccess = (data) => ({
+    type: constant.FETCH_REPORT_SALE_TRACE_DETAIL_SUCCESS,
+    data
+});
+const fetchSaleTraceDetailReportFailure = (error) => ({
+    type: constant.FETCH_REPORT_SALE_TRACE_DETAIL_FAILURE,
+    error
+});
+
+
+export const asyncFetchSaleTraceDetailReport = (params, callback) => dispatch => {
+    dispatch(fetchSaleTraceDetailReport());
+    if (!params) {
+        params = {};
+    }
+    if (typeof params === 'function') {
+        callback = params;
+        params = {};
+    }
+    axios.post(`${BASE_URL}/report/saleTrace/detail`, params)
+        .then(function (res) {
+            if (res.data && res.data.retCode == 0) {
+                dispatch(fetchSaleTraceDetailReportSuccess(fromJS(res.data)));
+            } else {
+                dispatch(fetchSaleTraceDetailReportFailure(res.data.retMsg));
+            }
+            callback && callback(res.data);
+        })
+        .catch(error => {
+            dispatch(fetchSaleTraceDetailReportFailure(error));
+        });
+};
+
+
+/**
+ * 更新配置项
+ */
+const updateConfig = (data) => ({
+    type: constant.TYPE + '_' + 'COMMON_UPDATE_TEMP_CONFIG',
+    data
+});
+export const asyncUpdateConfig = (type, fieldName, propName, index, value) => dispatch => {
+    dispatch(updateConfig({
+        type, fieldName, propName, index, value
+    }));
+};
+export const asyncBatchUpdateConfig = (arr, callback)=>asyncBaseBatchUpdateConfig(constant.TYPE, arr, callback);

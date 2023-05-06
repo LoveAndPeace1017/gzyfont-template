@@ -1,0 +1,71 @@
+@import "../../../../styles/core/base";
+
+.calculator {
+	width: 241px;
+	height: 201px;
+	overflow: hidden;
+	background-color: #fafafa;
+	z-index: 9999999;
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	.calc-screen {
+		position: relative;
+		width: 241px;
+		height: 40px;
+		padding: 9px 6px;
+		background: #fff;
+		.calc-result {
+			text-align: right;
+			white-space: nowrap;
+			font-size: 18px;
+			font-weight: 500;
+			color: #2DA66A;
+			line-height: 25px;
+		}
+	}
+	.calc-buttons {
+		font-size: 14px;
+		color: #333333;
+		line-height: 21px;
+		border-left: 1px solid #D2D2D2;
+		border-bottom: 1px solid #D2D2D2;
+		.buttons {
+			width: 60px;
+			height: 32px;
+			line-height: 32px;
+			text-align: center;
+			background: #FFFFFF;
+			display: inline-block;
+			border-right: 1px solid #D2D2D2;
+			border-top: 1px solid #D2D2D2;
+			cursor: pointer;
+			font-weight: 600;
+		}
+		.buttons:active {
+			background: #F0F9F4;
+			color: #fff;
+		}
+		.buttons.zero{
+			width: 120px;
+		}
+		.buttons.equals {
+			color: #fff;
+			background-color: #2DA66A;
+		}
+		.buttons.fn-btn{
+			background: #F0F0F0;
+			color: #2DA66A;
+		}
+		.buttons.equals:active {
+			background-color: #77ff89;
+		}
+	}
+}
+
+
+
+
+
+
+

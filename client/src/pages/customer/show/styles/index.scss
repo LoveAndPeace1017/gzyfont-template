@@ -1,0 +1,47 @@
+@import "../../../../styles/core/base";
+
+.mall-on{
+	margin:-3px 0 0 5px;
+	vertical-align: middle;
+}
+.follow-status{
+	display: inline-block;
+	margin-left: 30px;
+	position: relative;
+	bottom: 2px;
+	button{
+		margin-left: 10px;
+	}
+}
+
+.order-tack-header{
+	margin-bottom: 20px;
+}
+
+.order-tack-title{
+	font-size: 13px;
+	font-weight: 600;
+	text-align: justify;
+	color: #333333;
+	line-height: 28px;
+	margin-right: 20px;
+	display: inline-block;
+}
+
+.order-track-container{
+	border: 1px solid #D2D2D2;
+	padding: 10px;
+}
+
+.order-tack-row{
+	font-size: 13px;
+	font-weight: 500;
+	text-align: justify;
+	color: #333333;
+	line-height: 28px;
+}
+
+.copy-btn{
+	float: right;
+	margin: 10px 0 20px;
+}

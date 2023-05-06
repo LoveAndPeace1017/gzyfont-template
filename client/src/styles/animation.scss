@@ -1,0 +1,17 @@
+//slide-fade
+:global(.slide-fade-enter) {
+	height:0;
+	opacity: 0;
+}
+:global(.slide-fade-enter-active) {
+	opacity: 1;
+	transition: opacity 300ms ease-in, height 300ms ease-in-out;
+}
+:global(.slide-fade-exit) {
+	opacity: 1;
+}
+:global(.slide-fade-exit-active) {
+	opacity: 0;
+	height:0!important;
+	transition: opacity 300ms ease-in, height 300ms ease-in-out;
+}

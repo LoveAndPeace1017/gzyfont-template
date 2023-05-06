@@ -1,0 +1,150 @@
+//base
+@import "../../../../styles/base/mobile";
+
+.container{
+  overflow-y: hidden;
+  height: calc(100vh - 40px);
+  background-color: #fff;
+}
+.chat-content{
+  height: 90%;
+  overflow-y: scroll;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+.chat-opt{
+  height: 60px;
+  box-sizing: border-box;
+  background-color: #D1D3D8;
+  padding: 10px 17px 14px;
+  position: relative;
+}
+.search-input{
+  width: 90%;
+  height: 85%;
+  border-radius: 0 10px 10px 0;
+}
+.lt-icon{
+  width: 10%;
+  background-color: #fff;
+  float: left;
+  display: inline-block;
+  height: 85%;
+  border-radius: 10px 0 0 10px;
+  box-sizing: border-box;
+  img{
+    margin: 20%;
+    max-width: 50%;
+  }
+}
+.msg-box{
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.attent-file{
+  text-align: center;
+  color: #666666;
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+.box-l{
+  float: left;
+  display: inline-block;
+  padding: 5%;
+  img{
+    max-width: 52px;
+  }
+}
+.box-r{
+  float: left;
+  display: inline-block;
+  p{
+    font-size: 12px;
+    color: #666;
+    display: inline-block;
+    margin-right: 10px;
+    width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+.box1-l{
+  float: right;
+  display: inline-block;
+  padding: 20px;
+  img{
+    max-width: 52px;
+  }
+}
+.box1-r{
+  float: right;
+  display: inline-block;
+  p{
+    font-size: 12px;
+    color: #666;
+    display: inline-block;
+    margin-right: 10px;
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+.box-content{
+  margin-top: 5px;
+  background-color: #fff;
+  padding: 18px 10px;
+  width: 220px;
+  white-space: normal;
+  word-break: break-all;
+  word-wrap: break-word;
+  font-size: 12px;
+  color: #333;
+  border-radius: 5px;
+  position: relative;
+}
+.box-content:before{
+  content: ''; /*伪类下的属性*/
+  display: block;
+  position: absolute;
+  top: 16px;
+  left: -15px;
+  width: 0;
+  height: 0;
+  overflow:hidden;
+  font-size: 0;     /*是因为, 虽然宽高度为0, 但在IE6下会具有默认的 */
+  line-height: 0;  /* 字体大小和行高, 导致盒子呈现被撑开的长矩形 */
+  border: 8px;
+  border-style:dashed;
+  border-color: transparent #fff transparent transparent;
+}
+.box-content1{
+  margin-top: 5px;
+  background-color: #fff;
+  padding: 18px 10px;
+  width: 220px;
+  white-space: normal;
+  word-break: break-all;
+  word-wrap: break-word;
+  font-size: 12px;
+  color: #333;
+  border-radius: 5px;
+  position: relative;
+}
+.box-content1:before{
+  content: ''; /*伪类下的属性*/
+  display: block;
+  position: absolute;
+  top: 16px;
+  right: -15px;
+  width: 0;
+  height: 0;
+  overflow:hidden;
+  font-size: 0;     /*是因为, 虽然宽高度为0, 但在IE6下会具有默认的 */
+  line-height: 0;  /* 字体大小和行高, 导致盒子呈现被撑开的长矩形 */
+  border: 8px;
+  border-style:dashed;
+  border-color: transparent transparent transparent #fff;
+}

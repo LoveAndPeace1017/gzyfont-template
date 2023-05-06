@@ -1,0 +1,36 @@
+@import "../../../../styles/core/base";
+
+.attr-info{
+	font-size: 14px;
+	margin-right: 40px;
+	float: left;
+}
+.attr-row{
+	margin: 15px 0;
+	overflow: hidden;
+}
+.attr-key,
+.attr-value{
+	display: inline-block;
+	padding: 8px 8px 8px 0;
+}
+.attr-key {
+	color: $grayDark;
+	text-align: right;
+}
+.attr-value {
+	color: $grayDarker;
+}
+
+.footnote{
+    border-top:1px solid #d9d9d9;
+	overflow: hidden;
+	padding-top:15px;
+	.attr-info{
+		font-size: 12px;
+	}
+	.attr-key,
+	.attr-value{
+		color: #999;
+	}
+}

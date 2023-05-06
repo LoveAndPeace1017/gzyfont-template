@@ -1,0 +1,123 @@
+//-----------------------------------------------------
+//@name    reset
+//@desc    css reset
+//@author  guozd
+//@date    2015-07-21
+//-----------------------------------------------------
+
+html {
+	background: #f5f6f7;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+blockquote,body,button,dd,div,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,html,input,legend,li,ol,p,pre,td,textarea,th,ul {
+	margin: 0;
+	padding: 0;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,iframe,menu,nav,section {
+	display: block;
+}
+
+audio,canvas,video {
+	display: inline-block;
+}
+
+body,button,input,select,textarea {
+	color: $grayDarker;
+	font: #{$f13}/#{$baseLineHeight} #{$fontYaHei};
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: 500;
+	font-size: 100%;
+}
+
+address,caption,cite,code,dfn,em,var {
+	font-weight: 500;
+	font-style: normal;
+}
+
+li,ol,ul {
+	list-style: none;
+}
+
+a,input[type=button],input[type=checkbox],input[type=radio] {
+	outline: 0;
+}
+
+a {
+	color: $grayDarker;
+}
+
+a,s {
+	text-decoration: none;
+}
+
+a:hover {
+	color: $linkHoverColor;
+	text-decoration: none;
+}
+
+input[type=button] {
+	-webkit-appearance: none;
+}
+
+sup {
+	vertical-align: text-top;
+}
+
+sub {
+	vertical-align: text-bottom;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+legend {
+	color: $black;
+}
+
+fieldset,img, input {
+	border: 0;
+}
+
+img,input {
+	vertical-align: middle;
+}
+
+button,input,select,textarea {
+	outline: 0;
+	vertical-align: middle;
+	font-size: 100%;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th {
+	text-align: inherit;
+}
+
+i {
+	font-style: normal;
+}
+
+//placeholder style
+:-moz-placeholder {
+	color: #999;
+}/* Mozilla Firefox 4 to 18 */
+::-moz-placeholder {
+	color: #999;
+}/* Mozilla Firefox 19+ */
+input:-ms-input-placeholder,textarea:-ms-input-placeholder {
+	color: #999;
+}
+
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
+	color: #999;
+}

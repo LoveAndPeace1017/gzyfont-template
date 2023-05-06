@@ -1,0 +1,15 @@
+@import "../../../../styles/core/base";
+
+.scan-tip{
+  position:absolute;
+  right:-20px;
+  top:30%;
+  font-size:16px;
+  color:#fb982a;
+  margin-top:-8px;
+  z-index: 99;
+}
+
+.btn-copy{
+  padding: 40px 0;
+}

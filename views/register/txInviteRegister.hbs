@@ -1,0 +1,179 @@
+<link rel="stylesheet" href="/style/pages/tx_invite_register.css">
+
+<div class="header bg_{{form.source}}">
+    <div class="wrap">
+        {{#compare form.source "==" '002'}}
+            <h2 class="title">百卓优采云进销存</h2>
+        {{/compare}}
+        {{#compare form.source "==" '003'}}
+            <h2 class="title">百卓优采云进销存</h2>
+        {{/compare}}
+        {{#compare form.source "==" '004'}}
+            <h2 class="title">百卓优采云进销存</h2>
+        {{/compare}}
+        <ul class="introduce">
+            {{#compare form.source "==" '002'}}
+                <li>· 多门店多仓库智能管理</li>
+                <li>· 出入库单扫码录入</li>
+                <li>· 库存数量及时预警</li>
+            {{/compare}}
+            {{#compare form.source "==" '003'}}
+                <li>· 智能扫码录单、批量导单据</li>
+                <li>· 多岗位协同，告别重复录单</li>
+                <li>· 多维数据报表一键生成</li>
+            {{/compare}}
+            {{#compare form.source "==" '004'}}
+                <li>· 多岗位在线协同，可线上审批</li>
+                <li>· 海量商机信息，在线找客户</li>
+                <li>· CRM功能，轻松管客户</li>
+            {{/compare}}
+        </ul>
+    </div>
+    <div class="sub-title">
+        {{#compare form.source "==" '001'}}
+            进销存+财务协同，让你一年不白忙！
+        {{/compare}}
+        {{#compare form.source "==" '086'}}
+            进销存+财务协同，让你一年不白忙！
+        {{/compare}}
+        {{#compare form.source "==" '002'}}
+            库存积压不出现，高效管理多仓库！
+        {{/compare}}
+        {{#compare form.source "==" '003'}}
+            简单好用，1分钟轻松上手，告别996！
+        {{/compare}}
+        {{#compare form.source "==" '004'}}
+            高效远程办公，业务正常开展！
+        {{/compare}}
+    </div>
+</div>
+
+<div class="container">
+    <form action="/register" method="post" id="register" style="position:relative;">
+        <ul class="fieldset">
+            <li class="field">
+                <div class="field-hd"><span class="required">*</span> 公司名称</div>
+                <div class="field-bd">
+                    <input class="txt error" type="text" name="companyName" placeholder="填写公司全称" value="{{form.companyName}}" aria-invalid="true" />
+                    <span class="instant"></span>
+                </div>
+            </li>
+            <li class="field">
+                <div class="field-in">
+                    <div class="field-hd"><span class="required">*</span> 手机号</div>
+                    <div class="field-bd">
+                        <input class="txt" type="text" id="mobilePhone" name="mobilePhone" placeholder="手机号即为登录账号" maxlength="11" value="{{form.mobilePhone}}"/>
+                        <span class="instant"></span>
+                    </div>
+                </div>
+            </li>
+            <li class="field field-valid">
+                <div class="pop-valid-code" id="captcha"></div>
+                <div class="field-hd"><span class="required">*</span> 验证码</div>
+                <div class="field-bd">
+                    <input class="txt valid-code" type="text" name="code" value="" maxlength="6" placeholder="填写短信验证码" style="width:46%;">
+                    <button type="button" class="send-code js-sendCode">获取验证码</button>
+                    <button type="button" class="send-code" id="sendMobileCode" style="display: none">获取验证码</button>
+                    <span class="instant"></span>
+                </div>
+            </li>
+            <li class="field field-pwd">
+                <div class="field-hd"><span class="required">*</span> 密码</div>
+                <div class="field-bd">
+                    <input class="txt" type="password" name="logonPassword" id="password" value="" placeholder="6-20位字母或数字" autocomplete="on"/>
+                    <i class="iconfont icon-pwd-hide"></i>
+                    <i class="iconfont icon-pwd-show" style="display: none;"></i>
+                    <span class="instant"></span>
+                </div>
+            </li>
+        </ul>
+        <input type="hidden" name="url" value="{{form.url}}">
+        <input type="hidden" name="userIdEnc" value="{{form.userIdEnc}}">
+        <input type="hidden" name="comName" value="{{form.comName}}">
+        <input type="hidden" name="inviteType" value="{{form.inviteType}}">
+        <input type="hidden" name="gender" value="{{form.gender}}">
+        <input type="hidden" name="type" value="{{form.type}}">
+        <input type="hidden" name="channel" value="{{form.source}}">
+        <input type="hidden" name="source" value="{{form.trench}}">
+        <input type="hidden" name="referer" value="{{form.referer}}">
+        <input type="hidden" name="clickId" value="{{form.clickId}}">
+
+        <div class="field-ope">
+            <button type="submit" class="btn-register js-register">注册</button>
+            <button type="button" class="btn-register default js-register-default">注册</button>
+            <div class="agree">
+                <label for="agreement" id="labelAgree">
+                    <input type="checkbox" name="agree" id="agreement" checked/>
+                    已阅读并同意百卓优采<a class="blue" href="http://www.abiz.com/info/ensure/46146.htm?uri=/agreement.htm&locale=zh_CN">《用户协议》</a> 及 <a class="blue" href="http://www.abiz.com/info/ensure/63303.htm?uri=/policy.htm&locale=zh_CN">《隐私策略》</a>
+                </label>
+            </div>
+        </div>
+    </form>
+    <!--<p>已有账号？<a href="/login/mobile{{form.query}}">请登录绑定</a></p>-->
+</div>
+
+<div class="module-group">
+    <h2 class="title">100000+中小企业正在使用</h2>
+    <div class="icon-group">
+        <div class="icon-member">
+            <div class="icon-circle">
+                <i class="iconfont icon-cart"></i>
+            </div>
+            <p class="sub-title">采购管理</p>
+        </div>
+        <div class="icon-member">
+            <div class="icon-circle">
+                <i class="iconfont icon-sale"></i>
+            </div>
+            <p class="sub-title">销售管理</p>
+        </div>
+        <div class="icon-member">
+            <div class="icon-circle">
+                <i class="iconfont icon-goods"></i>
+            </div>
+            <p class="sub-title">库存管理</p>
+        </div>
+        <div class="icon-member">
+            <div class="icon-circle">
+                <i class="iconfont icon-finance"></i>
+            </div>
+            <p class="sub-title">财务管理</p>
+        </div>
+        <div class="icon-member">
+            <div class="icon-circle">
+                <i class="iconfont icon-in-out-com"></i>
+            </div>
+            <p class="sub-title">CRM</p>
+        </div>
+        <div class="icon-member">
+            <div class="icon-circle">
+                <i class="iconfont icon-shangji1"></i>
+            </div>
+            <p class="sub-title">商机管理</p>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <img class="logo" src="../../images/server/common/tx_invite_logo.png" alt="">
+    <div class="com-btn">
+        焦点科技（002315）旗下产品
+    </div>
+</div>
+
+<div class="field-tip" style="display: none;"></div>
+
+<div id="mpanel2" style="margin-top:20px;"></div>
+
+<script>
+    var pageError = '{{form.error}}';
+</script>
+<script src="/script/lib/jquery-3.3.1.min.js"></script>
+<script src="/script/lib/jquery.cookie.js"></script>
+<script src="/script/lib//FCaptcha-2.0.0.js" ></script>
+<script src="/script/lib/jquery.validate.min.js"></script>
+<script src="/script/lib/jquery.validate.extend.js"></script>
+<script src="/script/lib/imagevalidate.js"></script>
+<script src="/script/lib/miccn.validatecode-2.0.js"></script>
+<script src="/script/register/inviteRegister.js"></script>
+

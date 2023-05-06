@@ -1,0 +1,96 @@
+@import "../../../../styles/core/base";
+
+.tb-footer-wrap{
+  height:18px;
+  line-height: 18px;
+}
+
+.scan-tip{
+  position:absolute;
+  right:-20px;
+  top:50%;
+  font-size:16px;
+  color:#fb982a;
+  margin-top:-8px;
+}
+
+.select-goods-trigger{
+  display:inline-block;
+  vertical-align: middle;
+  width:28px;
+  height:28px;
+  margin-top: -8px;
+  a{
+    display:block;
+    width:100%;
+    height:100%;
+    position: relative;
+    left: 4px;
+  }
+  i{
+    font-size:28px;
+  }
+}
+
+.total{
+  float:right;
+  overflow:hidden;
+  span{
+    float:left;
+    margin-left:20px;
+    b{
+      color:#ff6060;
+      font-weight:normal;
+    }
+  }
+}
+
+.readOnly{
+  border:none;
+  cursor:default;
+  margin-top: 5px;
+  &:focus{
+    border:none;
+    box-shadow:none;
+  }
+}
+
+:global(.ant-table-tbody) > tr:hover:not(:global(.ant-table-expanded-row)) > td{
+  .readOnly{
+    background:#fafafa;
+  }
+}
+
+
+:global(.ant-table){
+  .add-item,
+  .delete-item{
+    margin-right:3px;
+    color:#333;
+    &:hover{
+      color:#333;
+    }
+    i{
+      font-size:16px;
+    }
+  }
+}
+
+.goods-table{
+  :global(.ant-table-body){
+    overflow-x:auto !important;
+    overflow-y: hidden;
+  }
+  :global(.ant-table-fixed){
+    table-layout: fixed;
+  }
+  :global(.ant-table-footer){
+    padding:14px;
+  }
+}
+
+.goods-table{
+  :global(.ant-legacy-form-item){
+    margin-bottom: 0;
+  }
+}

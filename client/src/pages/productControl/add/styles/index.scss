@@ -1,0 +1,95 @@
+@import "../../../../styles/core/base";
+
+.dropdown-action{
+  border-top:1px solid #ccc;
+  padding: 5px 12px;
+  line-height: 22px;
+}
+
+
+.dropdown{
+  width:500px;
+}
+
+.modal-btn{
+  float: right;
+  padding-top: 20px;
+}
+
+.prod-list{
+  height:30px;
+  line-height: 30px;
+  overflow:hidden;
+  width: 260px;
+  span{
+    float:left;
+    height:30px;
+    line-height: 30px;
+  }
+  .prod-no{
+    @include text-clip(80px);
+  }
+  .prod-name{
+    @include text-clip(180px);
+  }
+  .prod-item-spec{
+    @include text-clip(80px);
+  }
+  .prod-unit{
+    @include text-clip(50px);
+  }
+}
+
+.suggest{
+  width:200px;
+  overflow:hidden;
+  vertical-align: middle;
+  height: 32px;
+  &:global(.ant-select-open){
+    :global(.ant-select-arrow-icon){
+      svg{
+        transform: rotate(0deg);
+      }
+    }
+  }
+  :global(.ant-select-selection-selected-value){
+    white-space: normal;
+    word-break: break-all;
+  }
+  :global(.ant-select-selection--single){
+    cursor: text;
+  }
+  :global(.ant-select-arrow){
+    right:6px;
+  }
+}
+
+:global(.ant-select-selection-selected-value){
+  .prod-list{
+    display:inline;
+    span{
+      display:none;
+    }
+    :first-child{
+      display:inline;
+      float:none;
+    }
+  }
+}
+
+
+.process-table{
+  :global(.ant-table-tbody) {
+    :global(.ant-form-item) {
+      :global(.ant-form-item-explain) {
+        min-width: 268px;
+      }
+    }
+  }
+}
+
+.scan-tip{
+  font-size:16px;
+  color:#fb982a;
+}
+

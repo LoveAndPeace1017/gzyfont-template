@@ -1,0 +1,149 @@
+@import "../../../../styles/core/base";
+
+.wild-hd{
+
+}
+.customer-title{
+	width: 200px;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+	background: url("../images/customerB.png");
+	float: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.customer-information{
+	height: 80px;
+	float: left;
+	margin-left: 10px;
+	box-sizing: border-box;
+	color: #333;
+	font-size: 13px;
+	padding: 15px 0;
+	span{
+		margin-bottom: 10px;
+		display: inline-block;
+	}
+	.gray{
+		color: #666;
+	}
+	.red{
+		color: #F55252;
+	}
+}
+.customer-prod{
+     margin-top: 20px;
+	 padding-bottom: 40px;
+}
+.customer-prod-col{
+	margin-bottom: 10px;
+}
+.prod-detail-inner{
+    position: relative;
+	transition: all .3s;
+}
+.addCar{
+	position: absolute;
+	bottom: -32px;
+	transition: all .3s;
+	width: 100%;
+	text-align: center;
+	button{
+		border-radius:16px;
+		padding: 0 18px;
+	}
+}
+.prod-detail-big{
+	width: 100%;
+	border: 1px solid #e5e5e5;
+	position: relative;
+	overflow: hidden;
+	img {
+		max-width: 100%;
+	}
+	.prod-detail-price{
+		opacity: 0.7;
+		background: #FFFFFF;
+		box-sizing: border-box;
+		padding: 0 5px;
+		color: #F55252;
+		font-size: 15%;
+		line-height: 50px;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+}
+.prod-detail{
+	width: 95%;
+	margin: 0 5% 0 0;
+	height: 100%;
+	border: 1px solid #e5e5e5;
+	position: relative;
+	overflow: hidden;
+	transition: all .3s;
+	&:hover .addCar{
+		bottom: -20px;
+	}
+	&:hover .prod-detail-inner{
+		-webkit-transform: translate(0,-30px);
+	}
+	img{
+		max-width: 100%;
+		border-bottom: 1px solid #e5e5e5;
+	}
+	.prod-infor{
+		box-sizing: border-box;
+		padding: 5px;
+		p{
+			font-size: 13px;
+			width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			margin-bottom: 5px;
+		}
+		.red{
+			color: #F55252;
+		}
+	}
+}
+.new-product{
+	font-size: 16px;
+	line-height: 16px;
+	margin-top: 15px;
+	font-weight: bold;
+}
+
+
+.order-block{
+	display: inline-block;
+	background: #fff;
+	border: 1px solid #E5E5E5;
+	padding: 5px 10px;
+	color: #333;
+	font-size: 13px;
+	margin-right: 20px;
+	font-weight: normal;
+}
+.cart-num{
+	color: #ff0000;
+	display: inline-block;
+}
+.img-box{
+	position:relative;
+	width: 100%;
+	padding-top:100%;
+	text-align: center;
+	overflow: hidden;
+	img{
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform: translate(-50%, -50%);
+	}
+}

@@ -1,0 +1,25 @@
+@import "../../../../styles/core/base";
+
+.all-price{
+	padding: 10px 0;
+}
+.end-total{
+	padding: 10px 4px;
+	border: 1px solid #d9d9d9;
+	border-top: none;
+	.total-price{
+		float: right;
+		margin-right: 20px;
+	}
+}
+
+.readOnly{
+	border:none;
+	cursor:default;
+	margin-top: 5px;
+	padding: 0;
+	&:focus{
+		border:none;
+		box-shadow:none;
+	}
+}

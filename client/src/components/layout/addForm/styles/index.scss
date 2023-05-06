@@ -1,0 +1,38 @@
+//base
+@import '../../../../styles/core/base';
+
+//header
+.add-top-ope{
+	height:50px;
+	line-height: 50px;
+	margin:-20px -20px 20px;
+	padding:0 20px;
+	border-bottom:1px solid #eee;
+	:global(.ope-r){
+		padding-top:9px;
+		span{
+			display: inline-block;
+			vertical-align: middle;
+			margin-top: -5px;
+		}
+	}
+}
+
+@include max-screen-width($screen_narrow){
+	.add-top-ope{
+		height: 50px;
+		:global(.ope-r){
+			padding-top:9px;
+		}
+	}
+}
+
+.continue-new{
+	font-size: 10px;
+}
+
+.scan-tip{
+	font-size:16px;
+	color:#fb982a;
+	margin-top:-8px;
+}

@@ -1,0 +1,5 @@
+
+Upload example:
+```js
+<Upload />
+```

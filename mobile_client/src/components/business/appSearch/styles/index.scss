@@ -1,0 +1,84 @@
+//base
+@import "../../../../styles/base/mobile";
+
+input, textarea {
+  -webkit-user-select: auto;
+  -khtml-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  -o-user-select: auto;
+  user-select: auto;
+  caret-color: #333;
+}
+
+
+.search-bar{
+  width: 100%;
+  padding: px2rem(20px) px2rem(75px) px2rem(20px) px2rem(20px);
+  background: #F2F2F2;
+  position: relative;
+  .search-input{
+    width: 100%;
+    height: px2rem(58px);
+    border-radius: px2rem(30px);
+    padding: 0 px2rem(30px);
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  .search-filter{
+    position: absolute;
+    top: px2rem(32px);
+    right: px2rem(22px)
+  }
+  .search-go-btn {
+    padding: px2rem(8px) px2rem(10px);
+    box-sizing: border-box;
+    background: rgb(43, 146, 98);
+    color: #fff;
+    border-radius: 0 px2rem(30px) px2rem(30px) 0;
+    font-size: px2rem(28px);
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+  }
+  .search-clear{
+    position: absolute;
+    top: px2rem(20px);
+    right: px2rem(80px);
+    display: inline-block;
+    width: px2rem(58px);
+    height: px2rem(58px);
+    padding: px2rem(10px) 0;
+    text-align: center;
+  }
+}
+
+// search suggest list
+.suggest {
+  position: absolute;
+  top: px2rem(85px);
+  left: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, .5);
+  width: 100%;
+  @include box-sizing(border-box);
+  border-bottom: 2px solid darken(#eee, 20%);
+  @include box-shadow(0 3px 3px rgba(0, 0, 0, .2));
+}
+
+.suggest-lst {
+  width: 100%;
+  background: #fff;
+  max-height: px2rem(1014px);
+  overflow-y: auto;
+  li {
+    border-bottom: 1px solid #eee;
+    span {
+      display: block;
+      padding: 10px 15px;
+      color: $gray;
+    }
+  }
+}
+
+

@@ -1,0 +1,157 @@
+@import "../../../../styles/core/base";
+
+.wild-hd{
+   margin-top: 10px;
+}
+.customer-title{
+	width: 200px;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+	background: url("../images/customerB.png");
+	float: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.customer-information{
+	height: 80px;
+	float: left;
+	margin-left: 10px;
+	box-sizing: border-box;
+	color: #333;
+	font-size: 13px;
+	padding: 15px 0;
+	span{
+		margin-bottom: 10px;
+		display: inline-block;
+	}
+	.gray{
+		color: #666;
+	}
+	.red{
+		color: #F55252;
+	}
+}
+.customer-app{
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;
+	position: relative;
+	&:hover .customer-app-big{
+		display: block;
+	}
+	.customer-app-big{
+		display: none;
+		z-index: 999;
+		width: 170px;
+		height: 195px;
+		background-color: #fff;
+		left: 50px;
+		top: 0;
+		position: absolute;
+		box-shadow: 0 0 10px 0 #ccc;
+		p{
+			font-size: 14px;
+			color: #333;
+			text-align: center;
+		}
+	}
+}
+.customer-prod{
+     margin-top: 20px;
+	 padding-bottom: 40px;
+	 border-bottom: 1px solid #e5e5e5;
+}
+.prod-detail-inner{
+    position: relative;
+	transition: all .3s;
+}
+.addCar{
+	position: absolute;
+	bottom: -32px;
+	transition: all .3s;
+	width: 100%;
+	text-align: center;
+	button{
+		border-radius:16px;
+		padding: 0 18px;
+	}
+}
+.prod-detail{
+	width: 95%;
+	margin: 0 5% 0 0;
+	height: 100%;
+	border: 1px solid #e5e5e5;
+	position: relative;
+	overflow: hidden;
+	transition: all .3s;
+	&:hover .addCar{
+		bottom: -20px;
+	}
+	&:hover .prod-detail-inner{
+		-webkit-transform: translate(0,-30px);
+	}
+	img{
+		max-width: 100%;
+		border-bottom: 1px solid #e5e5e5;
+	}
+	.prod-infor{
+		box-sizing: border-box;
+		padding: 5px;
+		p{
+			font-size: 13px;
+			width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			margin-bottom: 5px;
+		}
+		.red{
+			color: #F55252;
+		}
+	}
+}
+.cart-num{
+	color: #ff0000;
+	display: inline-block;
+}
+.go-room{
+	float: right;
+	padding: 20px 0;
+	div{
+		width: 100px;
+		height: 32px;
+		text-align: center;
+		line-height: 32px;
+		background:rgba(45,166,106,1);
+		border-radius:2px;
+		color: #fff;
+	}
+}
+.has-no-data{
+	text-align: center;
+	margin-top: 15%;
+	p{
+		text-align: center;
+		font-size:13px;
+		font-weight:500;
+		color: #333;
+		padding: 10px;
+	}
+}
+.img-box{
+	position:relative;
+	width: 100%;
+	padding-top:100%;
+	text-align: center;
+	overflow: hidden;
+	img{
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform: translate(-50%, -50%);
+	}
+}

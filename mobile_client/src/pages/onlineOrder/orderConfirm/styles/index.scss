@@ -1,0 +1,86 @@
+//base
+@import "../../../../styles/base/mobile";
+input, textarea {
+  -webkit-user-select: auto;
+  -khtml-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  -o-user-select: auto;
+  user-select: auto;
+  caret-color: #333;
+}
+
+:global(.am-picker-col-item){
+  line-height: 1.5;
+  padding: px2rem(10px) 0;
+}
+.main{
+  position: absolute;
+  left:0;
+  right:0;
+  top: px2rem(90px);
+  bottom: px2rem(100px);
+  overflow-y: auto;
+}
+
+.order-detail{
+  font-size: px2rem(28px);
+  color: #333;
+  margin-bottom: px2rem(20px);
+  :global(.am-list-item .am-input-label.am-input-label-5){
+    width: px2rem(140px);
+  }
+  :global(.am-list-item .am-input-control input){
+    font-size: px2rem(28px);
+  }
+  .com-name{
+    font-size: px2rem(28px);
+    font-weight: bold;
+  }
+  .com-mobile{
+    color: #333;
+    font-size: px2rem(24px);
+    font-weight: lighter;
+  }
+  .order-desc{
+    div{
+      display: inline-block;
+    }
+    font-size: px2rem(28px);
+    color: #666;
+    font-weight: lighter;
+    display: inline-block;
+    label{
+      width: px2rem(150px);
+      display: inline-block;
+    }
+  }
+  .order-content{
+    color: #333;
+  }
+}
+
+.cart-bottom{
+  height: px2rem(100px);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  font-size: px2rem(28px);
+  color: #333;
+  .total{
+    float: left;
+    padding: px2rem(30px) px2rem(20px);
+    .red{
+      color: #FF6060;
+    }
+  }
+  .submit-btn{
+    font-size: px2rem(32px);
+    color: #fff;
+    background: #2DA66A;
+    padding: px2rem(28px) px2rem(46px) px2rem(27px) px2rem(46px);
+    float: right;
+  }
+}

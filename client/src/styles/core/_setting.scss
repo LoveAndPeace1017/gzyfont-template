@@ -1,0 +1,59 @@
+@charset "UTF-8";
+//-----------------------------------------------------	
+//@name    variable
+//@desc    define base variable
+//@author  guozd
+//@date    2015-07-21
+//-----------------------------------------------------	
+
+
+// color
+$red:            #e53e3e !default;
+$blue:           #0066dd !default;
+$black:      	 #000 !default;
+$orange:         #f9b03e !default;
+$orangeDarker:   #e7652b !default;
+$green:          #2b9262 !default;
+$gray:           #999 !default;
+$grayDark:       #222 !default;
+$grayDarker:     #222 !default;
+$grayLight:      #ccc !default;
+$white:          #fff !default;
+$borderColor:    #d2d2d2 !default;             //页面大部分模块框架边框颜色
+$inpBorderColor: #d9d9d9 #a7ceec !default;     //页面输入框边框正常颜色和获取焦点后颜色,通过nth($inpBorderColor,1)、nth($inpBorderColor,2)分别读取
+
+$primaryColor:     #2b9262;
+$subColor:         #2b9262;
+$iconColor:        #222;
+$linkColor:        #0066dd;
+$linkHoverColor:   #2b9262;
+$bgColor:          #f0f0f0;
+$placeholderColor: #b0b0b0;
+
+
+// font family
+$baseFontSize:   16px !default;
+$baseLineHeight: 1.5 !default;
+$fontYaHei:      "\5FAE\8F6F\96C5\9ED1", Arial, sans-serif !default;
+$fontSimsun:     "\5B8B\4F53", Arial, sans-serif !default;
+$fontArial:      Arial, sans-serif !default;
+
+
+// font size
+$f12: $baseFontSize * .75;
+$f13: 13px;
+$f14: $baseFontSize * .875;
+$f16: $baseFontSize * 1;
+$f18: $baseFontSize * 1.125;
+$f20: $baseFontSize * 1.25;
+$f24: $baseFontSize * 1.5;
+$f30: $baseFontSize * 1.875;
+$f36: $baseFontSize * 2.25;
+$f42: $baseFontSize * 2.625;
+$f48: $baseFontSize * 3;
+
+//base width
+$baseWidth: 1270px !default;        //宽屏宽度
+$baseNarrowWidth: 990px !default;   //窄屏宽度
+$baseSpaWidth: 1070px !default;     //没有左右侧边栏，中间的宽度
+$screen_narrow: 1367px !default;

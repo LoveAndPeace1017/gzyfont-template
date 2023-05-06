@@ -1,0 +1,16 @@
+@import "../../../../styles/core/base";
+
+//info
+.tip{
+	i{
+		margin-right:5px;
+		font-size:16px;
+	}
+}
+.tip-info{
+	display: inline-block;
+	vertical-align: middle;
+	span{
+		color:#499fff;
+	}
+}

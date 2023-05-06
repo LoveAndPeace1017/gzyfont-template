@@ -1,0 +1,149 @@
+//core
+@import '../core/base';
+
+//pager
+
+html,
+body{
+  height: 100%;
+  background: #EAFAF2;
+}
+
+
+.lf-container{
+  padding: 0 20px;
+  .logo{
+    margin-top: 17px;
+    img{
+      width: 154px;
+      height: 30px;
+    }
+  }
+
+  .header{
+    text-align: center;
+    margin: 50px 0 30px;
+    img{
+      width: 23px;
+      height: 28px;
+      display: inline-block;
+      margin: -7px 15px 0 0;
+    }
+    h2{
+      font-size: 24px;
+      font-weight: 500;
+      color: #333;
+      line-height: 24px;
+      display: inline-block;
+    }
+  }
+
+  .search{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 100%;
+    input{
+      width: 100%;
+      box-sizing: border-box;
+      height: 40px;
+      background: #fff;
+      border-radius: 20px;
+      padding: 0 0 0 20px;
+      outline: none;
+      border: 1px solid #2DA66A;
+    }
+    .search{
+      position: absolute;
+      top: 1px;
+      right: 0;
+      width: 80px;
+      height: 40px;
+      background: #2DA66A;
+      border-radius: 20px;
+      outline: none;
+      border: none;
+      color: #fff;
+      font-size: 14px;
+    }
+  }
+  .suggest-ul{
+     padding: 10px;
+     background: #fff;
+     border-radius: 6px;
+     width: 312px;
+     position: absolute;
+     box-shadow: 1px 2px 1px #d9d9d9;
+     top: 50px;
+     z-index: 99999;
+     li{
+       margin: 10px 4px;
+     }
+  }
+
+  .search-group{
+    position: relative;
+    .search-group-hd{
+      font-size: 12px;
+      font-weight: 500;
+      color: #333;
+      line-height: 12px;
+      margin-top: 20px;
+    }
+  }
+
+  .search-group-bd{
+    margin: 12px 0 0 0;
+    .search-group-item{
+      padding: 6px 15px;
+      background: #FFFFFF;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #333;
+      line-height: 16px;
+      margin: 0 12px 10px 0;
+      display: inline-block;
+    }
+  }
+
+  .module{
+    width: 100%;
+    box-sizing: border-box;
+    visibility:hidden;
+    padding: 30px 16px;
+    background: #E1FCEE;
+    border-radius: 8px;
+    border: 1px solid #2DA66A;
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    .name{
+      color: #2DA66A;
+    }
+    .belong{
+      color: #EABA66;
+    }
+    .type{
+      color: #333;
+    }
+  }
+
+  .footer{
+    margin-top: 100px;
+    text-align: center;
+    .v-sep {
+      color: #ced3d9;
+      margin: 0 5px;
+    }
+    span{
+      color: #666;
+    }
+    .footer-copyright{
+      text-align: center;
+      padding: 5px 0 8px 0;
+    }
+  }
+}
+

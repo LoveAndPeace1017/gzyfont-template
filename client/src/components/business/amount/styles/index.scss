@@ -1,0 +1,20 @@
+@import "../../../../styles/core/base";
+
+.amount{
+	float:left;
+	line-height: 32px;
+	font-size:14px;
+	color:$grayDarker;
+	.amount-item{
+		margin-right:10px;
+	}
+	.amount-txt{
+		color:$red;
+	}
+}
+
+@include max-screen-width($screen_narrow){
+	.amount{
+		line-height: 28px;
+	}
+}

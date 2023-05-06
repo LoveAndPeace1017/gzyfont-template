@@ -1,0 +1,32 @@
+@import "../../../../styles/core/base";
+
+.dropdown-action{
+	border-top:1px solid #ccc;
+	padding: 5px 12px;
+	line-height: 22px;
+	a{
+		color: $linkColor;
+	}
+}
+
+.abiz-cate{
+	height:400px;
+	overflow-y:auto;
+	li{
+		position:relative;
+		span:global(.ant-tree-switcher){
+			position:absolute;
+			width:100%;
+			text-align:left;
+			&:global(.ant-tree-switcher-noop){
+				display:none;
+			}
+		}
+		:global(.ant-tree-node-content-wrapper){
+			padding-left:20px;
+			&:global(.ant-tree-node-content-wrapper-normal){
+				padding:0 5px;
+			}
+		}
+	}
+}

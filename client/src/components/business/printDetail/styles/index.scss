@@ -1,0 +1,54 @@
+@import "../../../../styles/core/base";
+
+.ope-bar{
+	padding:16px;
+	border-bottom:1px solid #eee;
+	ul{
+		float:left;
+	}
+	li{
+		float:left;
+		margin-right:40px;
+		height: 18px;
+		line-height: 18px;
+		cursor:pointer;
+		i{
+			margin-right:11px;
+			font-size:14px;
+			color:$iconColor;
+		}
+		&.disabled{
+			color:#ccc;
+			a{
+				color:#ccc;
+				cursor: not-allowed;
+			}
+			i{
+				color: #ccc;
+			}
+		}
+		a[disabled]{
+			cursor: not-allowed;
+			i{
+				color: #ccc;
+			}
+		}
+	}
+	.page-switch{
+		float:right;
+		.prev,
+		.next{
+			display:inline-block;
+			width:24px;
+			height:24px;
+			line-height: 21px;
+			text-align:center;
+			border:1px solid #ddd;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			margin-left:10px;
+			cursor:pointer;
+		}
+	}
+}

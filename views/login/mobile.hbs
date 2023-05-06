@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="/style/pages/invite_register.css">
+
+<div class="container">
+  
+  <form action="/register?userIdEnc={{form.userIdEnc}}&type={{form.type}}" method="post" id="register" style="position:relative;">
+    <ul class="fieldset">
+      <li class="field">
+        <div class="field-in">
+          <div class="field-hd"><span class="required">*</span> 手机号</div>
+          <div class="field-bd">
+            <input class="txt" type="text" id="mobilePhone" name="mobilePhone" placeholder="手机号即为登录账号" maxlength="11" value="{{form.mobilePhone}}"/>
+            <span class="instant"></span>
+          </div>
+        </div>
+      </li>
+      <li class="field field-pwd">
+        <div class="field-hd"><span class="required">*</span> 密码</div>
+        <div class="field-bd">
+          <input class="txt" type="password" name="logonPassword" id="password" value="" placeholder="6-20位字母或数字" autocomplete="on"/>
+          <i class="iconfont icon-pwd-hide"></i>
+          <i class="iconfont icon-pwd-show" style="display: none;"></i>
+          <span class="instant"></span>
+        </div>
+      </li>
+    </ul>
+    <input type="hidden" name="url" value="{{form.url}}">
+    <input type="hidden" name="comName" value="{{form.comName}}">
+    <input type="hidden" name="userIdEnc" value="{{form.userIdEnc}}">
+    <input type="hidden" name="type" value="{{form.type}}">
+    <input type="hidden" name="identity" value="{{form.identity}}">
+    <input type="hidden" name="gender" value="{{form.gender}}">
+    <div class="field-ope">
+      <button type="submit" class="btn-register js-register">登录</button>
+    </div>
+  </form>
+  <p><a href="{{form.referer}}">注册</a></p>
+</div>
+
+<div class="field-tip" style="display: none;"></div>
+
+<script>
+  var pageError = '{{form.error}}';
+</script>
+<script src="/script/lib/jquery-3.3.1.min.js"></script>
+<script src="/script/lib/jquery.cookie.js"></script>
+<script src="/script/lib/jquery.validate.min.js"></script>
+<script src="/script/lib/jquery.validate.extend.js"></script>
+<script src="/script/lib/imagevalidate.js"></script>
+<script src="/script/lib/miccn.validatecode-2.0.js"></script>
+<script src="/script/register/inviteRegister.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

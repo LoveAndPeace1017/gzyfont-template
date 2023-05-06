@@ -1,0 +1,29 @@
+@import "../../../../styles/core/base";
+
+.invite-suppliers-select{
+	float:left;
+	width:200px;
+	margin-right:-220px;
+}
+.invite-suppliers-list{
+	float:left;
+	width:100%;
+	padding-left:220px;
+}
+.invite-suppliers-inner{
+	//background:#ffab33;
+}
+.btn-remove{
+	float:right;
+	padding:0 5px;
+}
+
+.prod-list-tips{
+	text-align: right;
+	padding:0 0 10px;
+	strong{
+		margin: 0 5px;
+		color:#ff0000;
+		font-weight: normal;
+	}
+}

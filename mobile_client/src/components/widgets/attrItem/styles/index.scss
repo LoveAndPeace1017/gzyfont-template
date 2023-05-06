@@ -1,0 +1,19 @@
+//core
+@import "../../../../styles/base/mobile";
+
+.attr-item{
+	padding:px2rem(12px) 0;
+	font-size: px2rem(24px);
+}
+.attr-item-label{
+	display:inline-block;
+	vertical-align: top;
+	width:30%;
+	color:#666;
+}
+.attr-item-content{
+	display:inline-block;
+	width:70%;
+}
+
+

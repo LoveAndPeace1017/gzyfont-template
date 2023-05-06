@@ -1,0 +1,81 @@
+//base
+@import "../../../../styles/base/mobile";
+
+input, textarea {
+  -webkit-user-select: auto;
+  -khtml-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  -o-user-select: auto;
+  user-select: auto;
+  caret-color: #333;
+}
+.container{
+  background-color: #f2f2f2;
+}
+.company-infor{
+  padding: px2rem(10px);
+  height: px2rem(232px);
+  background:url("../../../../images/topback.png") top center no-repeat;
+  background-size: 100% 100%;
+  .company-menu{
+    width: 98%;
+    margin-left: 1%;
+    height: calc(100vh - 146px);
+    //line-height: px2rem(68px);
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: px2rem(10px);
+    margin-top: px2rem(40px);
+    padding: px2rem(20px);
+    li{
+      line-height: px2rem(26px);
+      margin: px2rem(30px) 0;
+      overflow:hidden;
+      span{
+        float:left;
+        font-size: px2rem(26px);
+        width:px2rem(140px);
+        color: #999999;
+      }
+      .detail-something{
+        float:left;
+        width: 100%;
+        margin-left:px2rem(-140px);
+        padding-left:px2rem(140px);
+        font-size: px2rem(26px);
+        position: relative;
+      }
+      .call-phone{
+        float:right;
+        width:px2rem(100px);
+        a{
+          display:block;
+          text-align: center;
+          background:rgba(255,255,255,1);
+          line-height: px2rem(12px);
+          border:1px solid rgba(211,211,211,1);
+          border-radius:px2rem(27px);
+          margin-top: px2rem(10px);
+        }
+      }
+    }
+  }
+}
+.company-base-infor{
+  font-size: px2rem(36px);
+  color: #fff;
+  padding: px2rem(10px) px2rem(10px) px2rem(10px) px2rem(20px);
+  font-weight: bold;
+  p{
+    font-size: px2rem(28px);
+    color: #fff;
+  }
+  position: relative;
+  img{
+    position: absolute;
+    right: 0;
+    top: 20px;
+  }
+}
+

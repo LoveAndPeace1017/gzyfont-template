@@ -1,0 +1,57 @@
+@import "../../../../styles/core/base";
+
+
+.ant-table td { white-space: nowrap; }
+
+.quote-ope{
+	margin-bottom:10px;
+}
+
+.compare-wrap{
+	margin: -24px;
+}
+.ope-bar{
+	padding:20px 30px;
+	background:#fafafa;
+	border-bottom:2px solid #dddfe3;
+	.btn-export{
+		margin-right:20px;
+	}
+}
+
+.compare-content{
+	//padding:20px 50px;
+	/*overflow-y:auto;
+	max-height: 400px;*/
+}
+.compare-inner{
+	//border:5px solid #dadada;
+	padding:20px 30px;
+}
+.compare-hd{
+	h3{
+		font-size:26px;
+		text-align: center;
+	}
+}
+.sub-title{
+	span{
+		margin-right:20px;
+	}
+}
+.compare-bd{
+	margin-top:10px;
+}
+
+.cp-tb-tit{
+	text-align:center;
+}
+.cp-tb-ope{
+	margin-top:5px;
+	button{
+		margin:0 3px;
+	}
+}
+.attach-item{
+	margin-bottom:5px;
+}

@@ -1,0 +1,41 @@
+@import '../../../../styles/core/base';
+
+.txt{
+	line-height: 22px;
+	a{
+		color: $linkColor;
+	}
+}
+
+.btn-copy-link{
+	position: absolute;
+	left:100%;
+	top:50%;
+	line-height: 32px;
+	margin:-16px 0 0 10px;
+	white-space: nowrap;
+	color:$linkColor;
+
+}
+
+.qrcode{
+	width: 142px;
+	>div{
+		>div{
+			margin:0;
+		}
+	}
+}
+
+.qrcode-ope{
+	font-size: 12px;
+	a{
+		color:$linkColor;
+	}
+	.download{
+		float:left;
+	}
+	.copy{
+		float: right;
+	}
+}

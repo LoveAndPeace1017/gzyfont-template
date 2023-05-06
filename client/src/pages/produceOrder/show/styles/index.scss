@@ -1,0 +1,230 @@
+@import "../../../../styles/core/base";
+
+.dropdown-action {
+  border-top: 1px solid #ccc;
+  padding: 5px 12px;
+  line-height: 22px;
+}
+
+.prod-name {
+  display: inline-block;
+  color: #333;
+  font-size: 16px;
+}
+
+div.price-info {
+  background: #f2f2f2;
+  margin-left: -5px;
+  padding-left: 10px;
+}
+
+.price-item {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.price-attr-key {
+  color: #333;
+  font-size: 15px;
+}
+
+.attr-key {
+  float: right;
+  color: $grayDark;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.attr-value {
+  float: left;
+  color: $grayDarker;
+  padding-top: 10px;
+  padding-left: 3px;
+  padding-bottom: 10px;
+}
+
+.quantity {
+  color: #ff6060;
+  font-size: 16px;
+}
+
+.remark{
+  color:#999;
+  @include text-clip(calc(100% - 160px));
+}
+
+.status{
+  float: left;
+  line-height: 24px;
+  margin:0 20px 0 -25px;
+}
+
+.content-fd{
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+:global(.ant-tabs-nav){
+  :global(.ant-tabs-tab){
+    .tab-tit{
+      i{
+        margin:-3px 0 0 5px;
+        font-size:16px;
+        vertical-align: middle;
+        display: inline-block;
+        width: 16px;
+      }
+    }
+  }
+}
+
+.express-wrap{
+  max-height: 264px;
+  padding:20px 20px;
+  margin:-10px -20px;
+  overflow-y:auto;
+}
+.express-lst{
+  width:410px;
+  margin:0 auto;
+  li{
+    border-bottom:1px solid #E5E5E5;
+
+    height: 53px;
+    line-height: 52px;
+    &:nth-last-of-type(1){
+      border-bottom:none;
+    }
+  }
+  .name{
+    float:left;
+    @include text-clip(140px);
+  }
+  .bill-no{
+    float:left;
+    margin-left:15px;
+    @include text-clip(190px);
+  }
+  .btn{
+    float:right;
+    height: 24px;
+    line-height: 22px;
+    width: 56px;
+    padding:0;
+    border: 1px solid $primaryColor;
+    color: $primaryColor;
+    margin: 14px 0 0;
+    border-radius:2px;
+    text-align:center;
+  }
+}
+
+.status-img{
+  position: absolute;
+  display: inline-block;
+  right: 10px;
+  top: 9px;
+}
+
+.status-btn{
+  position: absolute;
+  display: inline-block;
+  right: 10px;
+  top: 14px;
+}
+
+.btn{
+  font-size: 12px;
+  color: #fff;
+}
+
+.orange{
+  background: #FF6D1E;
+  border-color: #FF6D1E;
+  color: #fff;
+  &:hover{
+    color: #fff;
+    background: #FF823E;
+    border-color: #FF823E;
+  }
+}
+
+.green{
+  background: #2DA66A;
+  border-color: #2DA66A;
+  color: #fff;
+  &:hover{
+    color: #fff;
+    background: #33BC78;
+    border-color: #33BC78;
+  }
+}
+
+.grey{
+  background: #9C9C9C;
+  border-color: #9C9C9C;
+  color: #fff;
+  &:hover{
+    color: #fff;
+    background: #B1B1B1;
+    border-color: #B1B1B1;
+  }
+}
+
+.white{
+  background: #EEEEEE;
+  border-color: #EEEEEE;
+  color: #000;
+  &:hover{
+    color: #000;
+    background: #E2E2E2;
+    border-color: #E2E2E2;
+  }
+}
+
+.ml10{
+  margin-left: 10px;
+}
+
+.abstract-drop-menu{
+  :global(.ant-dropdown-menu-item){
+    cursor:auto;
+    &:hover{
+      background:none;
+    }
+  }
+}
+
+.abstract-drop{
+  padding:12px 0 12px 10px;
+  font-size: 13px;
+  .tit{
+    line-height:30px;
+    color: #ccc;
+  }
+  ul{
+    max-height: 300px;
+    overflow-y: auto;
+    li{
+      line-height: 30px;
+    }
+    .prod-tit{
+      width: 138px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      float: left;
+    }
+    .prod-desc{
+      width: 98px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      float: left;
+    }
+  }
+}

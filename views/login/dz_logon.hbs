@@ -1,0 +1,93 @@
+<link rel="stylesheet" href="/style/pages/login.css">
+<div class="grid-wide header">
+  <div class="logo">
+      <img src="/images/server/dz/{{logo}}" alt="百卓优采-云进销存软件" />
+    <h1>登录</h1>
+  </div>
+  <div class="login">需要帮助？<a target="_blank" ga-data="1001" href="https://kefu.trademessenger.com/chat?domain=abiz&businessType=ayfvNxUccAs&multiWindow=true">点击咨询</a></div>
+</div>
+<div class="login-container" style="background: url(/images/server/dz/{{banner}}) top center no-repeat">
+  <div class="login-wrap grid">
+        <div class="login-box">
+            <div class="login-box-hd">
+                <div class="login-tab">
+                    <ul class="clearfix js-login-tab">
+                        <li><span ga-data="1002">扫码登录</span></li>
+                        <li class="cur"><span ga-data="1003">账户登录</span></li>
+                    </ul>
+                </div>
+            </div>
+
+      <!--扫码登录 S-->
+      <div class="login-box-bd qrcode-wrap"  style="display:none;">
+        <div class="qrcode">
+          <div id="qrcode" style="width:145px;height:145px;"> </div>
+          <div class="qrcode-ope js-refresh-area"> <!--显示添加 qrcode-ope-show-->
+            <p>二维码已失效</p>
+            <a href="javacript:void(0);" class="qrcode-refresh js-qrcode-refresh" ga-data="1007">刷新</a>
+            <img src="/images/server/common/loading.gif" alt="努力加载中..." style="display: none;" />
+          </div>
+        </div>
+        <p class="txt">打开百卓优采App，扫码登录</p>
+      </div>
+      <!--扫码登录 E-->
+
+      <!--账户登录 S-->
+      <form action="/login/dz" method="post" id="loginForm">
+      <div class="login-box-bd">
+          <div class="login-validate error js-err-msg" {{#if form.error}}style="display: block;"{{else}}style="display: none;"{{/if}}>
+            <i class="iconfont icon-close-circle-fill"></i><span>{{form.error}}</span>
+          </div>
+
+        <ul class="input-wrap">
+          <li>
+            <i class="iconfont icon-phone-stroke"></i>
+            <input type="text" class="login-inp" name="logonUserName" id="logonUserName" placeholder="手机号码/用户名/邮箱" maxlength="20"/>
+          </li>
+          <li>
+            <i class="iconfont icon-lock"></i>
+            <input type="password" class="login-inp" placeholder="密码" name="logonPassword"  id="logonPassword" maxlength="20"/>
+            <i class="iconfont icon-pwd-hide" id="showPsw"></i>
+          </li>
+          <li class="validate-item" style="display: none" id="validateLi">
+            <i class="iconfont icon-safe"></i>
+            <input type="text" class="login-inp" placeholder="验证码" name="validateCode"  id="validateCode" maxlength="4"/>
+            <div class="valid-img" id="validImage"></div>
+          </li>
+        </ul>
+        <div class="login-ope">
+            <button class="login-btn btn-disabled" type="submit" disabled="true" id="loginBtn" ga-data="1004">登录</button>
+        </div>
+        <div class="login-extra clearfix">
+          <a href="http://www.abiz.com/reset_passwords/new" class="forget-pwd" ga-data="1005">忘记密码</a>
+        </div>
+      </div>
+        <input type="hidden" id="baseNextPage" name="baseNextPage" value="{{form.baseNextPage}}" />
+        <input type="hidden"  name="pn" value="jxc" />
+        <input type="hidden" name="dzCompanyName" value="{{companyName}}" />
+      </form>
+      <!--账户登录 E-->
+
+    </div>
+  </div>
+</div>
+
+<div class="footer-wrap">
+    <div class="grid-wide footer">
+        <div class="footer-copyright">
+            <span>Copyright © 2021 <a target="_blank" href="//www.abiz.com">百卓网络科技有限公司</a>  版权所有 </span>
+            <span>备案证书号：<a target="_blank" href="http://jscainfo.miitbeian.gov.cn/publish/query/indexFirst.action">苏ICP备17075644号</a></span>
+        </div>
+        <div class="footer-police">
+            <span><img src="/images/server/common/icon_police.png" alt="网警图片"> 苏公网备 32011202000136</span>
+        </div>
+    </div>
+</div>
+
+<script src="//cd.abiz.com/script/sso_source_V1.0.1.js"></script>
+<script src="/script/lib/jquery-3.3.1.min.js"></script>
+<script src="/script/lib/jquery.cookie.js"></script>
+<script src="/script/lib/jquery.validate.min.js"></script>
+<script src="/script/lib/jquery.qrcode.min.js"></script>
+<script src="/script/logon/dz_logon.js"></script>
+<!--<script src="//cd.abiz.com/script/ssoattempt.js"></script>-->

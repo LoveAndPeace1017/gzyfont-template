@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<!--<link rel="manifest" href="/public/manifest.json" />-->
+		<title><%=htmlWebpackPlugin.options.title%></title>
+		<style>
+			body{
+				overflow:hidden;
+			}
+			.init-loading{
+				position:absolute;
+				top:0;
+				left:0;
+				right:0;
+				bottom:0;
+				background:#fff;
+				z-index:10000;
+			}
+			.init-loading span{
+				position:absolute;
+				top:50%;
+				left:50%;
+				font-size:12px;
+				color:#333;
+				transform:translate(-50%, -50%);
+				text-align:center;
+			}
+		</style>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TQQ44QL');</script>
+		<!-- End Google Tag Manager -->
+	</head>
+
+	<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQQ44QL"
+										height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+		<noscript>You need to enable JavaScript to run this app.</noscript>
+		<div id="root"></div>
+		<div id="root1"></div>
+		<div id="loading" class="init-loading">
+			<span><img src="/images/server/loading.gif" width="160"><p>拼命加载中...</p></span>
+		</div>
+	    <script src="/script/lib/html-docx.min.js"></script>
+	    <script src="/script/lib/generate.js"></script>
+			<script src="/script/lib/scanalytics.js"></script>
+	</body>
+</html>

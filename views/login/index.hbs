@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="/style/pages/login.css">
+<div class="grid-wide header">
+  <div class="logo">
+    <img src="/images/server/common/logo_new.png" alt="百卓优采-云进销存软件" />
+    <h1>登录</h1>
+  </div>
+  <div class="login">如遇问题，请联系客服：400-6979890（转1）或18402578025（微信同号）<a target="_blank" href="https://kefu.trademessenger.com/chat?domain=abiz&businessType=ayfvNxUccAs&multiWindow=true" ga-data="1001">在线客服</a></div>
+</div>
+<div class="login-container">
+  <div class="login-wrap grid">
+    <div class="login-box">
+      <div class="login-box-hd">
+        <div class="login-tab">
+          <ul class="clearfix js-login-tab">
+            <li><span ga-data="1002">扫码登录</span></li>
+            <li class="cur"><span ga-data="1003">账户登录</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--扫码登录 S-->
+      <div class="login-box-bd qrcode-wrap"  style="display:none;">
+        <div class="qrcode">
+          <div id="qrcode" style="width:145px;height:145px;"> </div>
+          <div class="qrcode-ope js-refresh-area"> <!--显示添加 qrcode-ope-show-->
+            <p>二维码已失效</p>
+            <a href="javacript:void(0);" class="qrcode-refresh js-qrcode-refresh" ga-data="1007">刷新</a>
+            <img src="/images/server/common/loading.gif" alt="努力加载中..." style="display: none;" />
+          </div>
+        </div>
+        <p class="txt">打开百卓优采App，扫码登录</p>
+      </div>
+      <!--扫码登录 E-->
+
+      <!--账户登录 S-->
+      <form action="/login" method="post" id="loginForm">
+      <div class="login-box-bd">
+        <div class="login-box-tit">可直接使用百卓采购网/中国制造网账号登录</div>
+
+          <div class="login-validate error js-err-msg" {{#if form.error}}style="display: block;"{{else}}style="display: none;"{{/if}}>
+            <i class="iconfont icon-close-circle-fill"></i><span>{{form.error}}</span>
+          </div>
+
+        <ul class="input-wrap">
+          <li>
+            <i class="iconfont icon-phone-stroke"></i>
+            <input type="text" class="login-inp" name="logonUserName" id="logonUserName" placeholder="手机号码/用户名/邮箱" maxlength="30"/>
+          </li>
+          <li>
+            <i class="iconfont icon-lock"></i>
+            <input type="password" class="login-inp" placeholder="密码" name="logonPassword"  id="logonPassword" maxlength="20"/>
+            <i class="iconfont icon-pwd-hide" id="showPsw"></i>
+          </li>
+        </ul>
+        <div class="login-ope">
+            <button class="login-btn btn-disabled" type="submit" disabled="true" id="loginBtn" ga-data="1004">登录</button>
+        </div>
+        <div class="login-extra clearfix">
+          <a href="http://www.abiz.com/reset_passwords/new" class="forget-pwd" ga-data="1005">忘记密码</a>
+          <a href="/register?source={{source}}" class="go-reg js-to-reg" ga-data="1006">立即注册></a>
+        </div>
+      </div>
+        <input type="hidden" id="baseNextPage" name="baseNextPage" value="{{form.baseNextPage}}" />
+      </form>
+      <!--账户登录 E-->
+
+    </div>
+  </div>
+</div>
+{{> footer }}
+<script src="//cd.abiz.com/script/sso_source_V1.0.1.js"></script>
+<script src="/script/lib/jquery-3.3.1.min.js"></script>
+<script src="/script/lib/jquery.cookie.js"></script>
+<script src="/script/lib/jquery.validate.min.js"></script>
+<script src="/script/lib/jquery.qrcode.min.js"></script>
+<script src="/script/logon/index.js"></script>

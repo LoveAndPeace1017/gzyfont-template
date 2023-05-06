@@ -1,0 +1,63 @@
+@import "../../../../../styles/core/base";
+
+.dropdown-action{
+	border-top:1px solid #ccc;
+	padding: 5px 12px;
+	line-height: 22px;
+}
+
+.input-prodNo{
+	display:inline-block;
+	width:100%;
+	padding-right:130px;
+	margin-right:-130px;
+}
+
+.ck-prodNo{
+	display:inline-block;
+	margin-left:12px;
+}
+
+.clv-mg{
+	margin-left:25px;
+	color:$linkColor;
+}
+.input-item-discount{
+	display:inline-block;
+	width:calc(100% - 40px);
+	margin:0;
+	vertical-align: middle;
+	input{
+		text-align:right;
+	}
+}
+.percent{
+	display:inline-block;
+	width:30px;
+	margin-left:10px;
+}
+
+.upload-list{
+	>span{
+		float:left;
+		width:112px;
+		height:112px;
+		overflow:hidden;
+	}
+}
+
+.ant-radio-wrapper{
+	margin-right: 50px;
+}
+.field-val{
+	margin-left: 10px;
+}
+
+.open-applet{
+	color:$linkColor;
+}
+
+.open-applet-txt{
+	color:#333;
+	margin-left:-102px;
+}

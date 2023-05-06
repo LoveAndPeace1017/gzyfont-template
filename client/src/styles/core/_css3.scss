@@ -1,0 +1,170 @@
+//-----------------------------------------------------	
+//@name    css3
+//@desc    define css3 mixer
+//@author  guozd
+//@date    2015-07-21
+//-----------------------------------------------------	
+
+
+//border-radius,  rad must be set
+@mixin border-radius($rad){
+	-webkit-border-radius: $rad;
+	-moz-border-radius: $rad;
+	border-radius: $rad;
+}
+
+//box-shadow,  shadow must be set
+@mixin box-shadow($shadow...){
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+
+
+//transition
+@mixin transition($property: all,$duration: .2s,$easing: ease,$delay: 0s){
+	transition:$property $duration $easing $delay;
+	-webkit-transition:$property $duration $easing $delay;
+	-moz-transition:$property $duration $easing $delay;
+	-o-transition:$property $duration $easing $delay;
+	-ms-transition:$property $duration $easing $delay;
+}
+
+//transform
+@mixin transform($translate:0,$rotate:0,$scale:0,$skew:0){
+	-webkit-transform:translate($translate) rotate($rotate) scale($scale) skew($skew);
+	-moz-transform:translate($translate) rotate($rotate) scale($scale) skew($skew);
+	-o-transform:translate($translate) rotate($rotate) scale($scale) skew($skew);
+	-ms-transform:translate($translate) rotate($rotate) scale($scale) skew($skew);
+	transform:translate($translate) rotate($rotate) scale($scale) skew($skew);
+}
+
+//translate
+@mixin translate($value){
+	-webkit-transform:translate($value);
+	-moz-transform:translate($value);
+	-o-transform:translate($value);
+	-ms-transform:translate($value);
+	transform:translate($value);
+}
+
+//translateX
+@mixin translateX($value){
+	-webkit-transform:translateX($value);
+	-moz-transform:translateX($value);
+	-o-transform:translateX($value);
+	-ms-transform:translateX($value);
+	transform:translateX($value);
+}
+
+//translateY
+@mixin translateY($value){
+	-webkit-transform:translateY($value);
+	-moz-transform:translateY($value);
+	-o-transform:translateY($value);
+	-ms-transform:translateY($value);
+	transform:translateY($value);
+}
+
+//translate3d
+@mixin translate3d($valueX:0,$valueY:0,$valueZ:0){
+	-webkit-transform:translate3D($value,$valueY,$valueZ);
+	-moz-transform:translate3D($value,$valueY,$valueZ);
+	-o-transform:translate3D($value,$valueY,$valueZ);
+	-ms-transform:translate3D($value,$valueY,$valueZ);
+	transform:translate3D($value,$valueY,$valueZ);
+}
+
+//rotate
+@mixin rotate($value){
+	-webkit-transform:rotate($value);
+	-moz-transform:rotate($value);
+	-o-transform:rotate($value);
+	-ms-transform:rotate($value);
+	transform:rotate($value);
+}
+
+//rotateX
+@mixin rotateX($value){
+	-webkit-transform:rotateX($value);
+	-moz-transform:rotateX($value);
+	-o-transform:rotateX($value);
+	-ms-transform:rotateX($value);
+	transform:rotateX($value);
+}
+
+//rotateY
+@mixin rotateY($value){
+	-webkit-transform:rotateY($value);
+	-moz-transform:rotateY($value);
+	-o-transform:rotateY($value);
+	-ms-transform:rotateY($value);
+	transform:rotateY($value);
+}
+
+//scale
+@mixin scale($value){
+	-webkit-transform:scale($value);
+	-moz-transform:scale($value);
+	-o-transform:scale($value);
+	-ms-transform:scale($value);
+	transform:scale($value);
+}
+
+//scaleX
+@mixin scaleX($value){
+	-webkit-transform:scaleX($value);
+	-moz-transform:scaleX($value);
+	-o-transform:scaleX($value);
+	-ms-transform:scaleX($value);
+	transform:scaleX($value);
+}
+
+//scaleY
+@mixin scaleY($value){
+	-webkit-transform:scaleY($value);
+	-moz-transform:scaleY($value);
+	-o-transform:scaleY($value);
+	-ms-transform:scaleY($value);
+	transform:scaleY($value);
+}
+
+//skew
+@mixin skew($value){
+	-webkit-transform:skew($value);
+	-moz-transform:skew($value);
+	-o-transform:skew($value);
+	-ms-transform:skew($value);
+	transform:skew($value);
+}
+
+//skewX
+@mixin skewX($value){
+	-webkit-transform:skewX($value);
+	-moz-transform:skewX($value);
+	-o-transform:skewX($value);
+	-ms-transform:skewX($value);
+	transform:skewX($value);
+}
+
+//skewY
+@mixin skewY($value){
+	-webkit-transform:skewY($value);
+	-moz-transform:skewY($value);
+	-o-transform:skewY($value);
+	-ms-transform:skewY($value);
+	transform:skewY($value);
+}
+
+//Media Queries
+@mixin max-screen-width($res){
+	@media screen and (max-width:$res) {
+		@content;
+	}
+}
+
+@mixin min-screen-width($res){
+	@media screen and (min-width:$res) {
+		@content;
+	}
+}

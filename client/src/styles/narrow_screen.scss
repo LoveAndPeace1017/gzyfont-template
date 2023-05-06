@@ -1,0 +1,112 @@
+//base
+@import '../styles/core/base';
+
+@include max-screen-width($screen_narrow){
+
+	//ant-table
+	:global(.ant-table-thead)
+	{
+		>tr{
+			>th{
+				line-height: 20px;
+				padding: 10px 5px;
+			}
+		}
+	}
+	:global(.ant-table-tbody){
+		>tr{
+			>td{
+				line-height: 20px;
+				padding: 8px 10px;
+			}
+		}
+	}
+
+	:global(.ant-table-footer){
+		padding: 8px 10px;
+	}
+
+
+	//ant-form
+	:global(.ant-form-item){
+		margin-bottom:20px;
+	}
+
+	:global(.ant-form-item-with-help){
+		margin-bottom:3px;
+	}
+
+	//ant-pagination
+	:global(.ant-pagination){
+		$paginationHeight: 28px;
+		height: $paginationHeight;
+		:global(.ant-select-selection--single){
+			height: $paginationHeight;
+		}
+		:global(.ant-select-dropdown-menu-item){
+			line-height: $paginationHeight - 10;
+		}
+		:global(.ant-select-selection__rendered){
+			line-height: $paginationHeight - 2;
+		}
+		:global(.ant-pagination-options-quick-jumper){
+			height:$paginationHeight;
+			line-height: $paginationHeight;
+			input{
+				height:$paginationHeight;
+			}
+		}
+
+		:global(.ant-pagination-item){
+			min-width: $paginationHeight;
+			height:$paginationHeight;
+			line-height: $paginationHeight;
+		}
+
+		:global(.ant-pagination-prev),
+		:global(.ant-pagination-next),
+		:global(.ant-pagination-jump-prev),
+		:global(.ant-pagination-jump-next){
+			min-width: $paginationHeight;
+			height:$paginationHeight;
+			line-height: $paginationHeight;
+		}
+	}
+
+
+
+	:global(.content-fd){
+		padding:12px 0;
+	}
+	:global(.content-bd),
+	:global(.detail-content-bd){
+		padding-bottom:52px;
+			:global(.detail-main-attr) {
+				margin-bottom: -5px;
+				margin-top:10px;
+			}
+	}
+
+	:global(.list-pop){
+		width:1100px;
+		//height:600px;
+		:global(.ant-modal-body){
+			max-height: calc(100vh - 55px - 53px - 10px);
+		}
+	}
+	:global(.list-pop-no-footer){
+		:global(.ant-modal-body){
+			max-height: calc(100vh - 55px - 10px);
+		}
+	}
+	:global(.tb-input-wrap){
+		margin:-10px 0;
+	}
+
+	:global(.list-footer){
+		padding:10px 16px;
+	}
+	:global(.tb-wrap){
+		padding-bottom:48px;
+	}
+}

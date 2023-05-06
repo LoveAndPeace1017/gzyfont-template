@@ -1,0 +1,22 @@
+//-----------------------------------------------------	
+//@name    base mixin
+//@desc    define base mixer
+//@author  guozd
+//@date    2015-07-21
+//-----------------------------------------------------	
+
+
+
+// opacity
+@mixin opacity($opacityValue: .5){
+    opacity: $opacityValue;
+    filter: alpha(opacity = $opacityValue * 100);
+}
+
+// Text clip, width must be set
+@mixin text-clip($width:auto){
+    width: $width;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

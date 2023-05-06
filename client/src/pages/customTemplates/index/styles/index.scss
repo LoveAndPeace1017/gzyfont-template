@@ -1,0 +1,36 @@
+@import "../../../../styles/core/base";
+
+.record-foot{
+  text-align: right;
+  padding: 10px 0;
+}
+
+.btn-lst{
+  margin: 0 5px;
+}
+
+.pic-name{
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.pic-dom,.pic-out{
+  position: relative;
+}
+
+.pic-out{
+  &:hover{
+    .pic-inner{
+      display: block;
+    }
+  }
+}
+
+.pic-inner{
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  background: #d9d9d9;
+  z-index: 999;
+  display: none;
+}

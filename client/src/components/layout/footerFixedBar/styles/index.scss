@@ -1,0 +1,22 @@
+//base
+@import '../../../../styles/core/base';
+
+.footer-fixed-bar{
+	position:fixed;
+	z-index:900;
+	right:22px;
+	left: 188px;
+	bottom:0;
+	background:#fff;
+	text-align:center;
+	box-shadow:0 -5px 10px -5px rgba(0, 0, 0, 0.2);
+	transition: left .2s, padding .2s;
+	&.footer-fixed-bar-collapsed{
+		left: 76px;
+	}
+}
+
+
+
+
+

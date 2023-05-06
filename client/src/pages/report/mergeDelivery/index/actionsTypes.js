@@ -1,0 +1,5 @@
+export const TYPE = 'REPORT_MERGE_DELIVERY';
+//合并送货单
+export const FETCH_MERGE_DELIVERY = 'FETCH_MERGE_DELIVERY';
+
+

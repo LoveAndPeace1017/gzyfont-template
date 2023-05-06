@@ -1,0 +1,8 @@
+//core
+@import '../../../../styles/core/base';
+
+:global(.mrp-detail){
+  :global(.ant-tabs-tabpane){
+    padding: 0!important;
+  }
+}

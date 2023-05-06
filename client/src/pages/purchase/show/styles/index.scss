@@ -1,0 +1,154 @@
+@import "../../../../styles/core/base";
+
+.dropdown-action {
+  border-top: 1px solid #ccc;
+  padding: 5px 12px;
+  line-height: 22px;
+}
+
+.prod-name {
+  display: inline-block;
+  color: #333;
+  font-size: 16px;
+}
+
+div.price-info {
+  background: #f2f2f2;
+  margin-left: -5px;
+  padding-left: 10px;
+}
+
+.price-item {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.price-attr-key {
+  color: #333;
+  font-size: 15px;
+}
+
+.attr-key {
+  float: right;
+  color: $grayDark;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.attr-value {
+  float: left;
+  color: $grayDarker;
+  padding-top: 10px;
+  padding-left: 3px;
+  padding-bottom: 10px;
+}
+
+.quantity {
+  color: #ff6060;
+  font-size: 16px;
+}
+
+.remark{
+  color:#999;
+  @include text-clip(calc(100% - 160px));
+}
+
+.status{
+  float: left;
+  line-height: 24px;
+  margin:0 20px 0 -25px;
+}
+
+.content-fd{
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+:global(.ant-tabs-nav){
+  :global(.ant-tabs-tab){
+    .tab-tit{
+      i{
+        margin:-3px 0 0 5px;
+        font-size:16px;
+        vertical-align: middle;
+        display: inline-block;
+        width: 16px;
+      }
+    }
+  }
+
+}
+
+.status-btn{
+  position: absolute;
+  display: inline-block;
+  right: 10px;
+  top: 14px;
+}
+
+.status-img{
+  position: absolute;
+  display: inline-block;
+  right: 10px;
+  top: 28px;
+}
+
+.approve-btn{
+  background-color: #2DA66A;
+  color: #fff;
+}
+
+.express-wrap{
+  max-height: 264px;
+  padding:20px 20px;
+  margin:-10px -20px;
+  overflow-y:auto;
+}
+.express-lst{
+  width:410px;
+  margin:0 auto;
+  li{
+    border-bottom:1px solid #E5E5E5;
+
+    height: 53px;
+    line-height: 52px;
+    &:nth-last-of-type(1){
+      border-bottom:none;
+    }
+  }
+  .name{
+    float:left;
+    @include text-clip(140px);
+  }
+  .bill-no{
+    float:left;
+    margin-left:15px;
+    @include text-clip(190px);
+  }
+  .btn{
+    float:right;
+    height: 24px;
+    line-height: 22px;
+    width: 56px;
+    padding:0;
+    border: 1px solid $primaryColor;
+    color: $primaryColor;
+    margin: 14px 0 0;
+    border-radius:2px;
+    text-align:center;
+  }
+}
+
+
+.remind-title{
+  padding-left: 20px;
+  line-height: 32px;
+}
+
+.remind-content{
+  line-height: 32px;
+}

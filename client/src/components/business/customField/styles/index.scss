@@ -1,0 +1,47 @@
+.field-row{
+	margin-bottom: -15px;
+	:global(.ant-row){
+		:global(.ant-form-item){
+			margin-bottom:0;
+		}
+	}
+}
+.field-name {
+	padding-right:10px;
+}
+.field-val{
+	position: relative;
+}
+
+.field-ope{
+	position:absolute;
+	right: -44px;
+	top: 0;
+	width: 38px;
+	i{
+		margin-left:3px;
+	}
+}
+
+.field-label{
+	background-color: #f5f5f5;
+	cursor: not-allowed;
+	opacity: 1;
+	border: 1px solid #d2d2d2;
+	border-radius: 2px;
+	font-size: 13px;
+	line-height: 1.5715;
+	padding: 4.8px 11px;
+}
+
+.field-old-row{
+	margin-bottom: -15px;
+	:global(.ant-row){
+		:global(.ant-form-item){
+			margin-bottom:0;
+		}
+	}
+	:global(.ant-legacy-form-item-control){
+		line-height: 0;
+	}
+}

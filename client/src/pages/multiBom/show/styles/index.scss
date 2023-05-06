@@ -1,0 +1,23 @@
+.bom-span{
+	margin-right: 20px;
+	width: 94px;
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 2;
+	position: relative;
+	top: 3px;
+}
+
+.bom-span-q{
+	position: absolute;
+	right: 0;
+}
+
+.scan-tip{
+	margin-left: 6px;
+	font-size:16px;
+	cursor: pointer;
+	color:#fb982a;
+}

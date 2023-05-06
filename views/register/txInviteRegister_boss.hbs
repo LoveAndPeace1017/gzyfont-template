@@ -1,0 +1,160 @@
+{{#extend "styles"}}
+    <link rel="stylesheet" href="/style/pages/tx_invite_register_boss.css">
+{{/extend}}
+
+<div class="container">
+    <a href="http://m.abiz.com/cgrj-app/?source=8" class="download-lnk">
+        <img src="../../images/server/tx_h5_7/figure_boss.jpeg" alt="" style="width: 100%">
+    </a>
+
+    <div class="main">
+        <div class="f_container">
+            <!--头部信息-->
+            <div class="header">
+                <div class="sub-info">
+                    <p>10分钟上手 &nbsp;|&nbsp; 自动录单 &nbsp;|&nbsp; 手机电脑同步 </p>
+                </div>
+            </div>
+
+            <!--注册模块-->
+            <div class="m_container">
+                <div class="blk">
+                    <form action="/register" method="post" id="register" style="position:relative;">
+                        <ul class="fieldset">
+                            <li class="field">
+                                <div class="field-in">
+                                    <div class="field-hd">手机号</div>
+                                    <div class="field-bd">
+                                        <input class="txt" type="text" id="mobilePhone" name="mobilePhone" placeholder="手机号即为登录账号" maxlength="11" value="{{form.mobilePhone}}"/>
+                                        <span class="instant"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="field field-valid">
+                                <div class="pop-valid-code" id="captcha"></div>
+                                <div class="field-hd">验证码</div>
+                                <div class="field-bd">
+                                    <input class="txt valid-code" type="text" name="code" value="" maxlength="6" placeholder="填写短信验证码" style="width:46%;">
+                                    <button type="button" class="send-code js-sendCode">获取验证码</button>
+                                    <button type="button" class="send-code" id="sendMobileCode" style="display: none">获取验证码</button>
+                                    <span class="instant"></span>
+                                </div>
+                            </li>
+                            <li class="field field-pwd">
+                                <div class="field-hd">密码</div>
+                                <div class="field-bd">
+                                    <input class="txt" type="password" name="logonPassword" id="password" value="" placeholder="6-20位字母或数字" autocomplete="on"/>
+                                    <i class="iconfont icon-pwd-hide"></i>
+                                    <i class="iconfont icon-pwd-show" style="display: none;"></i>
+                                    <span class="instant"></span>
+                                </div>
+                            </li>
+                            <li class="field">
+                                <div class="field-hd">公司名称</div>
+                                <div class="field-bd">
+                                    <input class="txt error" type="text" name="companyName" placeholder="填写公司全称" value="{{form.companyName}}" aria-invalid="true" />
+                                    <span class="instant"></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="field-ope">
+                            <button type="submit" class="btn-register js-register" ga-data="1012">立即领取免费试用</button>
+                            <button type="button" class="btn-register default js-register-default" ga-data="1012">立即领取免费试用</button>
+                            <div class="agree">
+                                <label for="agreement" id="labelAgree">
+                                    <input type="checkbox" name="agree" id="agreement" checked/>
+                                    已阅读并同意百卓优采<a class="blue" href="http://www.abiz.com/info/ensure/46146.htm?uri=/agreement.htm&locale=zh_CN">《用户协议》</a> 及 <a class="blue" href="http://www.abiz.com/info/ensure/63303.htm?uri=/policy.htm&locale=zh_CN">《隐私策略》</a>
+                                </label>
+                            </div>
+                        </div>
+                        <input type="hidden" name="url" value="{{form.url}}">
+                        <input type="hidden" name="userIdEnc" value="{{form.userIdEnc}}">
+                        <input type="hidden" name="comName" value="{{form.comName}}">
+                        <input type="hidden" name="inviteType" value="{{form.inviteType}}">
+                        <input type="hidden" name="gender" value="{{form.gender}}">
+                        <input type="hidden" name="type" value="{{form.type}}">
+                        <input type="hidden" name="channel" value="{{form.source}}">
+                        <input type="hidden" name="source" value="{{form.trench}}">
+                        <input type="hidden" name="referer" value="{{form.referer}}">
+                        <input type="hidden" name="clickId" value="{{form.clickId}}">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="c_container">
+            <!--注册模块-->
+            <div class="m_container">
+                <div class="introduce">
+                    <p><span class="yf">24年</span>企业服务经验  &nbsp;|&nbsp; <span class="yf">8年</span>专业进销存经验</p>
+                    <p><span class="yf">10万+</span>中小企业选择  &nbsp;|&nbsp;  <span class="yf">100+</span>行业全覆盖</p>
+                </div>
+                <ul class="module-lst">
+                    <li class="module-item ml1">
+                        <div class="ml-title">
+                            <h3>智慧经营</h3>
+                        </div>
+                        <p>仓管、采购、销售、财务一站</p>
+                        <p>式全业务流程管理</p>
+                    </li>
+                    <li class="module-item ml2">
+                        <div class="ml-title">
+                            <h3>智能分析</h3>
+                        </div>
+                        <p>多维度报表、一键生成全方位</p>
+                        <p>分析企业数据</p>
+                    </li>
+                    <li class="module-item ml3">
+                        <div class="ml-title">
+                            <h3>商机速递</h3>
+                        </div>
+                        <p>找资源、寻商机助力企业稳步</p>
+                        <p>成长</p>
+                    </li>
+                    <li class="module-item ml4">
+                        <div class="ml-title">
+                            <h3>多端互通</h3>
+                        </div>
+                        <p>电脑、手机、平板多端数据实</p>
+                        <p> 时同步</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{{#if isVivo}}
+    <div class="footer" style="height: 170px">
+        <img class="logo" src="../../images/server/tx_h5_7/logo.png" alt="">
+        <div class="com-btn">
+            <div class="com-tip">助力仓管员轻松工作</div>
+            <div style=" margin-top: 10px;">百卓网络科技有限公司</div>
+            <div>备案证书号：苏ICP备17075644号-1</div>
+        </div>
+    </div>
+{{else}}
+    <div class="footer">
+        <img class="logo" src="../../images/server/tx_h5_7/logo.png" alt="">
+        <div class="com-btn">
+            <div class="com-tip">助力仓管员轻松工作</div>
+        </div>
+    </div>
+{{/if}}
+
+<div class="field-tip" style="display: none;"></div>
+
+<div id="mpanel2" style="margin-top:20px;"></div>
+
+<script>
+    var pageError = '{{form.error}}';
+</script>
+<script src="/script/lib/jquery-3.3.1.min.js"></script>
+<script src="/script/lib/jquery.cookie.js"></script>
+<script src="/script/lib//FCaptcha-2.0.0.js" ></script>
+<script src="/script/lib/jquery.validate.min.js"></script>
+<script src="/script/lib/jquery.validate.extend.js"></script>
+<script src="/script/lib/jquery.form.js"></script>
+<script src="/script/lib/imagevalidate.js"></script>
+<script src="/script/lib/miccn.validatecode-2.0.js"></script>
+<script src="/script/register/newInviteRegister.js"></script>
+

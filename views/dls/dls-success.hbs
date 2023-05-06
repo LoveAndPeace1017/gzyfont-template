@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="/style/pages/invite_register_success.css">
+
+<input type="hidden" id="soleId" name="soleId" value="{{soleId}}">
+
+<div class="container con-gey">
+    <h3>
+        <img width="40" src="/images/server/common/arrow1.png" alt="百卓优采小程序二维码" />
+    </h3>
+    <h4>成功抢占名额</h4>
+    <p class="wechat-info">专属渠道经理会尽快联系您，请保持手机畅通</p>
+    <div class="wx-cont">
+        <div class="wx-hd">
+            <p>电话咨询：</p>
+            <p>025-66775081 或 18402578025 （微信同号）</p>
+            <p class="wechat-info">
+                <img width="120" src="/images/server/common/erweima1.png" alt="百卓优采小程序二维码" />
+            </p>
+            <p class="wechat-info-tp">长按识别加入我们，开启事业蓝图</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    var soleId = document.getElementById('soleId').value;
+
+    if(soleId && soleId !== localStorage.getItem("soleId")) {
+        localStorage.setItem("soleId", soleId);
+        meteor.track("form", {convert_id: "1701514422267908"})
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

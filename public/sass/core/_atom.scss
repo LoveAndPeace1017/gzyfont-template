@@ -1,0 +1,191 @@
+//-----------------------------------------------------
+//@name    atom
+//@desc    原子类样式，包括网格、清除浮动、浮动、显示隐藏、颜色、边距等；直接在class中调用方便快捷。
+//@author  guozd
+//@date    2018-07-22
+//-----------------------------------------------------	
+
+//grid
+.grid{
+	width: $baseWidth;
+	margin: 0 auto;
+	@include transition();
+	&:after,&:before{
+		display: table;
+		content: "";
+	}
+	&:after{
+		clear:both;
+	}
+}
+
+@include max-screen-width($baseWidth+20){
+	.grid{
+		width:$baseNarrowWidth;
+	}
+}
+
+// clearfix 
+.cf:after {
+	clear: both;
+}
+
+.clear {
+	clear: both;
+	display: block;
+	visibility: hidden;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+}
+
+.cf{
+	*zoom: 1;
+	&:before,&:after{
+		display: table;
+		content: "";
+	}
+	&:after{
+		clear: both;
+	}
+}
+
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.fl,.fr{
+	_display: inline;
+}
+
+.show {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
+
+
+//color class
+.red{
+	color: $red;
+}
+
+.blue{
+	color: $blue;
+}
+
+.black{
+	color: $black;
+}
+
+.orange{
+	color: $orange;
+}
+
+.orangeDarker{
+	color: $orangeDarker;
+}
+
+.grayDarker{
+	color: $grayDarker;
+}
+
+.grayDark{
+	color: $grayDark;
+}
+
+.gray{
+	color: $gray;
+}
+
+.grayLight{
+	color: $grayLight;
+}
+
+.white{
+	color: $white;
+}
+
+//font
+@for $i from 1 through 10 {
+	$j:2*$i;
+	.font#{12+$j}{
+		font-size:#{12+$j}px;
+	}
+}
+
+.font-arial{
+	font-size:$fontArial;
+}
+.font-simsun{
+	font-size:$fontSimsun;
+}
+.font-yahei{
+	font-size:$fontYaHei;
+}
+
+//margin size
+$baseMarginSize:5px !default;       
+$basePaddingSize:5px !default;
+
+//margin
+@for $i from 1 through 10 {
+	//margin-top
+	.mt#{$i*5} {
+		margin-top:$baseMarginSize*$i;
+	}
+
+	//margin-right
+	.mr#{$i*5} {
+		margin-right:$baseMarginSize*$i;
+	}
+
+	//margin-bottom
+	.mb#{$i*5} {
+		margin-bottom:$baseMarginSize*$i;
+	}
+
+	//margin-left
+	.ml#{$i*5} {
+		margin-left:$baseMarginSize*$i;
+	}
+}
+
+//padding
+@for $i from 1 through 10 {
+	//padding-top
+	.pt#{$i*5} {
+		padding-top:$basePaddingSize*$i;
+	}
+
+	//padding-right
+	.pr#{$i*5} {
+		padding-right:$basePaddingSize*$i;
+	}
+
+	//padding-bottom
+	.pb#{$i*5} {
+		padding-bottom:$basePaddingSize*$i;
+	}
+
+	//padding-left
+	.pl#{$i*5} {
+		padding-left:$basePaddingSize*$i;
+	}
+}
+
+//z-index
+@for $i from 10 through 20{
+	.zIndex#{$i} {
+		z-index:$i;
+	}
+} 
+
+

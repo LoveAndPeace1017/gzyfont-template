@@ -1,0 +1,102 @@
+//base
+@import "../../../../styles/base/mobile";
+
+.no-goods{
+  width: 100%;
+  .no-goods-logo{
+    margin: px2rem(160px) px2rem(255px) px2rem(36px) px2rem(255px);
+    display:inline-block;
+    width:px2rem(240px);
+    height:px2rem(240px);
+    background:url("../../../../images/no_list.png") top center no-repeat;
+    background-size: 100%;
+  }
+  .no-goods-words{
+    display: inline-block;
+    font-size: px2rem(32px);
+    line-height: px2rem(45px);
+    height: px2rem(45px);
+    width: 100%;
+    color: #000;
+    text-align: center;
+  }
+}
+
+//列表样式
+.tab-ls{
+  height: calc(100vh - 10px);
+}
+.container{
+}
+.c-bd{
+  height: 70px;
+  box-sizing: border-box;
+  padding: 10px;
+  box-shadow:0px 1px 0px 0px rgba(224,224,224,1);
+}
+.contact-tab-l{
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+.contact-tab-r{
+  float: left;
+  width: 80%;
+  p{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight:500;
+    color:rgba(102,102,102,1);
+    font-size: 12px;
+    margin-top: 5px;
+    width: 270px;
+  }
+}
+.contact-sub{
+  overflow: hidden;
+}
+.contact-title{
+  float: left;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+  font-size: 14px;
+  width: 188px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.contact-time{
+  float: right;
+  font-weight:500;
+  color:rgba(102,102,102,1);
+  font-size: 11.5px;
+}
+//contact-tab
+.contact-tab{
+  background:rgba(242,242,242,1);
+  overflow: hidden;
+  :global(.am-tabs-default-bar-underline){
+    border: 1px #2DA66A solid;
+    width: 20%!important;
+    margin-left: 15%;
+  }
+}
+
+.main-ls{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 2.25rem;
+  bottom: 0;
+  :global(.am-tabs-pane-wrap){
+    overflow-y: hidden;
+  }
+}
+
+:global(.am-tabs-default-bar-tab-active){
+  color: #2DA66A;
+}
+
+
+

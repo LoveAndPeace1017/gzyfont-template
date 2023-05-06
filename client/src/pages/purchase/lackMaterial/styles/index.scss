@@ -1,0 +1,178 @@
+@import "../../../../styles/core/base";
+
+.data-wrap{
+	position:relative;
+}
+
+.tb-wrap{
+	float:left;
+	width:100%;
+	padding:20px;
+	transition: .2s;
+}
+
+.abstract-drop-menu{
+	:global(.ant-dropdown-menu-item){
+		cursor:auto;
+		&:hover{
+			background:none;
+		}
+	}
+}
+
+.abstract-drop{
+	padding:12px 0 12px 10px;
+	font-size: 13px;
+	.tit{
+		line-height:30px;
+		color: #ccc;
+	}
+	ul{
+		max-height: 300px;
+		overflow-y: auto;
+		li{
+			line-height: 30px;
+		}
+		.prod-tit{
+			width: 138px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			float: left;
+		}
+		.amount{
+			min-width: 40px;
+			float: left;
+			margin-left: 10px;
+		}
+	}
+}
+
+.ware-drop{
+	padding:10px;
+	.tit{
+		line-height:20px;
+	}
+	ul{
+		li{
+			line-height: 20px;
+		}
+	}
+}
+
+table{
+	.txt-bill-no{
+		width:calc(100% - 55px);
+		vertical-align: top;
+	}
+	:global(.ui-status){
+		margin-left:5px;
+	}
+}
+
+i{
+	font-size: 16px;
+}
+
+.ant-table td { white-space: nowrap; }
+
+
+
+.dropdown-action{
+	border-top:1px solid #ccc;
+	padding: 5px 12px;
+	line-height: 22px;
+}
+
+.warehouse{
+	margin-top: 30px;
+	.wh-title{
+		width:75px;
+		height:13px;
+		font-size:13px;
+		color:rgba(34,34,34,1);
+		line-height:13px;
+		display: inline-block;
+	}
+}
+
+
+.lm-header-wrap{
+	width: 100%;
+	height: 32px;
+	position: relative;
+	font-size:13px;
+	margin: 30px 0 21px;
+	.lm-title{
+		line-height:13px;
+		margin:10px 0 9px;
+		padding: 0 30px 0 10px;
+		font-weight:bold;
+		float: left;
+		border-left: 3px solid #2DA66A;
+	}
+	.lm-title-detail{
+		float: left;
+		color: #222;
+		margin:9px 0 10px;
+		font-weight:500;
+	}
+	.lm-btn{
+		position: absolute;
+		top: 50%;
+		right: 0;
+		margin-top: -16px;
+	}
+}
+
+.tb-finished-prod{
+	:global(.ant-table){
+		:global(.ant-table-thead){
+			tr{
+				>th{
+					&:nth-of-type(1){
+						border-left:1px solid #e5e5e5;
+					}
+					&:nth-last-of-type(1){
+						border-right:1px solid #e5e5e5;
+					}
+				}
+			}
+		}
+		:global(.ant-table-tbody){
+			>tr{
+				>td{
+					&:nth-of-type(1){
+						border-left:1px solid #e5e5e5;
+					}
+					&:nth-last-of-type(1){
+						border-right:1px solid #e5e5e5;
+					}
+				}
+			}
+		}
+	}
+}
+
+:global(.ant-modal-body){
+	:global(.tb-inner){
+		position:relative;
+		:global(.ant-table-tbody){
+			> tr{
+				> td{
+					&:nth-last-of-type(1){
+						overflow: visible;
+					}
+					&:nth-last-of-type(2){
+						overflow: visible;
+					}
+				}
+			}
+		}
+	}
+}
+
+.choose-trigger{
+	color: #4ea2ff;
+	font-size:20px;
+}

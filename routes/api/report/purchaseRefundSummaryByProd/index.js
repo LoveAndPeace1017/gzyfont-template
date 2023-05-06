@@ -1,0 +1,241 @@
+const express = require('express');
+const router = express.Router();
+const backend = require('../../../../lib/backend');
+const Session = require('../../../../lib/session');
+const Constants = require('../../../../lib/constants');
+const DataFilter = require('../../../../lib/utils/DataFilter');
+const Decimal = require('../../../../lib/utils/Decimal');
+
+const map = {
+    supplierName: {
+        label: "node.report.purchaseRefundSummaryByProd.supplierName"
+    },
+    firstCatName: {
+        label: "node.report.purchaseRefundSummaryByProd.firstCatName"
+    },
+    secondCatName: {
+        label: "node.report.purchaseRefundSummaryByProd.secondCatName"
+    },
+    thirdCatName: {
+        label: "node.report.purchaseRefundSummaryByProd.thirdCatName"
+    },
+    purchaseOrderDate: {
+        label: "node.report.purchaseRefundSummaryByProd.purchaseOrderDate",
+        width: Constants.TABLE_COL_WIDTH.DATE
+    },
+    displayCode: {
+        label: "node.report.purchaseRefundSummaryByProd.displayCode"
+    },
+    prodName: {
+        label: "node.report.purchaseRefundSummaryByProd.prodName"
+    },
+    descItem: {
+        label: "node.report.purchaseRefundSummaryByProd.descItem"
+    },
+    proBarCode: {
+        label: "node.report.purchaseRefundSummaryByProd.proBarCode"
+    },
+    brand: {
+        label: "node.report.purchaseRefundSummaryByProd.brand"
+    },
+    produceModel: {
+        label: "node.report.purchaseRefundSummaryByProd.produceModel"
+    },
+    actualGoodsQuantity:{
+        label: "node.report.purchaseRefundSummaryByProd.actualGoodsQuantity",
+        columnType: 'decimal-quantity',
+        totalFlag: true
+    },
+    purchaseQuantity: {
+        label: "node.report.purchaseRefundSummaryByProd.purchaseQuantity",
+        columnType: 'decimal-quantity',
+        totalFlag: true
+    },
+    purchaseInQuantity: {
+        label: "node.report.purchaseRefundSummaryByProd.purchaseInQuantity",
+        columnType: 'decimal-quantity',
+        totalFlag: true
+    },
+    purchaseOutQuantity: {
+        label: "node.report.purchaseRefundSummaryByProd.purchaseOutQuantity",
+        columnType: 'decimal-quantity',
+        totalFlag: true
+    },
+    purchaseAmount: {
+        label: "node.report.purchaseRefundSummaryByProd.purchaseAmount",
+        columnType: 'money',
+        totalFlag: true
+    },
+    purchaseInAmount: {
+        label: "node.report.purchaseRefundSummaryByProd.purchaseInAmount",
+        columnType: 'money',
+        totalFlag: true
+    },
+    purchaseOutAmount: {
+        columnType: 'money',
+        label: "node.report.purchaseRefundSummaryByProd.purchaseOutAmount",
+        totalFlag: true
+    },
+    incomingQuantity: {
+        columnType: 'money',
+        label: "node.report.purchaseRefundSummaryByProd.incomingQuantity",
+        totalFlag: true
+    }
+};
+
+function dealTableConfig(list, customMap) {
+    let newList = [];
+    list && list.forEach(function (item) {
+        let obj = map[item.columnName];
+        obj = obj || (customMap && customMap[item.columnName]);
+        if (obj) {
+            if(item.columnName === 'supplierName'){
+                item.cannotEdit = true;
+                item.visibleFlag = 1;
+            }
+            newList.push({
+                fieldName: item.columnName,
+                label: obj.label,
+                columnType: obj.columnType,
+                width: item.columnWidth||obj.width||Constants.TABLE_COL_WIDTH.DEFAULT,
+                cannotEdit:item.cannotEdit||null,
+                recId: item.recId,
+                visibleFlag: item.visibleFlag,
+                originVisibleFlag: item.visibleFlag,
+                totalFlag: obj.totalFlag
+            });
+        } else {
+            newList.push({
+                fieldName: item.columnName,
+                label: undefined,
+                width: 0,
+                recId: item.recId,
+                visibleFlag: item.visibleFlag,
+                originVisibleFlag: item.visibleFlag
+            });
+        }
+    });
+    return newList;
+}
+
+function dealCustomField(prodTags) {
+    let obj = {};
+    prodTags && prodTags.forEach(function (item) {
+        if (item.propName !== "") {
+            const propertyIndex = item.mappingName && parseInt(item.mappingName.substr(item.mappingName.length - 1));
+            if (item.propName !== "" && item.mappingName) {
+                obj['prodPropertyValue' + propertyIndex] = {
+                    columnName: 'prodPropertyValue' + propertyIndex,
+                    label: item.propName,
+                    value: item.mappingName,
+                    visibleFlag: item.visibleFlag,
+                    originVisibleFlag: item.visibleFlag
+                };
+            }
+
+        }
+    });
+
+    return obj;
+}
+
+/* 采购及退货统计表. */
+router.post('/export', function (req, res, next) {
+    const params = req.body;
+    delete params.page;
+    delete params.perPage;
+    params.headers = {
+        "Content-Type": 'application/json'
+    };
+    const session = Session.get(req, res);
+    backend.post(`/pc/v1/${session.userIdEnc}/report/purchase/return/by/prod`, params, req, res, function (data) {
+        if (data && data.retCode == 0) {
+            let {quantityDecimalNum} = req.cookies;
+            let customMap = dealCustomField(data.tags);
+            let list = data.data;
+            let i = 1;
+            list.forEach(function (item) {
+                item.key = i;
+                item.serial = i++;
+                item.purchaseQuantity = Decimal.fixedDecimal(item.purchaseQuantity, quantityDecimalNum);
+                item.purchaseInQuantity = Decimal.fixedDecimal(item.purchaseInQuantity, quantityDecimalNum);
+                item.purchaseOutQuantity = Decimal.fixedDecimal(item.purchaseOutQuantity, quantityDecimalNum);
+                item.actualGoodsQuantity = Decimal.fixedDecimal(item.actualGoodsQuantity, quantityDecimalNum);
+                if(item.incomingQuantity < 0) item.incomingQuantity = 0;
+                item.incomingQuantity = Decimal.fixedDecimal(item.incomingQuantity, quantityDecimalNum);
+            });
+            let tableConfigList =  dealTableConfig(data.listFields || [], customMap);
+            let tableData = DataFilter.exportData(tableConfigList,list);
+            let decimalMap = {quantityDecimalNum};
+            tableData = DataFilter.dealFooterTotalFieldForExport(tableConfigList,data.totalMap,tableData,decimalMap);
+            res.json({
+                retCode: 0,
+                tableData: tableData,
+            });
+        } else {
+            res.json({
+                retCode: 1,
+                retMsg:  (data && data.retMsg) || "网络异常，请稍后重试！"
+            });
+        }
+
+    });
+});
+/* 采购及退货统计表. */
+router.post('/detail', function (req, res, next) {
+    const params = req.body;
+    params.headers = {
+        "Content-Type": 'application/json'
+    };
+    params.perPage = params.perPage || Constants.PAGINATION_PER_PAGE;
+    params.page = params.page ? parseInt(params.page) : 1;
+    const session = Session.get(req, res);
+
+    backend.post(`/pc/v1/${session.userIdEnc}/report/purchase/return/by/prod`, params, req, res, function (data) {
+        if (data && data.retCode == 0) {
+            let {quantityDecimalNum} = req.cookies;
+            let customMap = dealCustomField(data.tags);
+            let list = data.data;
+            let i = 1;
+            list.forEach(function (item) {
+                item.key = i;
+                item.serial = i++;
+                item.purchaseQuantity = Decimal.fixedDecimal(item.purchaseQuantity, quantityDecimalNum);
+                item.purchaseInQuantity = Decimal.fixedDecimal(item.purchaseInQuantity, quantityDecimalNum);
+                item.purchaseOutQuantity = Decimal.fixedDecimal(item.purchaseOutQuantity, quantityDecimalNum);
+                item.actualGoodsQuantity = Decimal.fixedDecimal(item.actualGoodsQuantity, quantityDecimalNum);
+                if(item.incomingQuantity < 0) item.incomingQuantity = 0;
+                item.incomingQuantity = Decimal.fixedDecimal(item.incomingQuantity, quantityDecimalNum);
+            });
+            let tableConfigList =  dealTableConfig(data.listFields || [], customMap);
+            let decimalMap = {quantityDecimalNum};
+            let tableData = DataFilter.dealFooterTotalFieldForList(tableConfigList,data.totalMap,list, decimalMap);
+
+            let tableWidth = tableConfigList && tableConfigList.reduce(function (width, item) {
+                return width + (item.width ? item.width : 200) / 1;
+            }, 0);
+            res.json({
+                retCode: 0,
+                list: tableData,
+                filterConfigList: [],
+                tableConfigList: tableConfigList,
+                tableWidth: tableWidth,
+                totalAmount: data.totalAmount,
+                pageAmount: data.pageAmount,
+                pagination: {
+                    total: data.count,
+                    current: params.page,
+                    pageSize: params.perPage
+                }
+            });
+        } else {
+            res.json({
+                retCode: 1,
+                retMsg:  (data && data.retMsg) || "网络异常，请稍后重试！"
+            });
+        }
+
+    });
+});
+
+module.exports = router;

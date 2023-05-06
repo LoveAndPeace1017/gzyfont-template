@@ -1,0 +1,26 @@
+<input type="hidden" id="gotoUrl" value="{{form.gotoUrl}}">
+<input type="hidden" id="retCode" value="{{form.retCode}}">
+<input type="hidden" id="callback" value="{{form.callback}}">
+<script>
+            {{#if form.crossDomain}}document.domain = "abiz.com";{{/if}}
+</script>
+{{#if form.success}}
+    <script>
+       {{{form.callback}}}({"success":true,"retcode":document.getElementById('retCode').value,"url":document.getElementById('gotoUrl').value});
+    </script>
+{{else}}
+    <div id="frameError" style="display:none;">
+        <div id="error" class="tip-nor tip-warn">
+            <i class="icon-nor icon-nor-warn"></i>
+            <div id="errortitle" class="tip-hd">对不起！提交不成功，原因如下：</div>
+            <div id="info" class="tip-bd">
+                {{#each form.errorMsgs}}
+                    <p>{{this}}</p>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <script >
+        {{{form.callback}}}({"success":false,"retcode":document.getElementById('retCode').value,"reason":document.getElementById("frameError"),"valid":{{form.nv}},"url":document.getElementById('gotoUrl').value});
+    </script>
+{{/if}}

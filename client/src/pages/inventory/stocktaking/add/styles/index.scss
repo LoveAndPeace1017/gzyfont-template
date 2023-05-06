@@ -1,0 +1,17 @@
+@import "../../../../../styles/core/base";
+
+
+.readOnly{
+  border:none;
+  cursor:default;
+  &:focus{
+    border:none;
+    box-shadow:none;
+  }
+}
+
+:global(.ant-table-tbody) > tr:hover:not(:global(.ant-table-expanded-row)) > td{
+  .readOnly{
+    background:#f0fff5
+  }
+}

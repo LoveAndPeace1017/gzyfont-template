@@ -1,0 +1,38 @@
+// @base : ruler
+
+// node
+$width-node: 320px 360px 375px 384px 400px 414px 424px 480px 540px;
+$width-node-over: 640px 720px 768px 800px 900px 990px 1024px 1080px;
+//$width-node-all: 320px 360px 375px 384px 400px 414px 424px 480px 540px 640px 720px 768px 800px 900px 1080px;
+
+// default-font-size
+$baseFontSize: 20px;
+
+// default-ps-width
+$defaultBodyWidth: 750px;
+
+@mixin min-screen($px){
+  @media only screen and ( min-width: $px )
+  {
+    @content;
+  }
+}
+
+@function px2rem($px) {
+  @return $px*.5 / $baseFontSize * 1rem;
+}
+
+@media screen and (max-width: 319px) {
+  html {
+    font-size: 319px * 2 * $baseFontSize / $defaultBodyWidth;
+  }
+}
+
+@each $item in $width-node {
+  @include min-screen($item) {
+    html {
+      font-size: $item * 2 * $baseFontSize / $defaultBodyWidth;
+    }
+  }
+}
+

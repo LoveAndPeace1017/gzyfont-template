@@ -1,0 +1,47 @@
+@import "../../../../styles/core/base";
+
+.tax-tip{
+	position: absolute;
+	right: 112px;
+	top: 3px;
+	width: 174px;
+	cursor: pointer;
+	animation:mymove 1s 5;
+	:global(.ant-tooltip){
+		z-index: 10;
+	}
+	.tax-del-btn{
+		color: #999;
+		width: 8px;
+		height: 8px;
+		position: absolute;
+		right: 12px;
+		z-index: 11;
+	}
+	:global(.ant-tooltip-info) {
+		:global(.ant-tooltip-inner) {
+			background-color: #FFF8EC;
+			border: 1px solid #FFDEAB;
+			color: #F9B03E;
+			box-shadow: none;
+			width: 165px;
+			padding: 6px 12px 6px 8px;
+			margin-right: -1px;
+		}
+		&:global(.ant-tooltip-placement-left) {
+			:global(.ant-tooltip-arrow) {
+				border-left-color: #FFF8EC;
+			}
+		}
+	}
+}
+
+@-webkit-keyframes mymove{
+
+	0% {transform: translateX(4px);}
+	25% {transform: translateX(0px);}
+	50% {transform: translateX(-4px);}
+	75% {transform: translateX(0px);}
+	100% {transform: translateX(4px);}
+}
+

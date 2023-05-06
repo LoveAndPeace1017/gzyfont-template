@@ -1,0 +1,44 @@
+.qr-wrap{
+	text-align: center;
+}
+.qr-bd{
+	position: relative;
+	width: 142px;
+	height: 142px;
+	margin: 0 auto;
+	border: 1px solid #e5e5e5;
+	padding: 11px;
+}
+
+.qrcode-ope {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: -1px;
+	background-color: rgba(0,0,0,0.6);
+	text-align: center
+}
+
+.qrcode-ope p {
+	margin-top: 52px;
+	color: #fff;
+	line-height: 14px;
+	font-size: 14px
+}
+
+.qrcode-ope .qrcode-refresh {
+	display: inline-block;
+	margin-top: 26px;
+	width: 90px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	background-color: #40be7f;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px
+}

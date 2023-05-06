@@ -1,0 +1,34 @@
+import {fromJS} from "immutable";
+import * as constant from "./actionsTypes";
+import {combineReducers} from "redux-immutable";
+import {withAsyncReducer} from 'utils/reduxSimpleAsync';
+import withBatchUpdateReducer from 'utils/HOR/reduxBatchUpdateConfig';
+
+// 请购单列表
+const requisitionApplyOrderList = withBatchUpdateReducer(constant.TYPE, (
+    state = fromJS({
+        isFetching: false,
+        data: []
+    }),
+    action
+) => {
+    switch (action.type) {
+        case constant.FETCH_REQUISITION_APPLY_ORDER_CONFIG_SUCCESS:
+            return state.set('config',action.data);
+        case constant.FETCH_REQUISITION_APPLY_ORDER_LIST_REQUEST:
+            return state.set('isFetching', true);
+        case constant.FETCH_REQUISITION_APPLY_ORDER_LIST_SUCCESS:
+            return state.set('isFetching', false)
+                .set('data', action.data);
+        case constant.FETCH_REQUISITION_APPLY_ORDER_LIST_FAILURE:
+            return state.set('isFetching', false);
+        case constant.FILTER_CONFIG_LIST:
+            return state.setIn(['data', 'filterConfigList'], fromJS(action.data));
+        default:
+            return state
+    }
+});
+
+export default combineReducers({
+    requisitionApplyOrderList
+})

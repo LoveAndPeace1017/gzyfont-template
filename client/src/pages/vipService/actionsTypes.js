@@ -1,0 +1,2 @@
+//vip service
+export const FETCH_VIP_SERVICE_SUCCESS = 'FETCH_VIP_SERVICE_SUCCESS';

@@ -1,0 +1,235 @@
+{{#extend "styles"}}
+    <link rel="stylesheet" href="/style/pages/dls_1.css">
+{{/extend}}
+
+<div class="container">
+    <div class="figure">
+    </div>
+
+    <div class="main">
+        <div class="f_container">
+            <div class="m_container">
+                <div class="blk">
+                    <p class="bd-title">- 填写信息，获取合作方案-</p>
+                    <form action="/dls" method="post" id="register" style="position:relative;">
+                        <ul class="fieldset">
+                           <li class="field">
+                                <div class="field-in">
+                                    <div class="field-hd"><span class="required">*</span>手机号</div>
+                                    <div class="field-bd">
+                                        <input class="txt" type="text" id="mobilePhone" name="mobilePhone" placeholder="输入手机号码速来抢占席位" maxlength="11" value="{{form.mobilePhone}}"/>
+                                        <span class="instant"></span>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="field">
+                                <div class="field-in">
+                                    <div class="field-hd"><span class="required">*</span>联系人</div>
+                                    <div class="field-bd">
+                                        <input class="txt" type="text" id="contacter" name="contacter" placeholder="请输入联系人姓名" maxlength="20" value="{{form.contacter}}"/>
+                                        <span class="instant"></span>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="field">
+                                <div class="field-hd">公司名称</div>
+                                <div class="field-bd">
+                                    <input class="txt error" type="text" name="companyName" placeholder="请输入公司名称" value="{{form.companyName}}" aria-invalid="true" />
+                                    <span class="instant"></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="field-ope">
+                            <button type="submit" class="btn-register js-register" ga-data="1012">马上报名</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="f_container">
+            <div class="m_container">
+                <div class="blk">
+                    <div class="bk-title">
+                        <img width="90%" src="/images/server/dl_1/title1.png" alt="tp">
+                    </div>
+                    <ul class="info-ul">
+                        <li>
+                            <div class="li-div">
+                                <img width="100%" src="/images/server/dl_1/bk-01.png" alt="tp">
+                                <span>
+                                    上市公司焦点科技出品，<br/> 大品牌有保障
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="li-div">
+                                <img width="100%" src="/images/server/dl_1/bk-02.png" alt="tp">
+                                <span>
+                                    全行业需要的管理软件，<br/> 广阔市场等你来
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="li-div">
+                                <img width="100%" src="/images/server/dl_1/bk-03.png" alt="tp">
+                                <span>
+                                    saas云产品正值风口， <br/> 用户接受度高
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="li-div">
+                                <img width="100%" src="/images/server/dl_1/bk-04.png" alt="tp">
+                                <span>
+                                    总部全程提供支持
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="f_container">
+            <div class="m_container">
+                <div class="blk">
+                    <div class="bk-title">
+                        <img width="30%" src="/images/server/dl_1/title2.png" alt="tp">
+                    </div>
+                    <ul class="info-ul-l">
+                        <li>
+                            <div class="li-div-l">
+                                <img width="40%" src="/images/server/dl_1/ts1.png" alt="tp">
+                                <h3>
+                                    市场支持
+                                </h3>
+                                <p>
+                                    提供精准销售线索，行业解决方案、宣传策略等一站式落地帮扶
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="li-div-l">
+                                <img width="40%" src="/images/server/dl_1/ts2.png" alt="tp">
+                                <h3>
+                                    培训支持
+                                </h3>
+                                <p>
+                                    从开始到落地，提供金牌销售开单技巧、产品知识等全面培训
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="li-div-l">
+                                <img width="40%" src="/images/server/dl_1/ts3.png" alt="tp">
+                                <h3>
+                                    物料支持
+                                </h3>
+                                <p>
+                                    总部提供产品手册、易拉宝等市场宣传物料
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="li-div-l">
+                                <img width="40%" src="/images/server/dl_1/ts4.png" alt="tp">
+                                <h3>
+                                    品牌支持
+                                </h3>
+                                <p>
+                                    总部给予宣传推广支持， 线上线下全方位覆盖
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="li-div-l">
+                                <img width="40%" src="/images/server/dl_1/ts5.png" alt="tp">
+                                <h3>
+                                    产研支持
+                                </h3>
+                                <p>
+                                    专业产品研发团队，保障产品功能，并提供CRM系统支持
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="li-div-l">
+                                <img width="40%" src="/images/server/dl_1/ts6.png" alt="tp">
+                                <h3>
+                                    售后支持
+                                </h3>
+                                <p>
+                                    强大客服团队全程售后扶持，新手亦可轻松上手
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="f_container">
+            <div class="m_container">
+                <div class="blk">
+                    <p class="bd-title">- 填写信息，获取合作方案 -</p>
+                    <form action="/dls" method="post" id="register1" style="position:relative;">
+                        <ul class="fieldset">
+                            <li class="field">
+                                <div class="field-in">
+                                    <div class="field-hd"><span class="required">*</span>手机号</div>
+                                    <div class="field-bd">
+                                        <input class="txt" type="text" id="mobilePhone" name="mobilePhone" placeholder="输入手机号码速来抢占席位" maxlength="11" value="{{form.mobilePhone}}"/>
+                                        <span class="instant"></span>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="field">
+                                <div class="field-in">
+                                    <div class="field-hd"><span class="required">*</span>联系人</div>
+                                    <div class="field-bd">
+                                        <input class="txt" type="text" id="contacter" name="contacter" placeholder="请输入联系人姓名" maxlength="20" value="{{form.contacter}}"/>
+                                        <span class="instant"></span>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="field">
+                                <div class="field-hd">公司名称</div>
+                                <div class="field-bd">
+                                    <input class="txt error" type="text" name="companyName" placeholder="请输入公司名称" value="{{form.companyName}}" aria-invalid="true" />
+                                    <span class="instant"></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="field-ope">
+                            <button type="submit" class="btn-register js-register" ga-data="1012">马上报名</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <img src="/images/server/dl_1/logo.png" class="logo" alt="tp">
+    <p>各行各业需要的管理软件，立即加入</p>
+    <h4>市场有风险，投资需谨慎</h4>
+</div>
+
+<div class="field-tip" style="display: none;"></div>
+
+<script>
+    var pageError = '{{error}}';
+</script>
+<script src="/script/lib/jquery-3.3.1.min.js"></script>
+<script src="/script/lib/jquery.cookie.js"></script>
+<script src="/script/lib/jquery.validate.min.js"></script>
+<script src="/script/lib/jquery.validate.extend.js"></script>
+<script src="/script/lib/imagevalidate.js"></script>
+<script src="/script/lib/miccn.validatecode-2.0.js"></script>
+<script src="/script/register/dls.js"></script>
+

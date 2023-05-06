@@ -1,0 +1,60 @@
+@import "../../../../styles/core/base";
+
+.dropdown-action{
+	border-top:1px solid #ccc;
+	padding: 5px 12px;
+	line-height: 22px;
+}
+
+.ck-prodNo{
+	position: absolute;
+	width: 102px;
+	top: 10px;
+	right: -16px;
+}
+
+.input-prodNo{
+	display: inline-block;
+	width: 100%;
+	padding-right: 138px;
+	margin-right: -155px;
+	margin-left: 46px;
+}
+
+.clv-mg{
+	margin-left:25px;
+	color:$linkColor;
+}
+.input-item-discount{
+	display:inline-block;
+	width:calc(100% - 40px);
+	margin:0;
+	vertical-align: middle;
+	input{
+		text-align:right;
+	}
+}
+.percent{
+	display:inline-block;
+	width:30px;
+	margin-left:10px;
+}
+
+.readOnly{
+  border:none;
+  cursor:default;
+  padding: 0;
+  &:focus{
+    border:none;
+    box-shadow:none;
+  }
+}
+
+.upload-list{
+	>span{
+		float:left;
+		width:112px;
+		height:112px;
+		overflow:hidden;
+	}
+}

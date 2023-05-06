@@ -1,0 +1,133 @@
+<link rel="stylesheet" href="/style/pages/register.css">
+
+<div class="container">
+  <div class="header">
+    <div class="logo">
+      <img src="/images/server/common/register_logo_new.png" alt="百卓优采-云进销存软件" />
+      <h1>注册</h1>
+    </div>
+
+    <div class="login">
+      <a target="_blank" ga-data="1010" href="https://kefu.trademessenger.com/chat?domain=abiz&businessType=ayfvNxUccAs&multiWindow=true">联系客服</a><span>|</span><a class="login-btn" ga-data="1011" href="/login?source={{form.source}}">立即登录&gt;</a>
+    </div>
+  </div>
+  <div class="main">
+    <div class="register">
+      {{#if form.error}}
+        <div class="login-validate error js-err-msg" >
+          <i class="iconfont icon-close-circle-fill"></i><span>{{form.error}}</span>
+        </div>
+      {{/if}}
+      <form action="/register" method="post" id="register">
+        <ul class="fieldset">
+          <li class="field">
+            <div class="field-hd"><span class="required">*</span> 手机号</div>
+            <div class="field-bd field-phone">
+              <input class="txt" type="text" id="mobilePhone" name="mobilePhone" placeholder="手机号即为登录账号" maxlength="13" value="{{form.mobilePhone}}" autocomplete="off"/>
+              <i class="iconfont icon-close-circle-fill js-empty-ico"></i>
+              <div class="instant">
+                <div class="form-error"></div>
+              </div>
+            </div>
+          </li>
+          <li class="field field-valid">
+            <div id="captcha"></div>
+            <div id="msg"></div>
+            <div class="field-hd"><span class="required">*</span> 验证码</div>
+            <div class="field-bd field-valid-code">
+              <input class="txt valid-code" type="text" id="validCode" name="code" value="" placeholder="请输入验证码"  maxlength="6" autocomplete="off"/>
+              <i class="iconfont icon-close-circle-fill js-empty-ico"></i>
+              <button type="button" class="send-code" id="sendMobileCode" ga-data="1008">获取验证码</button>
+              <div class="instant"></div>
+            </div>
+          </li>
+          <li class="field">
+            <div class="field-hd"><span class="required">*</span> 密码</div>
+            <div class="field-bd field-pwd">
+                <input class="txt" type="password" name="logonPassword" id="password" value="{{form.logonPassword}}" placeholder="6-20位字母或数字"  maxlength="20" autocomplete="off"/>
+                <i class="iconfont icon-pwd-hide" id="showPsw" style="display: block"></i>
+                <div class="instant">
+                <div class="form-succ"></div>
+                <div class="pwd-lv" id="pwdStrength" style="display: none;">
+                  <span class="pwd-lv-item on"></span>
+                  <span class="pwd-lv-item"></span>
+                  <span class="pwd-lv-item"></span>
+                  <p>密码安全度：<span>低</span></p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="field">
+            <div class="field-hd"><span class="required">*</span> 公司名称</div>
+            <div class="field-bd">
+              <input class="txt" type="text" name="companyName" placeholder="请输入公司名称" value="{{form.companyName}}" maxlength="30"/>
+              <div class="instant"></div>
+            </div>
+          </li>
+          <li class="field field-id">
+            <div class="field-hd"><span class="required">*</span> 使用模式</div>
+            <div class="field-bd">
+                <ul class="id-item cf">
+                    <li class="js-rad" data-job="11">
+                        <span class="radio" id="selfEmployed"></span>
+                        <label for="selfEmployed">个体户使用</label>
+                    </li>
+                    <li class="js-rad" data-job="12">
+                        <span class="radio" id="enterprise"></span>
+                        <label for="enterprise">企业多人使用</label>
+                    </li>
+                    <li class="js-rad" data-job="13">
+                        <span class="radio" id="selfEnterprise"></span>
+                        <label for="selfEnterprise">企业个人使用</label>
+                    </li>
+                </ul>
+                <div class="instant"></div>
+                <input type="hidden" name="job" value="{{form.job}}">
+            </div>
+          </li>
+          <li class="field">
+            <div class="field-hd"></div>
+            <div class="field-bd">
+              <button type="submit" class="btn-register js-register btn-disabled" ga-data="1009" disabled="disabled">立即注册</button>
+            </div>
+          </li>
+          <li class="field field-agree">
+            <div class="field-hd"></div>
+            <div class="field-bd">
+              <span class="agree js-agree">
+                <i class="iconfont icon-check-square icon-check-square-fill"></i>我已阅读，并同意 <a href="http://www.abiz.com/info/ensure/46146.htm?uri=/agreement.htm&locale=zh_CN" target="_blank">《用户协议》</a>和<a href="http://www.abiz.com/info/ensure/63303.htm?uri=/policy.htm&locale=zh_CN" target="_blank">《隐私策略》</a></span>
+              <div class="instant"></div>
+            </div>
+          </li>
+          <li class="field-tip">
+             如遇问题，请联系客服：400-6979890（转1）或18402578025（微信同号）
+          </li>
+
+        </ul>
+        <input type="hidden" name="gender" value="{{form.gender}}">
+        <input type="hidden" name="channel" value="{{form.source}}">
+        <input type="hidden" name="url" value="{{form.url}}">
+        <input type="hidden" name="comName" value="{{form.comName}}">
+        <input type="hidden" name="inviteType" value="{{form.inviteType}}">
+        <input type="hidden" name="userIdEnc" value="{{form.userIdEnc}}">
+        <input type="hidden" name="type" value="{{form.type}}">
+        <input type="hidden" name="nextPage" value="{{form.nextPage}}">
+        <input type="hidden" name="referer" value="{{form.referer}}">
+      </form>
+    </div>
+  </div>
+  <!-- 注册结束 -->
+</div>
+<div id="mpanel2" style="margin-top:20px;"></div>
+<!-- footer-->
+{{> footer }}
+<!--end footer-->
+
+<script src="/script/lib/jquery-3.3.1.min.js"></script>
+<script src="/script/lib//FCaptcha-2.0.0.js" ></script>
+<script src="/script/lib/jquery.cookie.js"></script>
+<script src="/script/lib/jquery.validate.min.js"></script>
+<script src="/script/lib/jquery.validate.extend.js"></script>
+<script src="/script/lib/imagevalidate.js"></script>
+<script src="/script/lib/miccn.validatecode-2.0.js"></script>
+<script src="/script/register/index.js"></script>

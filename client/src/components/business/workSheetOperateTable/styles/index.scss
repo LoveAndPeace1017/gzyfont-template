@@ -1,0 +1,11 @@
+.readOnly{
+  border:none;
+  cursor:default;
+  margin-top: 5px;
+  padding: 0;
+  &:focus{
+    border:none;
+    box-shadow:none;
+  }
+}
+

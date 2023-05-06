@@ -1,0 +1,75 @@
+@import "../../../../styles/core/base";
+:global(.guide-visible){
+	:global(.menu-goods){
+		position: relative;
+		z-index: 10001;
+		background:#fff;
+	}
+}
+.guide-mask{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(0, 0, 0, .8);
+	z-index:10000;
+}
+.guide-transparent{
+	position:absolute;
+	top:506px;
+	left:0;
+	width:174px;
+	height:40px;
+	background:transparent;
+	z-index:10002;
+}
+.guide-wrap{
+	position:absolute;
+	top:507px;
+	left:200px;
+	z-index:10001;
+	p{
+		color:#fff;
+		font-size:18px;
+	}
+	.btn-wrap{
+		margin-top:45px;
+		text-align:center;
+	}
+	.btn-refuse,
+	.btn-import{
+		display:inline-block;
+		margin:0 15px;
+		height: 40px;
+		line-height: 40px;
+		padding:0 27px;
+		border:1px solid #fff;
+		color:#fff;
+		font-size:16px;
+		border-radius:32px;
+		&:active,
+		&:visited{
+			text-decoration: none;
+		}
+	}
+	.btn-import{
+		background-color:$primaryColor;
+		border-color:$primaryColor;
+	}
+}
+
+.progress-wrap{
+	:global(.ant-progress-line){
+		width: 180px;
+	}
+	.progress-info{
+		margin-left:20px;
+		display:inline-block;
+		vertical-align: middle;
+		em{
+			margin-left:5px;
+			color:$linkColor;
+		}
+	}
+}

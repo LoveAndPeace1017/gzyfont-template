@@ -1,0 +1,264 @@
+//core
+@import '../core/base';
+
+//login
+.grid-wide{
+	width: 1020px;
+	margin: 0 auto;
+}
+.header{
+	height: 100px;
+	.logo{
+		float: left;
+		margin-top: 27px;
+	}
+	h1{
+		font-size: 16px;
+		border-left: 1px solid #ccc;
+		margin-left: 5px;
+		padding-left: 13px;
+		line-height: 20px;
+		display: inline-block;
+		margin-top: 9px;
+		vertical-align: middle;
+	}
+	.login{
+		float: right;
+		margin-top: 75px;
+		margin-right: -120px;
+		a:link,
+		a:visited{
+			color: #499fff;
+		}
+	}
+}
+
+.login-container{
+	height:600px;
+	background:url(../../images/server/common/login_bg_new.png) top center no-repeat;
+}
+
+.login-box{
+	float:right;
+	width:370px;
+	margin-top:110px;
+    padding-bottom: 15px;
+	background:#fff;
+}
+.login-box-hd{
+	height:64px;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.login-tab{
+	padding-top:10px;
+	li{
+		float:left;
+		width:50%;
+		padding:0 47px;
+		text-align:center;
+		@include box-sizing(border-box);
+		span{
+			display:block;
+			height:53px;
+			line-height: 53px;
+			padding-bottom:1px;
+			color:#666;
+			font-size:16px;
+			cursor:pointer;
+		}
+		&.cur{
+			span{
+				padding-bottom:0;
+				color: $primaryColor;
+				border-bottom:2px solid $primaryColor;
+				margin-bottom:-2px;
+			}
+		}
+	}
+}
+
+.login-box-bd{
+	padding:22px 45px 0;
+}
+.login-box-tit{
+	line-height: 30px;
+	font-size:14px;
+}
+.input-wrap{
+	margin-top:12px;
+	li{
+		margin-bottom:20px;
+		position:relative;
+		i{
+			position:absolute;
+			top:6px;
+			left:12px;
+			font-size:20px;
+			color:#ccc;
+		}
+		.icon-pwd-hide,
+		.icon-pwd-show{
+			right: 12px;
+			left: auto;
+			cursor: pointer;
+		}
+		label.error{
+			color: #d9363c;
+			margin-top: 5px;
+			display: inline-block;
+		}
+	}
+	.validate-item{
+		position: relative;
+		.valid-img{
+			position: absolute;
+			right: 5px;
+			top:6px;
+			cursor: pointer;
+		}
+	}
+	.login-inp{
+		width:280px;
+		height:40px;
+		border:1px solid #e5e5e5;
+		padding:10px 10px 10px 40px;
+		font-size:14px;
+		@include box-sizing(border-box);
+		@include border-radius(2px);
+		&.error{
+			border-color:#ff6060;
+		}
+	}
+}
+
+
+.login-ope{
+	.login-btn{
+		width:280px;
+		height:40px;
+		line-height: 40px;
+		background-color:$primaryColor;
+		color:#fff;
+		font-size:16px;
+		text-align:center;
+		border:none;
+		cursor: pointer;
+		@include border-radius(2px);
+	}
+	.btn-disabled{
+		display: block;
+		color: #999;
+		background: #f0f0f0;
+		cursor: default;
+	}
+}
+.login-extra{
+	margin-top:10px;
+	font-size:12px;
+	.forget-pwd{
+		float:left;
+		color:#666;
+	}
+	.go-reg{
+		float:right;
+		color:#499fff;
+	}
+}
+
+.qrcode-wrap{
+	padding:50px 0 0;
+	text-align:center;
+	.qrcode{
+		position:relative;
+		width:160px;
+		height:160px;
+		margin:0 auto;
+		border:1px solid #e5e5e5;
+		padding:6px 7px 7px 6px;
+		@include box-sizing(border-box);
+	}
+	.qrcode-ope{
+		display:none;
+		position:absolute;
+		top:0;
+		left:0;
+		bottom:0;
+		right:0;
+		margin:-1px;
+		background-color:rgba(0,0,0,.6);
+		text-align:center;
+		p{
+			margin-top:52px;
+			color:#fff;
+			line-height: 14px;
+			font-size:14px;
+		}
+		.qrcode-refresh{
+			display:inline-block;
+			margin-top:26px;
+			width:90px;
+			height:26px;
+			line-height:26px;
+			text-align:center;
+			color:#fff;
+			font-size:14px;
+			background-color:$primaryColor;
+			@include border-radius(2px);
+		}
+	}
+	.qrcode-ope-show{
+		display:block;
+	}
+	.txt{
+		margin-top:20px;
+		line-height: 14px;
+		color:#333;
+		font-size:14px;
+	}
+}
+
+.login-validate{
+	position:relative;
+	z-index:10;
+	margin-top:-30px;
+	padding:6px 9px 6px 27px;
+	line-height:16px;
+	font-size:12px;
+	overflow:hidden;
+	i{
+		float:left;
+		margin-left:-18px;
+	}
+	&.error{
+		background:#fff1f0;
+		border:1px solid #ffc3c0;
+		color:#ff6060;
+		i{
+
+			color:#ff6060;
+			font-size:14px;
+		}
+	}
+}
+
+.footer-wrap{
+	border-top: 1px solid #e6e6e6;
+}
+.footer{
+	padding: 20px 0;
+	text-align: center;
+	.v-sep {
+		color: #ced3d9;
+		margin: 0 5px;
+	}
+	span{
+		color: #666;
+	}
+	.footer-copyright{
+		padding: 5px 0 8px 0;
+	}
+}
+
+
+

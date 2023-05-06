@@ -1,0 +1,3 @@
+//获取询价详细信息
+export const FETCH_INQUIRY_DETAIL = 'PAGES/MIC_CN/SHOW/FETCH_INQUIRY_DETAIL';
+

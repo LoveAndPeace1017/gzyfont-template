@@ -1,0 +1,143 @@
+@import "../../../../styles/core/base";
+
+.wild-tab{
+  width: 95%;
+  height: 360px;
+  margin-top: 10px;
+  overflow: hidden;
+  .tab-title{
+    font-size: 13px;
+    color: #666;
+  }
+  strong{
+    font-size: 13px;
+    margin-right: 10px;
+  }
+}
+.wild-btn{
+  margin-bottom: 12px;
+}
+.editor-w{
+  height: 793px;
+  border: 1px solid #ccc;
+  z-index: 1!important;
+  position: relative;
+  overflow-y: auto;
+  border-bottom: none;
+  background-color: #999;
+}
+.editor-m{
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: #f1f1f1;
+  border-bottom: none;
+  z-index: 1!important;
+}
+.tem-ft{
+  text-align: center;
+  padding: 10px;
+  margin-top: 55px;
+  button{
+    margin: 0 20px;
+  }
+}
+.editor-hd{
+  width: 100%;
+  height: 584px;
+  overflow-y: scroll;
+  background-color: #999;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+.tb-infor{
+  margin-top: 15px;
+  position: relative;
+}
+.tb-tips{
+  display:block;
+  width:186px;
+  height:45px;
+  position: absolute;
+  top: 15px;
+  z-index: 2;
+  animation:walking 0.6s steps(2) infinite;
+  .tp-close{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    z-index: 2;
+    right: 4px;
+    top: 2px;
+    cursor: pointer;
+  }
+}
+@keyframes walking{
+  from{
+    top:10px;
+    left: 8px;
+  }
+
+  to{
+    top:6px;
+    left: 8px;
+  }
+}
+.tb-inners:before {
+  content: '';
+  position: absolute;
+  right: -1px;
+  top: -8px;
+  width: 6px;
+  height: 51px;
+  background-color: #fff;
+  z-index: 100;
+}
+.btn-label{
+  margin-right: 40px;
+}
+
+:global(.w-e-text){
+  background-color: #fff!important;
+}
+// 不知道有没有问题，先注释掉，后面出现弹层样式问题在去单独解决
+//:global(.ant-select-dropdown) {
+//  z-index: 10006!important;
+//}
+//:global(.ant-modal-wrap){
+//  z-index: 10004;
+//}
+
+:global(.bd-template-new){
+  :global(.ant-select-dropdown) {
+     z-index: 10006!important;
+  }
+}
+
+:global(.print-template){
+  :global(th){
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 3px 5px;
+  }
+  :global(table){
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+  }
+  :global(td){
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 3px 5px;
+  }
+}
+
+/*
+:global(.abc){
+  border: none!important;
+  th{
+    border: none!important;
+  }
+  td{
+    border: none!important;
+  }
+}*/

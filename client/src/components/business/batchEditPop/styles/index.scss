@@ -1,0 +1,30 @@
+@import "../../../../styles/core/base";
+
+
+.batch-edit-pop{
+	:global(.ant-tabs-tabpane){
+		padding: 20px 0 0;
+	}
+	:global(.ant-form-item){
+		margin-bottom: 10px;
+	}
+	.bill-attr{
+		line-height: 40px;
+		padding-right: 30px;
+		padding-left: 8px;
+	}
+	.content-height {
+		max-height: calc(100vh - 240px);
+		width: 100%;
+		padding: 0 10px;
+		overflow: scroll;
+	}
+	.divider {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+	.red{
+		color: #FF6060;
+	}
+}
+

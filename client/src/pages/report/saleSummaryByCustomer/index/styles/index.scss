@@ -1,0 +1,87 @@
+@import "../../../../../styles/core/base";
+
+.data-wrap{
+	position:relative;
+}
+.cate{
+	position:relative;
+	float: left;
+	margin-left:-100%;
+	z-index:2;
+	width:214px;
+	border-right:1px solid #eee;
+	transition: .2s;
+}
+
+.cate-wrap{
+	width:214px;
+	padding:20px;
+	overflow-y:auto;
+}
+.cate-hidden{
+	.cate{
+		width:0;
+		overflow:hidden;
+	}
+	.cate-wrap{
+		overflow:hidden;
+	}
+	.tb-wrap{
+		padding-left:0;
+	}
+	.cate-toggle{
+		left:1px;
+	}
+}
+
+.cate-toggle{
+	position:absolute;
+	left:213px;
+	top:50%;
+	margin-top:-14px;
+	width:14px;
+	height:28px;
+	line-height:28px;
+	border:1px solid #eee;
+	border-left-color:#fff;
+	cursor:pointer;
+	z-index:2;
+}
+
+.tb-wrap{
+	float:left;
+	width:100%;
+	//padding-left:213px;
+	transition: .2s;
+}
+
+.tb-wrap-inner{
+	padding:20px;
+	border-left:1px solid #eee;
+}
+
+.ware-drop-menu{
+	:global(.ant-dropdown-menu-item){
+		cursor:auto;
+		&:hover{
+			background:none;
+		}
+	}
+}
+
+.ware-drop{
+	padding:10px;
+	.tit{
+		line-height:20px;
+	}
+	ul{
+		li{
+			line-height: 20px;
+		}
+	}
+}
+
+
+
+
+.ant-table td { white-space: nowrap; }

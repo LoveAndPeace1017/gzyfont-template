@@ -1,0 +1,28 @@
+.prod-info{
+  background: #f8f8f8;
+  overflow: hidden;
+  //padding: 0 20px 20px;
+  & + :global(.tb-inner){
+    margin-top:10px;
+  }
+  .prod-info-wrap{
+    border-bottom: 1px solid #d9d9d9;
+  }
+  .prod-title{
+    float: left;
+    margin-left: 20px;
+    width: 180px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 50px;
+  }
+  .prod-detail{
+    float: left;
+    .prod-no-data{
+      font-weight: 700;
+      font-size: 14px;
+      padding: 23px 8px 8px 0;
+      display: inline-block;
+    }
+  }
+}

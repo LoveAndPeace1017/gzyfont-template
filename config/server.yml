@@ -1,0 +1,30 @@
+# server config
+domainUrl: "youcai.abiz.com"
+appName: "优采个人版"
+version: "1.0.0"
+clientType: "PC_WEB"
+title: "优采个人版"
+clusters: false
+port: 5000
+devMode: true
+logLevel: "INFO"
+logDist: "d:\\log"
+
+# 10.10.12.124:8050 杨星
+# 10.10.12.96:8050 许晓文
+# 10.10.12.130:8050 王正宇
+# 10.10.12.16:9797  刘天水
+# 10.110.1.185:8050 测试服务器
+
+backendUrl: "http://10.110.1.185:8050"
+cdBackendUrl: "http://cd.abiz.com"
+cnMobileBackendUrl: "http://10.110.1.79:7088"
+abizBackendUrl: "http://192.168.1.46:8081"
+tulipBackendUrl: "http://192.168.0.155:8989"
+# 内贸站小程序后台系统
+voBackendUrl: "http://192.168.0.178:7002"
+socketTimeout: 60000
+# 文件处理超时时间
+fileSocketTimeout: 180000
+cdn: ""
+encoding: "utf8"

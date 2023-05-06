@@ -1,0 +1,104 @@
+<link rel="stylesheet" href="/style/pages/cooperatorRegister.css">
+
+<div class="container">
+  <div class="header">
+    <div class="logo">
+      <h1>欢迎加入百卓优采云进销存合伙人</h1>
+    </div>
+    <div class="login">
+      <a class="login-btn" href="/login/cooperator">立即登录</a>
+    </div>
+  </div>
+  <div class="main">
+    <div class="register">
+      {{#if form.error}}
+        <div class="login-validate error js-err-msg" >
+          <i class="iconfont icon-close-circle-fill"></i><span>{{form.error}}</span>
+        </div>
+      {{/if}}
+      <form action="/register/cooperator" method="post" id="register">
+        <ul class="fieldset">
+          <li class="field">
+            <div class="field-hd"><span class="required">*</span> 手机号</div>
+            <div class="field-bd field-phone">
+              <input class="txt" type="text" id="mobilePhone" name="mobilePhone" placeholder="手机号即为登录账号" maxlength="13" value="{{form.mobilePhone}}" autocomplete="off"/>
+              <i class="iconfont icon-close-circle-fill js-empty-ico"></i>
+              <div class="instant">
+                <div class="form-error"></div>
+              </div>
+            </div>
+          </li>
+          <li class="field field-valid">
+            <div id="captcha"></div>
+            <div id="msg"></div>
+            <div class="field-hd"><span class="required">*</span> 验证码</div>
+            <div class="field-bd field-valid-code">
+              <input class="txt valid-code" type="text" id="validCode" name="code" value="" placeholder="请输入验证码"  maxlength="6" autocomplete="off"/>
+              <i class="iconfont icon-close-circle-fill js-empty-ico"></i>
+              <button type="button" class="send-code" id="sendMobileCode">获取验证码</button>
+              <div class="instant"></div>
+            </div>
+          </li>
+          <li class="field">
+            <div class="field-hd"><span class="required">*</span> 密码</div>
+            <div class="field-bd field-pwd">
+                <input class="txt" type="password" name="logonPassword" id="password" value="{{form.logonPassword}}" placeholder="6-20位字母或数字"  maxlength="20" autocomplete="off"/>
+                <i class="iconfont icon-pwd-hide" id="showPsw" style="display: block"></i>
+                <div class="instant">
+                <div class="form-succ"></div>
+                <div class="pwd-lv" id="pwdStrength" style="display: none;">
+                  <span class="pwd-lv-item on"></span>
+                  <span class="pwd-lv-item"></span>
+                  <span class="pwd-lv-item"></span>
+                  <p>密码安全度：<span>低</span></p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="field">
+            <div class="field-hd"><span class="required">*</span> 联系人</div>
+            <div class="field-bd">
+              <input class="txt" type="text" name="companyContacts" placeholder="请输入联系人" value="{{form.companyContacts}}" maxlength="10"/>
+              <div class="instant"></div>
+            </div>
+          </li>
+          <li class="field">
+              <div class="field-hd"><span class="required">*</span> 所在省市</div>
+              <div class="field-bd">
+                  <select name="province" id="province">
+                      <option value="">--选择省--</option>
+                  </select>
+                  <select name="city" id="city" class="city">
+                      <option value="">--选择市--</option>
+                  </select>
+                  <div class="instant"></div>
+              </div>
+          </li>
+          <li class="field">
+            <div class="field-hd"></div>
+            <div class="field-bd">
+              <button type="submit" class="btn-register js-register btn-disabled" disabled="disabled">立即注册</button>
+            </div>
+          </li>
+        </ul>
+
+        <input type="hidden" name="nextPage" value="{{form.nextPage}}">
+      </form>
+    </div>
+  </div>
+  <!-- 注册结束 -->
+</div>
+
+<div class="footer">
+    <span>合伙人客服热线：025-66775124、13914468382（微信同号）</span>
+    <span class="line"></span>
+    <a target="_blank" href="https://erp.abiz.com/login">返回百卓优采云进销存首页</a>
+</div>
+
+<script src="/script/lib/jquery-3.3.1.min.js"></script>
+<script src="/script/lib/jquery.cookie.js"></script>
+<script src="/script/lib/jquery.validate.min.js"></script>
+<script src="/script/lib/jquery.validate.extend.js"></script>
+<script src="/script/lib/imagevalidate.js"></script>
+<script src="/script/lib/miccn.validatecode-2.0.js"></script>
+<script src="/script/cooperatorRegister/index.js"></script>

@@ -1,0 +1,134 @@
+//base
+@import "../../../../styles/base/mobile";
+
+.main{
+  position: absolute;
+  left:0;
+  right:0;
+  top: px2rem(90px);
+  bottom: px2rem(100px);
+  overflow-y: auto;
+}
+
+.cart-prod-info{
+  padding: px2rem(30px) px2rem(48px) px2rem(31px) px2rem(40px);
+  background: #fff;
+  .cart-prod-name{
+    font-size: px2rem(32px);
+    line-height: 1.5;
+    height: px2rem(90px);
+    color: #333;
+  }
+  .cart-prod-price{
+    display: inline-block;
+    margin-top: px2rem(20px);
+    font-size: px2rem(20px);
+    line-height: px2rem(28px);
+    height: px2rem(28px);
+    color: #999;
+    .red{
+      font-size: px2rem(32px);
+      line-height: px2rem(28px);
+      height: px2rem(28px);
+      color: #FF6060;
+    }
+  }
+}
+
+.cart-prod-detail{
+  background: #fff;
+  font-size: px2rem(28px);
+  color: #333;
+  margin-top: px2rem(20px);
+  .com-name{
+    font-weight: bold;
+    border-bottom: px2rem(1px) solid #EEE;
+    height: px2rem(88px);
+    padding: px2rem(24px) px2rem(40px);
+  }
+  .cart-prod-desc{
+    padding: px2rem(40px);
+    .cart-desc-item{
+      font-size: px2rem(24px);
+      height: px2rem(33px);
+      margin-bottom: px2rem(20px);
+    }
+    .cart-title{
+      color: #666;
+    }
+  }
+}
+.cart-menu{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+.cart-submit-btn{
+  background: #2DA66A;
+  color: #fff;
+  font-size: px2rem(32px);
+  text-align: center;
+  padding: px2rem(22px) 0;
+  height: px2rem(100px);
+  width: 30%;
+  float: right;
+}
+.cart-submit-btn-lst{
+  background: #F9B03E;
+  color: #fff;
+  font-size: px2rem(32px);
+  text-align: center;
+  padding: px2rem(22px) 0;
+  height: px2rem(100px);
+  width: 30%;
+  float: right;
+}
+.cart-submit-btn-2st{
+  background: #fff;
+  width: 40%;
+  float: right;
+  height: px2rem(100px);
+  box-sizing: border-box;
+  ul{
+    width: 100%;
+    height: 100%;
+  }
+  li{
+    float: left;
+    width: 33%;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  p{
+    font-size: px2rem(10px);
+    color: #333;
+    text-align: center;
+  }
+}
+
+//slider
+.slider-amount{
+  position: absolute;
+  bottom: px2rem(19px);
+  right: px2rem(29px);
+  font-size: px2rem(28px);
+  line-height: px2rem(45px);
+  color: #999;
+  .current-index{
+    font-size: px2rem(32px);
+    color: #666;
+  }
+}
+
+.cart-prod-desc{
+  background:#fff;
+  figure{
+    margin:0;
+  }
+  img{
+    max-width: 100%;
+  }
+}

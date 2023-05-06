@@ -1,0 +1,35 @@
+@import "../../../../styles/core/base";
+
+
+.config-wrap{
+	:global(.ant-drawer-body){
+		padding:13px 16px 53px;
+	}
+}
+.config-panel{
+	margin-top:15px;
+	h4{
+		height: 32px;
+		line-height: 32px;
+		color:$gray;
+	}
+	li{
+		margin-top:10px;
+	}
+}
+
+.config-ope{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	.config-btn-reset,
+	.config-btn-confirm{
+		width: 50%;
+		border-radius: 0;
+	}
+	.config-btn-reset{
+		background:#f2f2f2;
+		border-color:#f2f2f2;
+	}
+}

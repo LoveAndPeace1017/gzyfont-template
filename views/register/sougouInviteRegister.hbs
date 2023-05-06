@@ -1,0 +1,92 @@
+{{#extend "styles"}}
+    <link rel="stylesheet" href="/style/pages/tx_invite_register_070.css">
+{{/extend}}
+
+<div class="container">
+    <div class="main">
+        <div class="f_container" style="background: #f5f6f7;padding-top: 20px;">
+            <!--注册模块-->
+            <div class="m_container">
+                <div class="blk">
+                    <form action="/register" method="post" id="register" style="position:relative;">
+                        <ul class="fieldset">
+                            <li class="field">
+                                <div class="field-in">
+                                    <div class="field-hd">手机号</div>
+                                    <div class="field-bd">
+                                        <input class="txt" type="text" id="mobilePhone" name="mobilePhone" placeholder="手机号即为登录账号" maxlength="11" value="{{form.mobilePhone}}"/>
+                                        <span class="instant"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="field field-valid">
+                                <div class="pop-valid-code" id="captcha"></div>
+                                <div class="field-hd">验证码</div>
+                                <div class="field-bd">
+                                    <input class="txt valid-code" type="text" name="code" value="" maxlength="6" placeholder="填写短信验证码" style="width:46%;">
+                                    <button type="button" class="send-code js-sendCode">获取验证码</button>
+                                    <button type="button" class="send-code" id="sendMobileCode" style="display: none">获取验证码</button>
+                                    <span class="instant"></span>
+                                </div>
+                            </li>
+                            <li class="field field-pwd">
+                                <div class="field-hd">密码</div>
+                                <div class="field-bd">
+                                    <input class="txt" type="password" name="logonPassword" id="password" value="" placeholder="6-20位字母或数字" autocomplete="on"/>
+                                    <i class="iconfont icon-pwd-hide"></i>
+                                    <i class="iconfont icon-pwd-show" style="display: none;"></i>
+                                    <span class="instant"></span>
+                                </div>
+                            </li>
+                            <li class="field">
+                                <div class="field-hd">公司名称</div>
+                                <div class="field-bd">
+                                    <input class="txt error" type="text" name="companyName" placeholder="填写公司全称" value="{{form.companyName}}" aria-invalid="true" />
+                                    <span class="instant"></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="field-ope">
+                            <button type="submit" class="btn-register js-register" ga-data="1012">点击生成试用帐号</button>
+                            <button type="button" class="btn-register default js-register-default" ga-data="1012">点击生成试用帐号</button>
+                            <div class="agree">
+                                <label for="agreement" id="labelAgree">
+                                    <input type="checkbox" name="agree" id="agreement" checked/>
+                                    已阅读并同意百卓优采<a class="blue" href="http://www.abiz.com/info/ensure/46146.htm?uri=/agreement.htm&locale=zh_CN">《用户协议》</a> 及 <a class="blue" href="http://www.abiz.com/info/ensure/63303.htm?uri=/policy.htm&locale=zh_CN">《隐私策略》</a>
+                                </label>
+                            </div>
+                        </div>
+                        <input type="hidden" name="url" value="{{form.url}}">
+                        <input type="hidden" name="userIdEnc" value="{{form.userIdEnc}}">
+                        <input type="hidden" name="comName" value="{{form.comName}}">
+                        <input type="hidden" name="inviteType" value="{{form.inviteType}}">
+                        <input type="hidden" name="gender" value="{{form.gender}}">
+                        <input type="hidden" name="type" value="{{form.type}}">
+                        <input type="hidden" name="channel" value="{{form.source}}">
+                        <input type="hidden" name="source" value="{{form.trench}}">
+                        <input type="hidden" name="referer" value="{{form.referer}}">
+                        <input type="hidden" name="clickId" value="{{form.clickId}}">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="field-tip" style="display: none;"></div>
+
+<div id="mpanel2" style="margin-top:20px;"></div>
+
+<script>
+    var pageError = '{{form.error}}';
+</script>
+<script src="/script/lib/jquery-3.3.1.min.js"></script>
+<script src="/script/lib/jquery.cookie.js"></script>
+<script src="/script/lib//FCaptcha-2.0.0.js" ></script>
+<script src="/script/lib/jquery.validate.min.js"></script>
+<script src="/script/lib/jquery.validate.extend.js"></script>
+<script src="/script/lib/jquery.form.js"></script>
+<script src="/script/lib/imagevalidate.js"></script>
+<script src="/script/lib/miccn.validatecode-2.0.js"></script>
+<script src="/script/register/inviteRegister.js"></script>
+

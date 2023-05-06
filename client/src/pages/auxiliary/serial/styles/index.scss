@@ -1,0 +1,36 @@
+
+.prefix-item{
+	margin-bottom:4px;
+	display: inline-block;
+}
+
+.date{
+	margin-bottom: 2px;
+	display: inline-block;
+}
+
+form{
+	.prefix-inp,
+	.date-select{
+		width:120px;
+		height: 32px;
+	}
+}
+
+.aux-serial-ope{
+	position:absolute;
+	width:100%;
+	left:0;
+	bottom:0;
+	padding:20px;
+	text-align:right;
+	border-top:1px solid #eee;
+	:global(.ant-btn){
+		margin-left:10px;
+	}
+}
+
+.split{
+	margin-left:30px;
+	line-height: 33px;
+}

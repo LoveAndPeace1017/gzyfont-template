@@ -1,0 +1,69 @@
+// global mixin
+// author liw
+// =====================================
+// require _global
+// import
+@import "global";
+
+// opacity
+@mixin opacity($bgColor: #000, $opacityValue: .5) {
+    background-color: $bgColor;
+    opacity: $opacityValue;
+    filter: alpha(opacity=$opacityValue * 100);
+}
+
+// Center-align a block level element
+@mixin center-block {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Sizing
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+// Min height
+@mixin min-height($height) {
+    min-height: $height;
+    height: auto;
+    @if $ie6 {
+        _height: $height;
+    }
+}
+
+// link
+@mixin link-style($defaultColor: $fcLink, $hoverColor: $fcLinkHover, $defaultDecoration: none, $hoverDecoration: underline) {
+    text-decoration: $defaultDecoration;
+    &:link, &:visited {
+        color: $defaultColor;
+    }
+    &:hover {
+        color: $hoverColor;
+        text-decoration: $hoverDecoration;
+    }
+}
+
+// clearfix
+@mixin clearfix() {
+    &:before,
+    &:after {
+        display: table;
+        content: " ";
+        height: 0;
+        font-size: 0;
+        visibility: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// text clip
+@mixin textclip($maxWidth) {
+    max-width: $maxWidth;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

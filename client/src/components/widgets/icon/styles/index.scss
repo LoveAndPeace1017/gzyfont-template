@@ -1,0 +1,16 @@
+@import '../../../../styles/core/base';
+
+
+.icon-mall{
+	color:$primaryColor;
+	font-size:18px;
+	margin-right:5px;
+}
+
+:global(.bd-goods-show) {
+	.icon-mall{
+		color: #222;
+		font-size:14px;
+		margin-right: 0;
+	}
+}

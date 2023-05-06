@@ -1,0 +1,50 @@
+@import "../../../../styles/core/base";
+
+.crumb-wrap {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+.supplier-font {
+	font-size: 20px;
+}
+
+.go-back,
+.crumb {
+	display: inline-block;
+}
+
+.highlight{
+	color:$primaryColor;
+}
+
+.go-back {
+	cursor: pointer;
+	border:1px solid $primaryColor;
+	color:$primaryColor;
+	padding: 0 5px 0 1px;
+	height: 22px;
+	line-height: 20px;
+	border-radius: 2px;
+	transition: .2s;
+	&:hover{
+		background:lighten($primaryColor, 5%);
+		color: #fff;
+		i{
+			color: #fff;
+		}
+	}
+	i {
+		vertical-align: middle;
+		margin-top: -5px;
+		color: $primaryColor;
+		font-size: 24px;
+	}
+}
+
+.v-sep {
+	margin: 0 10px;
+	color: rgba(0, 0, 0, .45);
+}

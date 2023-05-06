@@ -1,0 +1,268 @@
+//core
+@import '../core/base';
+
+//pager
+
+html,
+body{
+  height: 100%;
+}
+
+body{
+  background: #fff;
+}
+
+.container{
+  height: 100%;
+  h2{
+    font-size: 14px;
+    padding: 20px 5%;
+    background: #f8f8f8;
+  }
+}
+
+.fieldset{
+  padding: 0 9%;
+}
+.field{
+  height: 44px;
+  line-height: 44px;
+  border-bottom: 1px solid #eee;
+  padding-left: 71px;
+  margin-top: 15px;
+  font-size: 14px;
+  .field-hd{
+    float: left;
+    margin-left: -71px;
+  }
+  .field-bd{
+    float: left;
+    width: 100%;
+    line-height: 40px;
+    position: relative;
+    .gender{
+      position: relative;
+      float: right;
+    }
+    .gender-bd{
+      width: 72px;
+      background: #fff;
+      position: absolute;
+      top:31px;
+      left: -15px;
+      box-shadow:0 2px 10px #e7e7e7;
+      li{
+        line-height: 40px;
+        padding-left: 15px;
+        &:hover{
+          color: #52d271;
+          background: #f2f2f2;
+        }
+      }
+    }
+    .instant{
+    position: absolute;
+    left: 103%;
+    top: 0;
+    .icon-close-circle-fill{
+      color: #ff6060;
+    }
+    }
+    input{
+      width: 60%;
+    }
+  }
+  .send-code{
+    float: right;
+    margin-top: 10px;
+    color: #666;
+    background: none;
+    border: none;
+  }
+  .resend-code{
+    float: right;
+    color: #999;
+  }
+}
+.field-pwd{
+  .iconfont{
+    float: right;
+
+  }
+}
+.sel-gender{
+  float: right;
+  margin-top: 10px;
+}
+.field-ope{
+  padding: 20px 40px;
+
+}
+.agree{
+  margin-top: 30px;
+  text-align: center;
+}
+
+#register{
+  overflow: hidden;
+}
+
+.btn-register{
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  background: #40BE7F;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  margin-top: 35px;
+}
+
+.field-tip{
+  padding: 5px 10px;
+  color: #fff;
+  background: rgba(0,0,0,.8);
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.pop-valid-code{
+  position: absolute;
+  top: 0;
+  transform: translate(-50%,0);
+  left: 50%;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  display: none;
+  z-index: 9;
+  line-height: initial;
+  font-size: inherit;
+  .pop-hd{
+    height: 14px;
+    position: relative;
+    margin-bottom: 20px;
+    h3{
+      float: left;
+      font-size: 14px;
+    }
+    .refresh{
+      float: right;
+      color: #67afff;
+      cursor: pointer;
+    }
+    .icon-close{
+      position: absolute;
+      right: -20px;
+      top: -20px;
+      padding: 5px;
+      cursor: pointer;
+    }
+  }
+  .pop-bd{
+    min-height: 160px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+    position: relative;
+    .block{
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  .slider-container{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    background: #f2f2f2;
+    position: relative;
+    .slider-mask {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 40px;
+      border: 0 solid #1991FA;
+      background: #D1E9FE;
+    }
+    .slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background: #fff;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: background .2s linear;
+    }
+    .slider-icon{
+      position: absolute;
+      width: 48px;
+      height: 38px;
+      line-height: 38px;
+      border: 1px solid #e5e5e5;
+      text-align: center;
+      top: 0;
+      left: 0;
+      color: #52d271;
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,189 @@
+{{#extend "styles"}}
+    <link rel="stylesheet" href="/style/pages/tx_invite_register_009.css">
+{{/extend}}
+
+<div class="container">
+    <div class="section_01">
+        <div class="f_container">
+            <!--注册模块-->
+            <div class="m_container">
+                <div class="blk">
+                    <form action="/register" method="post" id="register" style="position:relative;">
+                        <ul class="fieldset">
+                            <li class="field">
+                                <div class="field-in">
+                                    <div class="field-hd">手机号</div>
+                                    <div class="field-bd">
+                                        <input class="txt" type="text" id="mobilePhone" name="mobilePhone" placeholder="手机号即为登录账号" maxlength="11" value="{{form.mobilePhone}}"/>
+                                        <span class="instant"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="field field-valid">
+                                <div class="pop-valid-code" id="captcha"></div>
+                                <div class="field-hd">验证码</div>
+                                <div class="field-bd">
+                                    <input class="txt valid-code" type="text" name="code" value="" maxlength="6" placeholder="填写短信验证码" style="width:46%;">
+                                    <button type="button" class="send-code js-sendCode">获取验证码</button>
+                                    <button type="button" class="send-code" id="sendMobileCode" style="display: none">获取验证码</button>
+                                    <span class="instant"></span>
+                                </div>
+                            </li>
+                            <li class="field field-pwd">
+                                <div class="field-hd">密码</div>
+                                <div class="field-bd">
+                                    <input class="txt" type="password" name="logonPassword" id="password" value="" placeholder="6-20位字母或数字" autocomplete="on"/>
+                                    <i class="iconfont icon-pwd-hide"></i>
+                                    <i class="iconfont icon-pwd-show" style="display: none;"></i>
+                                    <span class="instant"></span>
+                                </div>
+                            </li>
+                            <li class="field">
+                                <div class="field-hd">公司名称</div>
+                                <div class="field-bd">
+                                    <input class="txt error" type="text" name="companyName" placeholder="填写公司全称" value="{{form.companyName}}" aria-invalid="true" />
+                                    <span class="instant"></span>
+                                </div>
+                            </li>
+                            <li class="field">
+                                <div class="field-hd">软件偏好</div>
+                                <div class="field-bd habit-bd">
+                                    <span class="block-span first-block-span"><input class="radio-input" name="job" type="radio" value="21" />更关注价格</span>
+                                    <span class="block-span"><input class="radio-input" name="job" type="radio" value="22" />更关注功能</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="field-ope">
+                            <button type="submit" class="btn-register js-register" ga-data="1012">立即领取免费试用</button>
+                            <button type="button" class="btn-register default js-register-default" ga-data="1012">立即领取免费试用</button>
+                            <div class="agree">
+                                <label for="agreement" id="labelAgree">
+                                    <input type="checkbox" name="agree" id="agreement"/>
+                                    已阅读并同意百卓优采<a class="blue" href="http://www.abiz.com/info/ensure/46146.htm?uri=/agreement.htm&locale=zh_CN">《用户协议》</a> 及 <a class="blue" href="http://www.abiz.com/info/ensure/63303.htm?uri=/policy.htm&locale=zh_CN">《隐私策略》</a>
+                                </label>
+                            </div>
+                        </div>
+                        <input type="hidden" name="url" value="{{form.url}}">
+                        <input type="hidden" name="userIdEnc" value="{{form.userIdEnc}}">
+                        <input type="hidden" name="comName" value="{{form.comName}}">
+                        <input type="hidden" name="inviteType" value="{{form.inviteType}}">
+                        <input type="hidden" name="gender" value="{{form.gender}}">
+                        <input type="hidden" name="type" value="{{form.type}}">
+                        <input type="hidden" name="channel" value="{{form.source}}">
+                        <input type="hidden" name="source" value="{{form.trench}}">
+                        <input type="hidden" name="referer" value="{{form.referer}}">
+                        <input type="hidden" name="clickId" value="{{form.clickId}}">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section_02">
+        <div class="s02_container">
+            <div class="s02_item">
+                <p class="title">多级BOM</p>
+                <p class="text">百卓轻云ERP能信息化管理产品结构，直接查看生产某产品所需配套件、协作件和易耗品等，精准管理产品结构，支撑MRP运算。</p>
+            </div>
+            <div class="s02_item">
+                <p class="title">MRP运算</p>
+                <p class="text">百卓轻云ERP能根据销售需求智能模拟生产情况，产出物料需求和生产、采购建议，智能预计生产总耗时和原料缺货日期，轻松应对订单变化。</p>
+            </div>
+            <div class="s02_item">
+                <p class="title">生产进度看板</p>
+                <p class="text">百卓轻云ERP提供可视化生产进度看板，工单、成本、退料等数据实时更新，支持远程把控生产进度，统筹管理生产经营情况。</p>
+            </div>
+            <div class="s02_item">
+                <p class="title">多账号协同</p>
+                <p class="text" style="padding-bottom: 0">百卓轻云ERP能实现工厂无纸化管理，业务部门、职能部门高效协同，数据线上流转，无缝对接。设置业务权限，数据更安全，业务流程更完善。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section_03">
+        <!--<div class="s_container">-->
+            <!--<img class="title" src="../../images/server/tx_h5_009/title_02.png" alt="">-->
+            <!--<p class="sub-title">降本增效看得见</p>-->
+            <!--<div class="rate-wrap">-->
+                <!--<div class="rate-item">-->
+                    <!--<img class="circle-rate" src="../../images/server/tx_h5_009/20.png" alt="">-->
+                    <!--<p class="text">缩短工单转换<br />时间</p>-->
+                <!--</div>-->
+                <!--<div class="rate-item">-->
+                    <!--<img class="circle-rate" src="../../images/server/tx_h5_009/78.png" alt="">-->
+                    <!--<p class="text">缩短数据汇总<br />分析时间</p>-->
+                <!--</div>-->
+                <!--<div class="rate-item">-->
+                    <!--<img class="circle-rate" src="../../images/server/tx_h5_009/56.png" alt="">-->
+                    <!--<p class="text">提升员工协作<br />效率</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <div class="c_container">
+            <img class="title" src="../../images/server/tx_h5_009/title_01.png" alt="">
+            <p class="sub-title">无需实施，即买即用</p>
+            <div class="card-wrap">
+            <img src="../../images/server/tx_h5_009/card_01.png" alt="">
+            <img src="../../images/server/tx_h5_009/card_02.png" alt="">
+            <img src="../../images/server/tx_h5_009/card_03.png" alt="">
+            <img src="../../images/server/tx_h5_009/card_04.png" alt="">
+            <img src="../../images/server/tx_h5_009/card_05.png" alt="">
+            <img src="../../images/server/tx_h5_009/card_06.png" alt="">
+            </div>
+        </div>
+
+        <div class="x_container">
+            <img class="title" src="../../images/server/tx_h5_009/title_03.png" alt="">
+            <div class="reason-wrap">
+                <div class="reason-item">
+                    <div class="reason-inner">
+                        <p class="sub-title">功能更实用</p>
+                        <p class="text">工贸一体化管理，角色<br />权限按需灵活配置。<br />软件界面简洁，上手快</p>
+                    </div>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-inner">
+                        <p class="sub-title">交互更便捷</p>
+                        <p class="text">手机、电脑都能用，不受<br />IP限制，随时随地查<br />数据</p>
+                    </div>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-inner">
+                        <p class="sub-title">价格更优惠</p>
+                        <p class="text">无需购买配置服务器，<br />无需专人维护，持续<br />迭代升级</p>
+                    </div>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-inner">
+                        <p class="sub-title">服务更满意</p>
+                        <p class="text">专属顾问提供操作指导，<br />400热线、QQ群、微信<br />群全渠道客户服务</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-register default bottom-register" id="register-back">立即领取免费试用</button>
+
+        <img class="logo" src="../../images/server/tx_h5_009/logo.jpeg" alt="">
+    </div>
+
+</div>
+
+<div class="field-tip" style="display: none;"></div>
+<div id="mpanel2" style="margin-top:20px;"></div>
+
+<script>
+    var pageError = '{{form.error}}';
+</script>
+<script src="/script/lib/jquery-3.3.1.min.js"></script>
+<script src="/script/lib//FCaptcha-2.0.0.js" ></script>
+<script src="/script/lib/jquery.cookie.js"></script>
+<script src="/script/lib/jquery.validate.min.js"></script>
+<script src="/script/lib/jquery.validate.extend.js"></script>
+<script src="/script/lib/jquery.form.js"></script>
+<script src="/script/lib/imagevalidate.js"></script>
+<script src="/script/lib/miccn.validatecode-2.0.js"></script>
+<script src="/script/common/share.js"></script>
+<script src="/script/register/newInviteRegister.js"></script>
+

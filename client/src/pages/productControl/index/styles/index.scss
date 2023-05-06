@@ -1,0 +1,84 @@
+@import "../../../../styles/core/base";
+
+.data-wrap{
+	position:relative;
+}
+
+.tb-wrap{
+	float:left;
+	width:100%;
+	padding:20px;
+	transition: .2s;
+}
+
+.abstract-drop-menu{
+	:global(.ant-dropdown-menu-item){
+		cursor:auto;
+		&:hover{
+			background:none;
+		}
+	}
+}
+
+.abstract-drop{
+	padding:12px 0 12px 10px;
+	font-size: 13px;
+	.tit{
+		line-height:30px;
+		color: #ccc;
+	}
+	ul{
+		max-height: 300px;
+		overflow-y: auto;
+		li{
+			line-height: 30px;
+		}
+		.prod-tit{
+			width: 138px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			float: left;
+		}
+		.prod-desc{
+			width: 98px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			float: left;
+		}
+		.amount{
+			min-width: 40px;
+			float: left;
+			margin-left: 10px;
+		}
+	}
+}
+
+.ware-drop{
+	padding:10px;
+	.tit{
+		line-height:20px;
+	}
+	ul{
+		li{
+			line-height: 20px;
+		}
+	}
+}
+
+table{
+	.txt-bill-no{
+		width:calc(100% - 55px);
+		vertical-align: top;
+	}
+	:global(.ui-status){
+		margin-left:5px;
+	}
+}
+
+i{
+	font-size: 16px;
+}
+
+.ant-table td { white-space: nowrap; }

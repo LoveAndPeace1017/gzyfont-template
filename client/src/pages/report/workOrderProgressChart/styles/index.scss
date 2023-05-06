@@ -1,0 +1,40 @@
+@import "../../../../styles/core/base";
+
+.echarts-dom{
+	margin-top: 40px;
+	padding: 20px;
+	border: 1px solid #d2d2d2;
+}
+.p-title{
+	font-size: 18px;
+	text-align: left;
+	margin-bottom: 15px;
+}
+
+.do-option{
+	margin-bottom: 20px;
+}
+
+.span-check{
+	border: 1px solid #d2d2d2;
+	padding: 6px;
+	margin-left: 20px;
+}
+
+.spec-tab{
+    position: relative;
+	:global(.ant-table-content){
+          position: relative;
+	}
+}
+
+.y-dom{
+	padding: 14px 20px;
+	li{
+		width: 170px;
+		display: inline-block;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+}

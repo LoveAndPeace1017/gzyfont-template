@@ -1,0 +1,63 @@
+.dropdown-action{
+	border-top:1px solid #ccc;
+	padding: 5px 12px;
+	line-height: 22px;
+}
+
+.fitting-add-hd{
+	line-height: 20px;
+	padding:20px 0 10px;
+	font-weight:bold;
+}
+
+.tb-finished-prod{
+	:global(.ant-table){
+		:global(.ant-table-thead){
+			tr{
+				>th{
+					&:nth-of-type(1){
+						border-left:1px solid #e5e5e5;
+					}
+					&:nth-last-of-type(1){
+						border-right:1px solid #e5e5e5;
+					}
+				}
+			}
+		}
+		:global(.ant-table-tbody){
+			>tr{
+				>td{
+					&:nth-of-type(1){
+						border-left:1px solid #e5e5e5;
+					}
+					&:nth-last-of-type(1){
+						border-right:1px solid #e5e5e5;
+					}
+				}
+			}
+		}
+	}
+}
+
+:global(.ant-modal-body){
+	:global(.tb-inner){
+		position:relative;
+		:global(.ant-table-tbody){
+			> tr{
+				> td{
+					&:nth-last-of-type(1){
+						overflow: visible;
+					}
+					&:nth-last-of-type(2){
+						overflow: visible;
+					}
+				}
+			}
+		}
+	}
+}
+
+.choose-trigger{
+	color: #4ea2ff;
+	font-size:20px;
+}

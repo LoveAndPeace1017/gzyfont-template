@@ -1,0 +1,29 @@
+//core
+@import "../../../../styles/base/mobile";
+
+.fold{
+	margin-top: px2rem(20px);
+}
+.fold-hd{
+	height:px2rem(68px);
+	overflow:hidden;
+	background:#fff;
+	border-bottom:1px solid #E0E0E0;
+}
+.fold-title{
+	position:relative;
+	float:left;
+	padding:px2rem(13px) px2rem(30px);
+	font-size:px2rem(28px);
+}
+
+.fold-sub-tit{
+	float:left;
+	margin-left:10px;
+	color:#666;
+	font-size:px2rem(28px);
+}
+.fold-bd{
+	padding:px2rem(10px) px2rem(30px);
+	background:#fff;
+}

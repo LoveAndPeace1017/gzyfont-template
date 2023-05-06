@@ -1,0 +1,47 @@
+@import "../../../../../styles/core/base";
+
+.abstract-drop-menu{
+  :global(.ant-dropdown-menu-item){
+    cursor:auto;
+    &:hover{
+      background:none;
+    }
+  }
+}
+
+.abstract-drop{
+  padding:12px 0 12px 10px;
+  font-size: 13px;
+  .tit{
+    line-height:30px;
+    color: #ccc;
+  }
+  ul{
+    max-height: 300px;
+    overflow-y: auto;
+    li{
+      line-height: 30px;
+    }
+    .prod-tit{
+      width: 138px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      float: left;
+    }
+    .prod-desc{
+      width: 98px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      float: left;
+    }
+    .amount{
+      min-width: 40px;
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+.ant-table td { white-space: nowrap; }

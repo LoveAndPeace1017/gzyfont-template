@@ -1,0 +1,23 @@
+@import "../../../../styles/core/base";
+
+.cart-wrap{
+	position:relative;
+	i{
+		float:left;
+		font-size:20px;
+		color:$primaryColor;
+	}
+	.cart-num{
+		float:right;
+		margin:-6px 0 0 -10px;
+		min-width: 25px;
+		padding:0 6px;
+		height:18px;
+		line-height:16px;
+		color:#f55252;
+		background:#fff;
+		border-radius:9px;
+		border:1px solid #f55252;
+		text-align:center;
+	}
+}

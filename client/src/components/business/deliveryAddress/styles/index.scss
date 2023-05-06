@@ -1,0 +1,50 @@
+.field-name {
+	display: inline-block;
+	width: 40%;
+	position: relative;
+	top: 5px;
+	:global(.ant-cascader-picker){
+		vertical-align: top;
+	}
+}
+.field-val{
+	display: inline-block;
+	width: 60%;
+	padding: 0 50px 0 15px;
+}
+.field-ope{
+	display: inline-block;
+	width: 40px;
+	margin-left:-40px;
+	i{
+		margin-left:3px;
+	}
+}
+.modal-container{
+	display: inline-block;
+}
+.modal-size{
+	width: 100%;
+}
+:global(.ant-form-item-children){
+	.modal-container{
+		width:100%;
+	}
+}
+/*:global(.ant-form-item-control-input){
+	:global(.ant-form-item-control-input-content){
+		max-width: none;
+	}
+}*/
+
+:global(.ant-form-item-control-input-content){
+	.modal-container{
+		width:100%;
+	}
+}
+.dropdown-action{
+	border-top:1px solid #ccc;
+	padding: 5px 12px;
+	line-height: 22px;
+}
+

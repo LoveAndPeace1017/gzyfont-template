@@ -1,0 +1,36 @@
+//base
+@import "../../../../../styles/base/mobile";
+
+.inq-detail{
+	position:relative;
+}
+
+.main{
+	.scroll-container{
+		padding-bottom:px2rem(20px);
+		bottom:px2rem(100px);
+	}
+}
+
+.footer-ope{
+	position: absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	a{
+		display: block;
+		width:100%;
+		height: px2rem(100px);
+		background: #2DA66A;
+		text-align: center;
+		color:#fff;
+		font-size:px2rem(32px);
+		padding:px2rem(25px);
+		&:disabled,
+		&[disabled]{
+			color:#999;
+			background:#cdcdcd;
+		}
+	}
+
+}

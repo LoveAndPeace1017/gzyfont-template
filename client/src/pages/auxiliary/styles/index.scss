@@ -1,0 +1,155 @@
+//core
+@import '../../../styles/core/base';
+
+.auxiliary-modal{
+	:global(.ant-modal-body){
+		padding:0;
+	}
+}
+.auxiliary-modal-content{
+	position:relative;
+	overflow:hidden;
+}
+.aux-sider{
+	position:relative;
+	z-index:2;
+	float:left;
+	width:180px;
+	height:720px;
+	overflow: hidden;
+	margin-left:-100%;
+	padding-top:30px;
+	background:$primaryColor;
+	color:#fff;
+	border-radius:2px 0 0 2px;
+	.aux-tit{
+		padding-left:30px;
+		line-height: 20px;
+		font-size:16px;
+		i{
+			font-size:20px;
+			margin-right:10px;
+		}
+	}
+}
+
+.aux-tab{
+	margin-top:30px;
+	margin-bottom: -6px;
+	overflow-y:auto;
+	li{
+		height:40px;
+		line-height: 40px;
+		padding:0 30px;
+		margin-bottom:6px;
+		cursor:pointer;
+		i{
+			font-size:16px;
+			margin-right:10px;
+		}
+	}
+	.cur{
+		background:#fff;
+		color:$primaryColor;
+	}
+}
+
+.aux-tab-content{
+	float:left;
+	width:100%;
+	padding: 60px 20px 30px 200px;
+	:global(.ant-tabs-tabpane){
+		padding-left:0;
+		padding-right:0;
+	}
+
+}
+
+:global(.custom-field){
+	:global(.ant-tabs-tab-active){
+		&:after{
+			width: 74px!important;
+		}
+	}
+}
+
+.aux-ope{
+	overflow: hidden;
+	margin-top:30px;
+	button{
+		float: right;
+	}
+	.tip-info{
+		float: left;
+		margin-top: 10px;
+	}
+}
+
+:global(.ant-tabs){
+	.aux-ope{
+		margin-top:0;
+	}
+}
+.top-tip{
+	height: 32px;
+	line-height: 32px;
+	padding-left: 5px;
+	margin: 15px 0;
+	background: #DFF5FF;
+	border-radius: 2px;
+	border: 1px solid #9DD2F8;
+}
+
+.aux-list{
+	position:relative;
+	margin-top:20px;
+	&:before{
+		content:'';
+		position:absolute;
+		right:0;
+		top:0;
+		width:7px;
+		height:50px;
+		background-color:#fff;
+		z-index:100;
+		border-left: 1px solid #d3d3d3;
+	}
+}
+
+.tit{
+	line-height:30px;
+	color: #ccc;
+}
+
+.account-tab-footer{
+	padding-top: 10px;
+}
+
+.tip-currency{
+	display: inline-block;
+	margin-left: 10px;
+	font-size: 10px;
+}
+
+.ch-sq{
+	font-size: 12px;
+	margin-right: 6px;
+	color: #0066DD;
+	cursor: pointer;
+}
+
+.info-num{
+	padding: 10px 0;
+	span{
+		font-weight: bold;
+		color: red;
+	}
+}
+
+@include max-screen-width($screen_narrow){
+	:global(.aux-list){
+		&:before{
+			height:42px;
+		}
+	}
+}

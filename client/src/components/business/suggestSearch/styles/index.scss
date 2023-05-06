@@ -1,0 +1,48 @@
+@import "../../../../styles/core/base";
+
+.suggest-search{
+	position:relative;
+	width:100%;
+	:global(.ant-select-selection){
+		border-color:$primaryColor;
+	}
+	.suggest{
+		&:global(.ant-select-open){
+			:global(.ant-select-arrow-icon){
+				svg{
+					transform: rotate(0deg);
+				}
+			}
+		}
+	}
+	.search-btn{
+		position:absolute;
+		right:0;
+		top:50%;
+		margin-top:-16px;
+		font-size:16px;
+		color:#fff;
+		cursor:pointer;
+		border-radius:0 4px 4px 0;
+		box-shadow: none;
+		i{
+			font-size:18px;
+		}
+	}
+	:global(.ant-btn:not(.ant-btn-circle):not(.ant-btn-circle-outline).ant-btn-icon-only){
+		padding:0 28px 0 12px;
+	}
+	:global(.ant-select-selection--single){
+		cursor: text;
+	}
+	:global(.ant-select-clear){
+		right:50px;
+	}
+}
+
+
+.suggest-input{
+	:global(.ant-select-auto-complete .ant-select-clear){
+		right: 62px;
+	}
+}

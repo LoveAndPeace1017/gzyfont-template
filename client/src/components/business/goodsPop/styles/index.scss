@@ -1,0 +1,22 @@
+@import "../../../../styles/core/base";
+
+
+.goods-pop{
+	:global(.ant-tabs-tabpane){
+		padding: 20px 0 0;
+	}
+}
+.ope-bar-lst{
+	padding: 10px 0 5px;
+}
+
+.nodata-wrap{
+	height:300px;
+}
+.list-search{
+	:global(.anticon-close-circle){
+		color: #999;
+	}
+}
+
+

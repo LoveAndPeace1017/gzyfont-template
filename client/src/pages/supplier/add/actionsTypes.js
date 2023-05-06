@@ -1,0 +1,6 @@
+
+// 获取客户详情
+export const SUPPLIER_DETAIL = 'SUPPLIER_DETAIL';
+export const SUPPLIER_INSERT = 'SUPPLIER_INSERT';
+export const SUPPLIER_INSERT_END = 'SUPPLIER_INSERT_END';
+

@@ -1,0 +1,90 @@
+@import "../../../../styles/core/base";
+
+.attr-info{
+	margin: 0 50px 10px 0;
+	float: left;
+	line-height: 24px;
+}
+
+
+.attr-row{
+	//margin: 15px 0;
+	margin:15px 0 -10px;
+	overflow: hidden;
+}
+.attr-key,
+.attr-value{
+	display: inline-block;
+	word-break: break-all;
+}
+.attr-key {
+	color: $grayDark;
+	text-align: right;
+}
+.attr-value {
+	color: $grayDarker;
+}
+
+.footnote{
+    border-top:1px solid #d9d9d9;
+	overflow: hidden;
+	padding-top:15px;
+	.attr-info{
+		font-size: 12px;
+	}
+	.attr-key,
+	.attr-value{
+		color: #999;
+	}
+}
+
+.report-note{
+	overflow: hidden;
+	padding: 8px 0;
+	.attr-info{
+		margin: 5px 50px 5px 0;
+		font-size: 12px;
+	}
+	.attr-key,
+	.attr-value{
+		color: #999;
+	}
+}
+
+.goods-note{
+	overflow: hidden;
+	padding-top:15px;
+	.attr-info{
+		font-size: 13px;
+	}
+	.attr-key{
+		color: #888;
+	}
+	.attr-value{
+		color: #333;
+	}
+}
+.special-a{
+	color: #499fff;
+}
+
+@include max-screen-width($screen_narrow){
+	.attr-info{
+		margin-bottom:5px;
+	}
+	.attr-row{
+		margin:5px 0 -5px;
+	}
+}
+
+//刚加上去又要去掉，还是暂时不要删除，保不齐下个版本又要加上。。。
+//.attr-title-info{
+//	font-size:16px;
+//	margin-top: -2px;
+//	.attr-key{
+//		color:$primaryColor;
+//	}
+//	.attr-value{
+//		color:$primaryColor;
+//	}
+//}
